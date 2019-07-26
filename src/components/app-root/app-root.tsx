@@ -29,6 +29,7 @@ export class AppRoot {
     { name: 'Popover', id: 'popover' },
     { name: 'Progress Indicators', id: 'progress' },
     { name: 'Radio', id: 'radio' },
+    { name: 'Range', id: 'range' },
     { name: 'Refresher', id: 'refresher' },
     { name: 'Reorder', id: 'reorder' },
     { name: 'Routing', id: 'routing' },

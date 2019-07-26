@@ -35,6 +35,7 @@ export namespace Components {
   interface ComponentPopover {}
   interface ComponentProgress {}
   interface ComponentRadio {}
+  interface ComponentRange {}
   interface ComponentRefresher {}
   interface ComponentReorder {}
   interface ComponentRouting {}
@@ -208,6 +209,12 @@ declare global {
     new (): HTMLComponentRadioElement;
   };
 
+  interface HTMLComponentRangeElement extends Components.ComponentRange, HTMLStencilElement {}
+  var HTMLComponentRangeElement: {
+    prototype: HTMLComponentRangeElement;
+    new (): HTMLComponentRangeElement;
+  };
+
   interface HTMLComponentRefresherElement extends Components.ComponentRefresher, HTMLStencilElement {}
   var HTMLComponentRefresherElement: {
     prototype: HTMLComponentRefresherElement;
@@ -306,6 +313,7 @@ declare global {
     'component-popover': HTMLComponentPopoverElement;
     'component-progress': HTMLComponentProgressElement;
     'component-radio': HTMLComponentRadioElement;
+    'component-range': HTMLComponentRangeElement;
     'component-refresher': HTMLComponentRefresherElement;
     'component-reorder': HTMLComponentReorderElement;
     'component-routing': HTMLComponentRoutingElement;
@@ -348,6 +356,7 @@ declare namespace LocalJSX {
   interface ComponentPopover extends JSXBase.HTMLAttributes<HTMLComponentPopoverElement> {}
   interface ComponentProgress extends JSXBase.HTMLAttributes<HTMLComponentProgressElement> {}
   interface ComponentRadio extends JSXBase.HTMLAttributes<HTMLComponentRadioElement> {}
+  interface ComponentRange extends JSXBase.HTMLAttributes<HTMLComponentRangeElement> {}
   interface ComponentRefresher extends JSXBase.HTMLAttributes<HTMLComponentRefresherElement> {}
   interface ComponentReorder extends JSXBase.HTMLAttributes<HTMLComponentReorderElement> {}
   interface ComponentRouting extends JSXBase.HTMLAttributes<HTMLComponentRoutingElement> {}
@@ -388,6 +397,7 @@ declare namespace LocalJSX {
     'component-popover': ComponentPopover;
     'component-progress': ComponentProgress;
     'component-radio': ComponentRadio;
+    'component-range': ComponentRange;
     'component-refresher': ComponentRefresher;
     'component-reorder': ComponentReorder;
     'component-routing': ComponentRouting;

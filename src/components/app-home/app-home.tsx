@@ -29,6 +29,7 @@ export class AppHome {
     { name: 'Popover', icon: '', id: 'popover' },
     { name: 'Progress Indicators', icon: '', id: 'progress' },
     { name: 'Radio', icon: '', id: 'radio' },
+    { name: 'Range', icon: '', id: 'range' },
     { name: 'Refresher', icon: '', id: 'refresher' },
     { name: 'Reorder', icon: '', id: 'reorder' },
     { name: 'Routing', icon: '', id: 'routing' },
