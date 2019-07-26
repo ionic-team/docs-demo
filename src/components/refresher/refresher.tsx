@@ -1,5 +1,31 @@
 import { Component, h, State } from '@stencil/core';
 
+const names = [
+    'Burt Bear',
+    'Charlie Cheetah',
+    'Donald Duck',
+    'Eva Eagle',
+    'Ellie Elephant',
+    'Gino Giraffe',
+    'Isabella Iguana',
+    'Karl Kitten',
+    'Lionel Lion',
+    'Molly Mouse',
+    'Paul Puppy',
+    'Rachel Rabbit',
+    'Ted Turtle'
+];
+
+const createItems = (count: number, unread: boolean) => {
+  return new Array(count).fill(0).map(_ => { 
+    return {
+      name: names[Math.floor(Math.random() * names.length)],
+      unread
+    }
+  });
+}
+
+
 @Component({
   tag: 'component-refresher',
   styleUrl: 'refresher.css'
@@ -7,11 +33,11 @@ import { Component, h, State } from '@stencil/core';
 export class refresher {
   refresher: HTMLIonRefresherElement;
 
-  @State() items = new Array(20).fill(0).map((_, i) => i);
+  @State() items = createItems(5, false);
 
   handleRefresh = () => {
     setTimeout(() => {
-      this.items = [...new Array(1).fill(0).map(_ => Math.floor(Math.random() * 100)), ...this.items];
+      this.items = [...createItems(2, true), ...this.items];
       this.refresher.complete();
     }, 1000);
   }
@@ -32,10 +58,14 @@ export class refresher {
           <ion-refresher-content></ion-refresher-content>
         </ion-refresher>
         <ion-list>
-          {this.items.map((i) => {
+          {this.items.map(({unread, name }: any) => {
             return (
               <ion-item>
-                <ion-label>Item {i}</ion-label>
+                <div slot="start" class={unread ? 'unread' : 'read'}></div>
+                <ion-label class="ion-text-wrap">
+                  <h2>{name}</h2>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                </ion-label>
               </ion-item>
             );
           })}
