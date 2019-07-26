@@ -14,10 +14,9 @@ export class alert {
     await alertController.componentOnReady();
 
     const alert = await alertController.create({
-      header: 'Alert',
-      subHeader: 'Subtitle',
-      message: 'This is an alert message.',
-      buttons: ['OK']
+      header: 'Use this lightsaber?',
+      message: 'Do you agree to use this lightsaber to do good across the galaxy?',
+      buttons: ['Disagree', 'Agree']
     });
     await alert.present();
   }
@@ -34,7 +33,7 @@ export class alert {
       </ion-header>,
 
       <ion-content>
-        <ion-button onClick={this.open}>Open</ion-button>
+        <ion-button expand="block" onClick={this.open}>Show Alert</ion-button>
       </ion-content>
     ];
   }
