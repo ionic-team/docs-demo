@@ -1,10 +1,27 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Element, State } from '@stencil/core';
 
 @Component({
   tag: 'component-input',
   styleUrl: 'input.css'
 })
 export class input {
+  @Element() el;
+
+  @State() firstName: string;
+  @State() lastName: string;
+
+  processForm = (event) => {
+    const controller = this.el.querySelector('ion-alert-controller')
+    event.preventDefault();
+    controller.create({
+      header: 'Account Created',
+      message: `Created account for: <b>${this.firstName} ${this.lastName}</b>`,
+      buttons: [{
+        text: 'OK'
+      }]
+    }).then(alert => alert.present());
+  }
+
   render() {
     return [
       <ion-header>
@@ -16,8 +33,40 @@ export class input {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
-      </ion-content>
+      <ion-content fullscreen>
+        <form onSubmit={this.processForm}>
+          <ion-list lines="full" class="ion-no-margin ion-no-padding">
+            <ion-item>
+              <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text" onInput={(e: any) => { this.firstName = e.target.value}} value={this.firstName}></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Last Name <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input required type="text" onInput={(e: any) => { this.lastName = e.target.value}} value={this.lastName}></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Address</ion-label>
+              <ion-input placeholder="Address Line 1"></ion-input>
+              <ion-input placeholder="Address Line 2"></ion-input>
+              <ion-input placeholder="City"></ion-input>
+              <ion-input placeholder="State"></ion-input>
+              <ion-input placeholder="Zip Code"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Notes</ion-label>
+              <ion-textarea></ion-textarea>
+            </ion-item>
+          </ion-list>
+
+          <div class="ion-padding">
+            <ion-button expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
+          </div>
+        </form>
+      </ion-content>,
+      <ion-alert-controller />
     ];
   }
 }
