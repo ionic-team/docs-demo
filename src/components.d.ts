@@ -14,6 +14,7 @@ export namespace Components {
   interface Component_template_ {}
   interface ComponentActionSheet {}
   interface ComponentAlert {}
+  interface ComponentAvatar {}
   interface ComponentBadge {}
   interface ComponentButton {}
   interface ComponentCard {}
@@ -32,6 +33,8 @@ export namespace Components {
   interface ComponentMenu {}
   interface ComponentModal {}
   interface ComponentNav {}
+  interface ComponentNote {}
+  interface ComponentPicker {}
   interface ComponentPopover {}
   interface ComponentProgress {}
   interface ComponentRadio {}
@@ -42,11 +45,13 @@ export namespace Components {
   interface ComponentSearchbar {}
   interface ComponentSegment {}
   interface ComponentSelect {}
+  interface ComponentSkeletonText {}
   interface ComponentSlides {}
   interface ComponentTabs {}
   interface ComponentToast {}
   interface ComponentToggle {}
   interface ComponentToolbar {}
+  interface NavExamplePage {}
   interface PopoverExamplePage {}
 }
 
@@ -81,6 +86,12 @@ declare global {
   var HTMLComponentAlertElement: {
     prototype: HTMLComponentAlertElement;
     new (): HTMLComponentAlertElement;
+  };
+
+  interface HTMLComponentAvatarElement extends Components.ComponentAvatar, HTMLStencilElement {}
+  var HTMLComponentAvatarElement: {
+    prototype: HTMLComponentAvatarElement;
+    new (): HTMLComponentAvatarElement;
   };
 
   interface HTMLComponentBadgeElement extends Components.ComponentBadge, HTMLStencilElement {}
@@ -191,6 +202,18 @@ declare global {
     new (): HTMLComponentNavElement;
   };
 
+  interface HTMLComponentNoteElement extends Components.ComponentNote, HTMLStencilElement {}
+  var HTMLComponentNoteElement: {
+    prototype: HTMLComponentNoteElement;
+    new (): HTMLComponentNoteElement;
+  };
+
+  interface HTMLComponentPickerElement extends Components.ComponentPicker, HTMLStencilElement {}
+  var HTMLComponentPickerElement: {
+    prototype: HTMLComponentPickerElement;
+    new (): HTMLComponentPickerElement;
+  };
+
   interface HTMLComponentPopoverElement extends Components.ComponentPopover, HTMLStencilElement {}
   var HTMLComponentPopoverElement: {
     prototype: HTMLComponentPopoverElement;
@@ -251,6 +274,12 @@ declare global {
     new (): HTMLComponentSelectElement;
   };
 
+  interface HTMLComponentSkeletonTextElement extends Components.ComponentSkeletonText, HTMLStencilElement {}
+  var HTMLComponentSkeletonTextElement: {
+    prototype: HTMLComponentSkeletonTextElement;
+    new (): HTMLComponentSkeletonTextElement;
+  };
+
   interface HTMLComponentSlidesElement extends Components.ComponentSlides, HTMLStencilElement {}
   var HTMLComponentSlidesElement: {
     prototype: HTMLComponentSlidesElement;
@@ -281,6 +310,12 @@ declare global {
     new (): HTMLComponentToolbarElement;
   };
 
+  interface HTMLNavExamplePageElement extends Components.NavExamplePage, HTMLStencilElement {}
+  var HTMLNavExamplePageElement: {
+    prototype: HTMLNavExamplePageElement;
+    new (): HTMLNavExamplePageElement;
+  };
+
   interface HTMLPopoverExamplePageElement extends Components.PopoverExamplePage, HTMLStencilElement {}
   var HTMLPopoverExamplePageElement: {
     prototype: HTMLPopoverExamplePageElement;
@@ -292,6 +327,7 @@ declare global {
     'component-_template_': HTMLComponent_template_Element;
     'component-action-sheet': HTMLComponentActionSheetElement;
     'component-alert': HTMLComponentAlertElement;
+    'component-avatar': HTMLComponentAvatarElement;
     'component-badge': HTMLComponentBadgeElement;
     'component-button': HTMLComponentButtonElement;
     'component-card': HTMLComponentCardElement;
@@ -310,6 +346,8 @@ declare global {
     'component-menu': HTMLComponentMenuElement;
     'component-modal': HTMLComponentModalElement;
     'component-nav': HTMLComponentNavElement;
+    'component-note': HTMLComponentNoteElement;
+    'component-picker': HTMLComponentPickerElement;
     'component-popover': HTMLComponentPopoverElement;
     'component-progress': HTMLComponentProgressElement;
     'component-radio': HTMLComponentRadioElement;
@@ -320,11 +358,13 @@ declare global {
     'component-searchbar': HTMLComponentSearchbarElement;
     'component-segment': HTMLComponentSegmentElement;
     'component-select': HTMLComponentSelectElement;
+    'component-skeleton-text': HTMLComponentSkeletonTextElement;
     'component-slides': HTMLComponentSlidesElement;
     'component-tabs': HTMLComponentTabsElement;
     'component-toast': HTMLComponentToastElement;
     'component-toggle': HTMLComponentToggleElement;
     'component-toolbar': HTMLComponentToolbarElement;
+    'nav-example-page': HTMLNavExamplePageElement;
     'popover-example-page': HTMLPopoverExamplePageElement;
   }
 }
@@ -335,6 +375,7 @@ declare namespace LocalJSX {
   interface Component_template_ extends JSXBase.HTMLAttributes<HTMLComponent_template_Element> {}
   interface ComponentActionSheet extends JSXBase.HTMLAttributes<HTMLComponentActionSheetElement> {}
   interface ComponentAlert extends JSXBase.HTMLAttributes<HTMLComponentAlertElement> {}
+  interface ComponentAvatar extends JSXBase.HTMLAttributes<HTMLComponentAvatarElement> {}
   interface ComponentBadge extends JSXBase.HTMLAttributes<HTMLComponentBadgeElement> {}
   interface ComponentButton extends JSXBase.HTMLAttributes<HTMLComponentButtonElement> {}
   interface ComponentCard extends JSXBase.HTMLAttributes<HTMLComponentCardElement> {}
@@ -353,6 +394,8 @@ declare namespace LocalJSX {
   interface ComponentMenu extends JSXBase.HTMLAttributes<HTMLComponentMenuElement> {}
   interface ComponentModal extends JSXBase.HTMLAttributes<HTMLComponentModalElement> {}
   interface ComponentNav extends JSXBase.HTMLAttributes<HTMLComponentNavElement> {}
+  interface ComponentNote extends JSXBase.HTMLAttributes<HTMLComponentNoteElement> {}
+  interface ComponentPicker extends JSXBase.HTMLAttributes<HTMLComponentPickerElement> {}
   interface ComponentPopover extends JSXBase.HTMLAttributes<HTMLComponentPopoverElement> {}
   interface ComponentProgress extends JSXBase.HTMLAttributes<HTMLComponentProgressElement> {}
   interface ComponentRadio extends JSXBase.HTMLAttributes<HTMLComponentRadioElement> {}
@@ -363,11 +406,13 @@ declare namespace LocalJSX {
   interface ComponentSearchbar extends JSXBase.HTMLAttributes<HTMLComponentSearchbarElement> {}
   interface ComponentSegment extends JSXBase.HTMLAttributes<HTMLComponentSegmentElement> {}
   interface ComponentSelect extends JSXBase.HTMLAttributes<HTMLComponentSelectElement> {}
+  interface ComponentSkeletonText extends JSXBase.HTMLAttributes<HTMLComponentSkeletonTextElement> {}
   interface ComponentSlides extends JSXBase.HTMLAttributes<HTMLComponentSlidesElement> {}
   interface ComponentTabs extends JSXBase.HTMLAttributes<HTMLComponentTabsElement> {}
   interface ComponentToast extends JSXBase.HTMLAttributes<HTMLComponentToastElement> {}
   interface ComponentToggle extends JSXBase.HTMLAttributes<HTMLComponentToggleElement> {}
   interface ComponentToolbar extends JSXBase.HTMLAttributes<HTMLComponentToolbarElement> {}
+  interface NavExamplePage extends JSXBase.HTMLAttributes<HTMLNavExamplePageElement> {}
   interface PopoverExamplePage extends JSXBase.HTMLAttributes<HTMLPopoverExamplePageElement> {}
 
   interface IntrinsicElements {
@@ -376,6 +421,7 @@ declare namespace LocalJSX {
     'component-_template_': Component_template_;
     'component-action-sheet': ComponentActionSheet;
     'component-alert': ComponentAlert;
+    'component-avatar': ComponentAvatar;
     'component-badge': ComponentBadge;
     'component-button': ComponentButton;
     'component-card': ComponentCard;
@@ -394,6 +440,8 @@ declare namespace LocalJSX {
     'component-menu': ComponentMenu;
     'component-modal': ComponentModal;
     'component-nav': ComponentNav;
+    'component-note': ComponentNote;
+    'component-picker': ComponentPicker;
     'component-popover': ComponentPopover;
     'component-progress': ComponentProgress;
     'component-radio': ComponentRadio;
@@ -404,11 +452,13 @@ declare namespace LocalJSX {
     'component-searchbar': ComponentSearchbar;
     'component-segment': ComponentSegment;
     'component-select': ComponentSelect;
+    'component-skeleton-text': ComponentSkeletonText;
     'component-slides': ComponentSlides;
     'component-tabs': ComponentTabs;
     'component-toast': ComponentToast;
     'component-toggle': ComponentToggle;
     'component-toolbar': ComponentToolbar;
+    'nav-example-page': NavExamplePage;
     'popover-example-page': PopoverExamplePage;
   }
 }

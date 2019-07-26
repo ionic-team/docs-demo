@@ -17,6 +17,7 @@ export class nav {
       </ion-header>,
 
       <ion-content>
+        <ion-nav id="nav-example" root="nav-example-page"></ion-nav>
       </ion-content>
     ];
   }
