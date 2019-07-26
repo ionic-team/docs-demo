@@ -48,7 +48,7 @@ export class AppRoot {
           <ion-route url="/" component="app-home" />
           {this.components.map(component => {
             return (
-              <ion-route url={`/component/${component.id}`} component={component.id} />
+              <ion-route url={`/component/${component.id}`} component={`component-${component.id}`} />
             );
           })}
         </ion-router>

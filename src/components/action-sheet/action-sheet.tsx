@@ -1,7 +1,7 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'action-sheet',
+  tag: 'component-action-sheet',
   styleUrl: 'action-sheet.css'
 })
 export class ActionSheet {
