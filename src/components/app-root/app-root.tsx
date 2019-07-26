@@ -22,6 +22,7 @@ export class AppRoot {
     { name: 'Input', id: 'input' },
     { name: 'List', id: 'list' },
     { name: 'List Item', id: 'list-item' },
+    { name: 'Loading', id: 'loading' },
     { name: 'Menu', id: 'menu' },
     { name: 'Modal', id: 'modal' },
     { name: 'Navigation', id: 'nav' },

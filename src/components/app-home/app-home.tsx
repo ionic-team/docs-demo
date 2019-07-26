@@ -22,6 +22,7 @@ export class AppHome {
     { name: 'Input', icon: '', id: 'input' },
     { name: 'List', icon: '', id: 'list' },
     { name: 'List Item', icon: '', id: 'list-item' },
+    { name: 'Loading', icon: '', id: 'loading' },
     { name: 'Menu', icon: '', id: 'menu' },
     { name: 'Modal', icon: '', id: 'modal' },
     { name: 'Navigation', icon: '', id: 'nav' },

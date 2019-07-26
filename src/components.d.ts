@@ -28,6 +28,7 @@ export namespace Components {
   interface ComponentInput {}
   interface ComponentList {}
   interface ComponentListItem {}
+  interface ComponentLoading {}
   interface ComponentMenu {}
   interface ComponentModal {}
   interface ComponentNav {}
@@ -45,6 +46,7 @@ export namespace Components {
   interface ComponentToast {}
   interface ComponentToggle {}
   interface ComponentToolbar {}
+  interface PopoverExamplePage {}
 }
 
 declare global {
@@ -164,6 +166,12 @@ declare global {
     new (): HTMLComponentListItemElement;
   };
 
+  interface HTMLComponentLoadingElement extends Components.ComponentLoading, HTMLStencilElement {}
+  var HTMLComponentLoadingElement: {
+    prototype: HTMLComponentLoadingElement;
+    new (): HTMLComponentLoadingElement;
+  };
+
   interface HTMLComponentMenuElement extends Components.ComponentMenu, HTMLStencilElement {}
   var HTMLComponentMenuElement: {
     prototype: HTMLComponentMenuElement;
@@ -265,6 +273,12 @@ declare global {
     prototype: HTMLComponentToolbarElement;
     new (): HTMLComponentToolbarElement;
   };
+
+  interface HTMLPopoverExamplePageElement extends Components.PopoverExamplePage, HTMLStencilElement {}
+  var HTMLPopoverExamplePageElement: {
+    prototype: HTMLPopoverExamplePageElement;
+    new (): HTMLPopoverExamplePageElement;
+  };
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
@@ -285,6 +299,7 @@ declare global {
     'component-input': HTMLComponentInputElement;
     'component-list': HTMLComponentListElement;
     'component-list-item': HTMLComponentListItemElement;
+    'component-loading': HTMLComponentLoadingElement;
     'component-menu': HTMLComponentMenuElement;
     'component-modal': HTMLComponentModalElement;
     'component-nav': HTMLComponentNavElement;
@@ -302,6 +317,7 @@ declare global {
     'component-toast': HTMLComponentToastElement;
     'component-toggle': HTMLComponentToggleElement;
     'component-toolbar': HTMLComponentToolbarElement;
+    'popover-example-page': HTMLPopoverExamplePageElement;
   }
 }
 
@@ -325,6 +341,7 @@ declare namespace LocalJSX {
   interface ComponentInput extends JSXBase.HTMLAttributes<HTMLComponentInputElement> {}
   interface ComponentList extends JSXBase.HTMLAttributes<HTMLComponentListElement> {}
   interface ComponentListItem extends JSXBase.HTMLAttributes<HTMLComponentListItemElement> {}
+  interface ComponentLoading extends JSXBase.HTMLAttributes<HTMLComponentLoadingElement> {}
   interface ComponentMenu extends JSXBase.HTMLAttributes<HTMLComponentMenuElement> {}
   interface ComponentModal extends JSXBase.HTMLAttributes<HTMLComponentModalElement> {}
   interface ComponentNav extends JSXBase.HTMLAttributes<HTMLComponentNavElement> {}
@@ -342,6 +359,7 @@ declare namespace LocalJSX {
   interface ComponentToast extends JSXBase.HTMLAttributes<HTMLComponentToastElement> {}
   interface ComponentToggle extends JSXBase.HTMLAttributes<HTMLComponentToggleElement> {}
   interface ComponentToolbar extends JSXBase.HTMLAttributes<HTMLComponentToolbarElement> {}
+  interface PopoverExamplePage extends JSXBase.HTMLAttributes<HTMLPopoverExamplePageElement> {}
 
   interface IntrinsicElements {
     'app-home': AppHome;
@@ -363,6 +381,7 @@ declare namespace LocalJSX {
     'component-input': ComponentInput;
     'component-list': ComponentList;
     'component-list-item': ComponentListItem;
+    'component-loading': ComponentLoading;
     'component-menu': ComponentMenu;
     'component-modal': ComponentModal;
     'component-nav': ComponentNav;
@@ -380,6 +399,7 @@ declare namespace LocalJSX {
     'component-toast': ComponentToast;
     'component-toggle': ComponentToggle;
     'component-toolbar': ComponentToolbar;
+    'popover-example-page': PopoverExamplePage;
   }
 }
 
