@@ -9,12 +9,19 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface ActionSheet {}
   interface AppHome {}
   interface AppRoot {}
 }
 
 declare global {
 
+
+  interface HTMLActionSheetElement extends Components.ActionSheet, HTMLStencilElement {}
+  var HTMLActionSheetElement: {
+    prototype: HTMLActionSheetElement;
+    new (): HTMLActionSheetElement;
+  };
 
   interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {}
   var HTMLAppHomeElement: {
@@ -28,16 +35,19 @@ declare global {
     new (): HTMLAppRootElement;
   };
   interface HTMLElementTagNameMap {
+    'action-sheet': HTMLActionSheetElement;
     'app-home': HTMLAppHomeElement;
     'app-root': HTMLAppRootElement;
   }
 }
 
 declare namespace LocalJSX {
+  interface ActionSheet extends JSXBase.HTMLAttributes<HTMLActionSheetElement> {}
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
   interface AppRoot extends JSXBase.HTMLAttributes<HTMLAppRootElement> {}
 
   interface IntrinsicElements {
+    'action-sheet': ActionSheet;
     'app-home': AppHome;
     'app-root': AppRoot;
   }
