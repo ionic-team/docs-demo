@@ -5,15 +5,12 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'action-sheet.css'
 })
 export class ActionSheet {
-  open = async () => {
-    let actionSheetController = document.querySelector('ion-action-sheet-controller');
-    if (!actionSheetController) {
-      actionSheetController = document.createElement('ion-action-sheet-controller');
-      document.body.appendChild(actionSheetController);
-    }
-    await actionSheetController.componentOnReady();
+  controller: HTMLIonActionSheetControllerElement;
 
-    const actionSheet = await actionSheetController.create({
+  open = async () => {
+    await this.controller.componentOnReady();
+
+    const actionSheet = await this.controller.create({
       header: "Albums",
       buttons: [{
         text: 'Delete',
@@ -54,6 +51,7 @@ export class ActionSheet {
 
   render() {
     return [
+      <ion-action-sheet-controller ref={e => { this.controller = e }} />,
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
@@ -63,7 +61,7 @@ export class ActionSheet {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen class="ion-padding">
         <ion-button onClick={this.open}>Open</ion-button>
       </ion-content>
     ];

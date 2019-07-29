@@ -5,15 +5,12 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'alert.css'
 })
 export class alert {
-  open = async () => {
-    let alertController = document.querySelector('ion-alert-controller');
-    if (!alertController) {
-      alertController = document.createElement('ion-alert-controller');
-      document.body.appendChild(alertController);
-    }
-    await alertController.componentOnReady();
+  controller: HTMLIonAlertControllerElement;
 
-    const alert = await alertController.create({
+  open = async () => {
+    await this.controller.componentOnReady();
+
+    const alert = await this.controller.create({
       header: 'Use this lightsaber?',
       message: 'Do you agree to use this lightsaber to do good across the galaxy?',
       buttons: ['Disagree', 'Agree']
@@ -23,6 +20,7 @@ export class alert {
 
   render() {
     return [
+      <ion-alert-controller ref={e => { this.controller = e }} />,
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
@@ -32,7 +30,7 @@ export class alert {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen class="ion-padding">
         <ion-button expand="block" onClick={this.open}>Show Alert</ion-button>
       </ion-content>
     ];
