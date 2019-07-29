@@ -48,6 +48,9 @@ export namespace Components {
   interface ComponentSkeletonText {}
   interface ComponentSlides {}
   interface ComponentTabs {}
+  interface ComponentTabsGames {}
+  interface ComponentTabsMovies {}
+  interface ComponentTabsMusic {}
   interface ComponentToast {}
   interface ComponentToggle {}
   interface ComponentToolbar {}
@@ -292,6 +295,24 @@ declare global {
     new (): HTMLComponentTabsElement;
   };
 
+  interface HTMLComponentTabsGamesElement extends Components.ComponentTabsGames, HTMLStencilElement {}
+  var HTMLComponentTabsGamesElement: {
+    prototype: HTMLComponentTabsGamesElement;
+    new (): HTMLComponentTabsGamesElement;
+  };
+
+  interface HTMLComponentTabsMoviesElement extends Components.ComponentTabsMovies, HTMLStencilElement {}
+  var HTMLComponentTabsMoviesElement: {
+    prototype: HTMLComponentTabsMoviesElement;
+    new (): HTMLComponentTabsMoviesElement;
+  };
+
+  interface HTMLComponentTabsMusicElement extends Components.ComponentTabsMusic, HTMLStencilElement {}
+  var HTMLComponentTabsMusicElement: {
+    prototype: HTMLComponentTabsMusicElement;
+    new (): HTMLComponentTabsMusicElement;
+  };
+
   interface HTMLComponentToastElement extends Components.ComponentToast, HTMLStencilElement {}
   var HTMLComponentToastElement: {
     prototype: HTMLComponentToastElement;
@@ -361,6 +382,9 @@ declare global {
     'component-skeleton-text': HTMLComponentSkeletonTextElement;
     'component-slides': HTMLComponentSlidesElement;
     'component-tabs': HTMLComponentTabsElement;
+    'component-tabs-games': HTMLComponentTabsGamesElement;
+    'component-tabs-movies': HTMLComponentTabsMoviesElement;
+    'component-tabs-music': HTMLComponentTabsMusicElement;
     'component-toast': HTMLComponentToastElement;
     'component-toggle': HTMLComponentToggleElement;
     'component-toolbar': HTMLComponentToolbarElement;
@@ -409,6 +433,9 @@ declare namespace LocalJSX {
   interface ComponentSkeletonText extends JSXBase.HTMLAttributes<HTMLComponentSkeletonTextElement> {}
   interface ComponentSlides extends JSXBase.HTMLAttributes<HTMLComponentSlidesElement> {}
   interface ComponentTabs extends JSXBase.HTMLAttributes<HTMLComponentTabsElement> {}
+  interface ComponentTabsGames extends JSXBase.HTMLAttributes<HTMLComponentTabsGamesElement> {}
+  interface ComponentTabsMovies extends JSXBase.HTMLAttributes<HTMLComponentTabsMoviesElement> {}
+  interface ComponentTabsMusic extends JSXBase.HTMLAttributes<HTMLComponentTabsMusicElement> {}
   interface ComponentToast extends JSXBase.HTMLAttributes<HTMLComponentToastElement> {}
   interface ComponentToggle extends JSXBase.HTMLAttributes<HTMLComponentToggleElement> {}
   interface ComponentToolbar extends JSXBase.HTMLAttributes<HTMLComponentToolbarElement> {}
@@ -455,6 +482,9 @@ declare namespace LocalJSX {
     'component-skeleton-text': ComponentSkeletonText;
     'component-slides': ComponentSlides;
     'component-tabs': ComponentTabs;
+    'component-tabs-games': ComponentTabsGames;
+    'component-tabs-movies': ComponentTabsMovies;
+    'component-tabs-music': ComponentTabsMusic;
     'component-toast': ComponentToast;
     'component-toggle': ComponentToggle;
     'component-toolbar': ComponentToolbar;
