@@ -42,6 +42,8 @@ export class AppHome {
     { name: 'Skeleton Text', id: 'skeleton-text' },
     { name: 'Slides', icon: '', id: 'slides' },
     { name: 'Tabs', icon: '', id: 'tabs' },
+    { name: 'Text', icon: '', id: 'text' },
+    { name: 'Thumbnail', icon: '', id: 'thumbnail' },
     { name: 'Toast', icon: '', id: 'toast' },
     { name: 'Toggle', icon: '', id: 'toggle' },
     { name: 'Toolbar', icon: '', id: 'toolbar' },

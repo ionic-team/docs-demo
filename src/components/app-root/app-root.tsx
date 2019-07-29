@@ -42,6 +42,8 @@ export class AppRoot {
     { name: 'Skeleton Text', id: 'skeleton-text' },
     { name: 'Slides', id: 'slides' },
     { name: 'Tabs', id: 'tabs' },
+    { name: 'Text', id: 'text' },
+    { name: 'Thumbnail', id: 'thumbnail' },
     { name: 'Toast', id: 'toast' },
     { name: 'Toggle', id: 'toggle' },
     { name: 'Toolbar', id: 'toolbar' },

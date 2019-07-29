@@ -51,6 +51,8 @@ export namespace Components {
   interface ComponentTabsGames {}
   interface ComponentTabsMovies {}
   interface ComponentTabsMusic {}
+  interface ComponentText {}
+  interface ComponentThumbnail {}
   interface ComponentToast {}
   interface ComponentToggle {}
   interface ComponentToolbar {}
@@ -313,6 +315,18 @@ declare global {
     new (): HTMLComponentTabsMusicElement;
   };
 
+  interface HTMLComponentTextElement extends Components.ComponentText, HTMLStencilElement {}
+  var HTMLComponentTextElement: {
+    prototype: HTMLComponentTextElement;
+    new (): HTMLComponentTextElement;
+  };
+
+  interface HTMLComponentThumbnailElement extends Components.ComponentThumbnail, HTMLStencilElement {}
+  var HTMLComponentThumbnailElement: {
+    prototype: HTMLComponentThumbnailElement;
+    new (): HTMLComponentThumbnailElement;
+  };
+
   interface HTMLComponentToastElement extends Components.ComponentToast, HTMLStencilElement {}
   var HTMLComponentToastElement: {
     prototype: HTMLComponentToastElement;
@@ -385,6 +399,8 @@ declare global {
     'component-tabs-games': HTMLComponentTabsGamesElement;
     'component-tabs-movies': HTMLComponentTabsMoviesElement;
     'component-tabs-music': HTMLComponentTabsMusicElement;
+    'component-text': HTMLComponentTextElement;
+    'component-thumbnail': HTMLComponentThumbnailElement;
     'component-toast': HTMLComponentToastElement;
     'component-toggle': HTMLComponentToggleElement;
     'component-toolbar': HTMLComponentToolbarElement;
@@ -436,6 +452,8 @@ declare namespace LocalJSX {
   interface ComponentTabsGames extends JSXBase.HTMLAttributes<HTMLComponentTabsGamesElement> {}
   interface ComponentTabsMovies extends JSXBase.HTMLAttributes<HTMLComponentTabsMoviesElement> {}
   interface ComponentTabsMusic extends JSXBase.HTMLAttributes<HTMLComponentTabsMusicElement> {}
+  interface ComponentText extends JSXBase.HTMLAttributes<HTMLComponentTextElement> {}
+  interface ComponentThumbnail extends JSXBase.HTMLAttributes<HTMLComponentThumbnailElement> {}
   interface ComponentToast extends JSXBase.HTMLAttributes<HTMLComponentToastElement> {}
   interface ComponentToggle extends JSXBase.HTMLAttributes<HTMLComponentToggleElement> {}
   interface ComponentToolbar extends JSXBase.HTMLAttributes<HTMLComponentToolbarElement> {}
@@ -485,6 +503,8 @@ declare namespace LocalJSX {
     'component-tabs-games': ComponentTabsGames;
     'component-tabs-movies': ComponentTabsMovies;
     'component-tabs-music': ComponentTabsMusic;
+    'component-text': ComponentText;
+    'component-thumbnail': ComponentThumbnail;
     'component-toast': ComponentToast;
     'component-toggle': ComponentToggle;
     'component-toolbar': ComponentToolbar;
