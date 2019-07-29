@@ -32,6 +32,7 @@ export namespace Components {
   interface ComponentLoading {}
   interface ComponentMenu {}
   interface ComponentModal {}
+  interface ComponentModalContent {}
   interface ComponentNav {}
   interface ComponentNote {}
   interface ComponentPicker {}
@@ -199,6 +200,12 @@ declare global {
   var HTMLComponentModalElement: {
     prototype: HTMLComponentModalElement;
     new (): HTMLComponentModalElement;
+  };
+
+  interface HTMLComponentModalContentElement extends Components.ComponentModalContent, HTMLStencilElement {}
+  var HTMLComponentModalContentElement: {
+    prototype: HTMLComponentModalContentElement;
+    new (): HTMLComponentModalContentElement;
   };
 
   interface HTMLComponentNavElement extends Components.ComponentNav, HTMLStencilElement {}
@@ -380,6 +387,7 @@ declare global {
     'component-loading': HTMLComponentLoadingElement;
     'component-menu': HTMLComponentMenuElement;
     'component-modal': HTMLComponentModalElement;
+    'component-modal-content': HTMLComponentModalContentElement;
     'component-nav': HTMLComponentNavElement;
     'component-note': HTMLComponentNoteElement;
     'component-picker': HTMLComponentPickerElement;
@@ -433,6 +441,7 @@ declare namespace LocalJSX {
   interface ComponentLoading extends JSXBase.HTMLAttributes<HTMLComponentLoadingElement> {}
   interface ComponentMenu extends JSXBase.HTMLAttributes<HTMLComponentMenuElement> {}
   interface ComponentModal extends JSXBase.HTMLAttributes<HTMLComponentModalElement> {}
+  interface ComponentModalContent extends JSXBase.HTMLAttributes<HTMLComponentModalContentElement> {}
   interface ComponentNav extends JSXBase.HTMLAttributes<HTMLComponentNavElement> {}
   interface ComponentNote extends JSXBase.HTMLAttributes<HTMLComponentNoteElement> {}
   interface ComponentPicker extends JSXBase.HTMLAttributes<HTMLComponentPickerElement> {}
@@ -484,6 +493,7 @@ declare namespace LocalJSX {
     'component-loading': ComponentLoading;
     'component-menu': ComponentMenu;
     'component-modal': ComponentModal;
+    'component-modal-content': ComponentModalContent;
     'component-nav': ComponentNav;
     'component-note': ComponentNote;
     'component-picker': ComponentPicker;

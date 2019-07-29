@@ -7,8 +7,11 @@ import { Component, h, Element } from '@stencil/core';
 export class menu {
   @Element() el;
 
-  openMenu = () => {
-    this.el.querySelector('ion-menu-controller').open();
+  controller: HTMLIonMenuControllerElement;
+
+  openMenu = async () => {
+    await this.controller.componentOnReady();
+    this.controller.open();
   }
 
   render() {
@@ -55,7 +58,7 @@ export class menu {
         </ion-content>
       </div>,
 
-      <ion-menu-controller />
+      <ion-menu-controller ref={e => { this.controller = e }} />
     ]
   }
 }

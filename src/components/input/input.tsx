@@ -10,20 +10,26 @@ export class input {
   @State() firstName: string;
   @State() lastName: string;
 
-  processForm = (event) => {
-    const controller = this.el.querySelector('ion-alert-controller')
+  controller: HTMLIonAlertControllerElement;
+
+  processForm = async (event) => {
     event.preventDefault();
-    controller.create({
+
+    await this.controller.componentOnReady();
+    const alert = await this.controller.create({
       header: 'Account Created',
       message: `Created account for: <b>${this.firstName} ${this.lastName}</b>`,
       buttons: [{
         text: 'OK'
       }]
-    }).then(alert => alert.present());
+    })
+
+    alert.present();
   }
 
   render() {
     return [
+      <ion-alert-controller ref={e => { this.controller = e}} />,
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">

@@ -7,12 +7,17 @@ import { Component, h, Element } from '@stencil/core';
 export class loading {
   @Element() el;
 
-  handleButtonClick = () => {
-    const controller = this.el.querySelector('ion-loading-controller');
-    controller.create({
+  controller: HTMLIonLoadingControllerElement;
+
+  handleButtonClick = async () => {
+    await this.controller.componentOnReady();
+
+    const loading = await this.controller.create({
       message: 'Please wait...',
       duration: 3000
-    }).then(loading => loading.present());
+    });
+
+    loading.present();
   }
 
   render() {
@@ -26,11 +31,11 @@ export class loading {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen class="ion-padding">
         <ion-button expand="block" onClick={this.handleButtonClick}>Show Loading</ion-button>
       </ion-content>,
 
-      <ion-loading-controller></ion-loading-controller>
+      <ion-loading-controller ref={e => { this.controller = e}}></ion-loading-controller>
     ];
   }
 }
