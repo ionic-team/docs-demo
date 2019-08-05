@@ -17,7 +17,7 @@ const names = [
 ];
 
 const createItems = (count: number, unread: boolean) => {
-  return new Array(count).fill(0).map(_ => { 
+  return new Array(count).fill(0).map(_ => {
     return {
       name: names[Math.floor(Math.random() * names.length)],
       unread
@@ -47,7 +47,7 @@ export class refresher {
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <ion-back-button />
+            <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
           <ion-title>Refresher</ion-title>
         </ion-toolbar>

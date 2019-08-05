@@ -15,7 +15,7 @@ export class AppRoot {
     { name: 'Checkbox', id: 'checkbox' },
     { name: 'Chip', id: 'chip' },
     { name: 'Content', id: 'content' },
-    { name: 'Date/time Picker', id: 'datetime' },
+    { name: 'Datetime', id: 'datetime' },
     { name: 'Floating Action Button (FAB)', id: 'fab' },
     { name: 'Grid', id: 'grid' },
     { name: 'Icons', id: 'icons' },

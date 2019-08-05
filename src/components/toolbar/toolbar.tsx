@@ -9,14 +9,17 @@ export class toolbar {
     return [
       <ion-header translucent>
         <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-back-button defaultHref="/"></ion-back-button>
+          </ion-buttons>
           <ion-buttons slot="secondary">
             <ion-button>
               <ion-icon slot="icon-only" name="logo-ionic"></ion-icon>
             </ion-button>
           </ion-buttons>
 
-          <ion-title>Header</ion-title>
-          
+          <ion-title>Toolbar</ion-title>
+
           <ion-buttons slot="primary">
             <ion-button>
               <ion-icon slot="icon-only" name="star"></ion-icon>
@@ -58,9 +61,9 @@ export class toolbar {
           <ion-buttons slot="secondary">
             <ion-button>Messages (1)</ion-button>
           </ion-buttons>
-          
+
           <ion-title>Buttons</ion-title>
-          
+
           <ion-buttons slot="primary">
             <ion-button>Log Out</ion-button>
           </ion-buttons>
@@ -76,7 +79,7 @@ export class toolbar {
           </ion-buttons>
 
           <ion-title>Footer</ion-title>
-          
+
           <ion-buttons slot="primary">
             <ion-button>
               <ion-icon slot="icon-only" name="more"></ion-icon>

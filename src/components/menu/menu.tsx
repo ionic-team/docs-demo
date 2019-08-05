@@ -19,6 +19,9 @@ export class menu {
       <ion-menu side="start" contentId="main">
         <ion-header>
           <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
             <ion-title>Menu</ion-title>
           </ion-toolbar>
         </ion-header>

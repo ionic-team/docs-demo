@@ -15,7 +15,7 @@ export class AppHome {
     { name: 'Checkbox', icon: 'radio-button-off', id: 'checkbox' },
     { name: 'Chip', icon: 'radio-button-off', id: 'chip' },
     { name: 'Content', icon: 'radio-button-off', id: 'content' },
-    { name: 'Date/time Picker', icon: 'radio-button-off', id: 'datetime' },
+    { name: 'Datetime', icon: 'radio-button-off', id: 'datetime' },
     { name: 'Floating Action Button (FAB)', icon: 'radio-button-off', id: 'fab' },
     { name: 'Grid', icon: 'radio-button-off', id: 'grid' },
     { name: 'Icons', icon: 'radio-button-off', id: 'icons' },

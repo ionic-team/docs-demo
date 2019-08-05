@@ -10,7 +10,7 @@ export class chip {
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <ion-back-button />
+            <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
           <ion-title>Chip</ion-title>
         </ion-toolbar>

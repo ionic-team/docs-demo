@@ -11,7 +11,7 @@ export class text {
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <ion-back-button />
+            <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
           <ion-title>Text</ion-title>
         </ion-toolbar>
