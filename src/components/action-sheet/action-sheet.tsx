@@ -59,9 +59,9 @@ export class ActionSheet {
 
   render() {
     const description = `The <b>Action Sheet</b> is a dialog that displays a set of options. It appears on
-    top of the app’s content, and must be manually dismissed by the user before they can
-    resume interaction with the app. There are multiple ways to dismiss the action sheet,
-    including tapping the backdrop or hitting the escape key.`;
+      top of the app’s content, and must be manually dismissed by the user before they can
+      resume interaction with the app. There are multiple ways to dismiss the action sheet,
+      including tapping the backdrop or hitting the escape key.`;
     const url = 'action-sheet';
 
     return [
@@ -78,10 +78,8 @@ export class ActionSheet {
       <ion-content fullscreen class="component-content">
         <component-details description={description} url={url}></component-details>
 
-        <div class="component-preview">
-          <div class="ion-padding-start ion-padding-end">
-            <ion-button expand="block" onClick={this.open}>Open Action Sheet</ion-button>
-          </div>
+        <div class="ion-padding-start ion-padding-end">
+          <ion-button expand="block" onClick={this.open}>Open Action Sheet</ion-button>
         </div>
       </ion-content>
     ];
