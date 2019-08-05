@@ -51,11 +51,26 @@ export class badge {
             <ion-label>Drafts</ion-label>
             <ion-badge color="medium" slot="end">14</ion-badge>
           </ion-item>
-          <ion-item>
+          <ion-item lines="full">
             <ion-label>Deleted</ion-label>
             <ion-badge color="dark" slot="end">4</ion-badge>
           </ion-item>
         </ion-list>
+
+        <ion-tab-bar>
+          <ion-tab-button selected>
+            <ion-icon name="globe"></ion-icon>
+            <ion-badge color="tertiary">44</ion-badge>
+          </ion-tab-button>
+          <ion-tab-button>
+            <ion-icon name="contact"></ion-icon>
+            <ion-badge color="success">1</ion-badge>
+          </ion-tab-button>
+          <ion-tab-button>
+            <ion-icon name="mail"></ion-icon>
+            <ion-badge>2.3k</ion-badge>
+          </ion-tab-button>
+        </ion-tab-bar>
       </ion-content>
     ];
   }
