@@ -28,7 +28,8 @@
 /*
  * Theme CSS
  * ----------------------------------------------------------------------------
- * Imports a file that can be used to theme an application.
+ * Imports theme files that can be used to theme an application.
  */
 
+@import "../themes/default.css";
 @import "../themes/dark.css";
