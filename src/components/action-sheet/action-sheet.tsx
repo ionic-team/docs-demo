@@ -1,13 +1,21 @@
-import { Component, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
+
+import { Config } from '@ionic/core';
 
 @Component({
   tag: 'component-action-sheet',
   styleUrl: 'action-sheet.css'
 })
 export class ActionSheet {
+  mode!: string;
+
+  @Prop({ context: 'config' }) config: Config;
+
   controller: HTMLIonActionSheetControllerElement;
 
   open = async () => {
+    const mode = this.config.get('mode');
+
     await this.controller.componentOnReady();
 
     const actionSheet = await this.controller.create({
@@ -15,31 +23,31 @@ export class ActionSheet {
       buttons: [{
         text: 'Delete',
         role: 'destructive',
-        icon: 'trash',
+        icon: mode !== 'ios' ? 'trash' : null,
         handler: () => {
           console.log('Delete clicked');
         }
       }, {
         text: 'Share',
-        icon: 'share',
+        icon: mode !== 'ios' ? 'share' : null,
         handler: () => {
           console.log('Share clicked');
         }
       }, {
         text: 'Play (open modal)',
-        icon: 'arrow-dropright-circle',
+        icon: mode !== 'ios' ? 'arrow-dropright-circle' : null,
         handler: () => {
           console.log('Play clicked');
         }
       }, {
         text: 'Favorite',
-        icon: 'heart',
+        icon: mode !== 'ios' ? 'heart' : null,
         handler: () => {
           console.log('Favorite clicked');
         }
       }, {
         text: 'Cancel',
-        icon: 'close',
+        icon: mode !== 'ios' ? 'close' : null,
         role: 'cancel',
         handler: () => {
           console.log('Cancel clicked');
@@ -61,8 +69,36 @@ export class ActionSheet {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen class="ion-padding">
-        <ion-button onClick={this.open}>Open</ion-button>
+      <ion-content fullscreen class="component-content">
+        {/* TODO make into a component */}
+        <div class="component-details">
+          <ion-list>
+            <ion-item>
+              <ion-label class="component-description">
+                The <b>Action Sheet</b> is a dialog that displays a set of options. It appears on
+                top of the app’s content, and must be manually dismissed by the user before they can
+                resume interaction with the app. There are multiple ways to dismiss the action sheet,
+                including tapping the backdrop or hitting the escape key.
+              </ion-label>
+            </ion-item>
+            <ion-item class="component-link" href="https://ionicframework.com/docs/components" target="_blank">
+              <ion-label color="primary">
+                Component Docs
+              </ion-label>
+            </ion-item>
+            <ion-item lines="full" class="component-link" href="https://ionicframework.com/docs/api/action-sheet" target="_blank">
+              <ion-label color="primary">
+                API
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+
+        <div class="component-preview">
+          <div class="ion-padding-start ion-padding-end">
+            <ion-button expand="block" onClick={this.open}>Open Action Sheet</ion-button>
+          </div>
+        </div>
       </ion-content>
     ];
   }
