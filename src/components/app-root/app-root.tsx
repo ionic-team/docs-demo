@@ -1,53 +1,12 @@
 import { Component, h } from '@stencil/core';
+import { getComponents } from '../../utils/component-utils';
 
 @Component({
   tag: 'app-root',
   styleUrl: 'app-root.css'
 })
 export class AppRoot {
-  components = [
-    { name: 'Action Sheet', id: 'action-sheet' },
-    { name: 'Alert', id: 'alert' },
-    { name: 'Avatar', id: 'avatar' },
-    { name: 'Badge', id: 'badge' },
-    { name: 'Button', id: 'button' },
-    { name: 'Card', id: 'card' },
-    { name: 'Checkbox', id: 'checkbox' },
-    { name: 'Chip', id: 'chip' },
-    { name: 'Content', id: 'content' },
-    { name: 'Datetime', id: 'datetime' },
-    { name: 'Floating Action Button (FAB)', id: 'fab' },
-    { name: 'Grid', id: 'grid' },
-    { name: 'Icons', id: 'icons' },
-    { name: 'Infinite Scroll', id: 'infinite-scroll' },
-    { name: 'Input', id: 'input' },
-    { name: 'List', id: 'list' },
-    { name: 'List Item', id: 'list-item' },
-    { name: 'Loading', id: 'loading' },
-    { name: 'Menu', id: 'menu' },
-    { name: 'Modal', id: 'modal' },
-    { name: 'Navigation', id: 'nav' },
-    { name: 'Note', id: 'note' },
-    { name: 'Picker', id: 'picker' },
-    { name: 'Popover', id: 'popover' },
-    { name: 'Progress Indicators', id: 'progress' },
-    { name: 'Radio', id: 'radio' },
-    { name: 'Range', id: 'range' },
-    { name: 'Refresher', id: 'refresher' },
-    { name: 'Reorder', id: 'reorder' },
-    { name: 'Routing', id: 'routing' },
-    { name: 'Searchbar', id: 'searchbar' },
-    { name: 'Segment', id: 'segment' },
-    { name: 'Select', id: 'select' },
-    { name: 'Skeleton Text', id: 'skeleton-text' },
-    { name: 'Slides', id: 'slides' },
-    { name: 'Tabs', id: 'tabs' },
-    { name: 'Text', id: 'text' },
-    { name: 'Thumbnail', id: 'thumbnail' },
-    { name: 'Toast', id: 'toast' },
-    { name: 'Toggle', id: 'toggle' },
-    { name: 'Toolbar', id: 'toolbar' },
-  ]
+  components = getComponents();
 
   render() {
     return (

@@ -1,16 +1,20 @@
-ion-content {
-  --background: var(--ion-color-step-50, #f2f2f2);
+/*
+ * Component icons
+ */
+
+.component-icon {
+  border-radius: 50%;
+  padding: 5px;
+  height: 16px;
+  width: 16px;
 }
 
-.list-ios {
-  margin-top: 32px !important;
-  margin-bottom: 32px !important;
+.component-icon-dark {
+  background: #27323e;
+  color: #fff;
 }
 
-.list-ios ion-item:only-child {
-  --border-width: 0.55px 0 0.55px 0;
-}
-
-.list-md ion-item:only-child {
-  --border-width: 1px 0 1px 0;
+.component-icon-primary {
+  background: var(--ion-color-primary);
+  color: #fff;
 }

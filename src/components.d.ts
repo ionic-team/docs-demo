@@ -48,11 +48,11 @@ export namespace Components {
   interface ComponentSelect {}
   interface ComponentSkeletonText {}
   interface ComponentSlides {}
+  interface ComponentSpinner {}
   interface ComponentTabs {}
   interface ComponentTabsGames {}
   interface ComponentTabsMovies {}
   interface ComponentTabsMusic {}
-  interface ComponentText {}
   interface ComponentThumbnail {}
   interface ComponentToast {}
   interface ComponentToggle {}
@@ -298,6 +298,12 @@ declare global {
     new (): HTMLComponentSlidesElement;
   };
 
+  interface HTMLComponentSpinnerElement extends Components.ComponentSpinner, HTMLStencilElement {}
+  var HTMLComponentSpinnerElement: {
+    prototype: HTMLComponentSpinnerElement;
+    new (): HTMLComponentSpinnerElement;
+  };
+
   interface HTMLComponentTabsElement extends Components.ComponentTabs, HTMLStencilElement {}
   var HTMLComponentTabsElement: {
     prototype: HTMLComponentTabsElement;
@@ -320,12 +326,6 @@ declare global {
   var HTMLComponentTabsMusicElement: {
     prototype: HTMLComponentTabsMusicElement;
     new (): HTMLComponentTabsMusicElement;
-  };
-
-  interface HTMLComponentTextElement extends Components.ComponentText, HTMLStencilElement {}
-  var HTMLComponentTextElement: {
-    prototype: HTMLComponentTextElement;
-    new (): HTMLComponentTextElement;
   };
 
   interface HTMLComponentThumbnailElement extends Components.ComponentThumbnail, HTMLStencilElement {}
@@ -403,11 +403,11 @@ declare global {
     'component-select': HTMLComponentSelectElement;
     'component-skeleton-text': HTMLComponentSkeletonTextElement;
     'component-slides': HTMLComponentSlidesElement;
+    'component-spinner': HTMLComponentSpinnerElement;
     'component-tabs': HTMLComponentTabsElement;
     'component-tabs-games': HTMLComponentTabsGamesElement;
     'component-tabs-movies': HTMLComponentTabsMoviesElement;
     'component-tabs-music': HTMLComponentTabsMusicElement;
-    'component-text': HTMLComponentTextElement;
     'component-thumbnail': HTMLComponentThumbnailElement;
     'component-toast': HTMLComponentToastElement;
     'component-toggle': HTMLComponentToggleElement;
@@ -457,11 +457,11 @@ declare namespace LocalJSX {
   interface ComponentSelect extends JSXBase.HTMLAttributes<HTMLComponentSelectElement> {}
   interface ComponentSkeletonText extends JSXBase.HTMLAttributes<HTMLComponentSkeletonTextElement> {}
   interface ComponentSlides extends JSXBase.HTMLAttributes<HTMLComponentSlidesElement> {}
+  interface ComponentSpinner extends JSXBase.HTMLAttributes<HTMLComponentSpinnerElement> {}
   interface ComponentTabs extends JSXBase.HTMLAttributes<HTMLComponentTabsElement> {}
   interface ComponentTabsGames extends JSXBase.HTMLAttributes<HTMLComponentTabsGamesElement> {}
   interface ComponentTabsMovies extends JSXBase.HTMLAttributes<HTMLComponentTabsMoviesElement> {}
   interface ComponentTabsMusic extends JSXBase.HTMLAttributes<HTMLComponentTabsMusicElement> {}
-  interface ComponentText extends JSXBase.HTMLAttributes<HTMLComponentTextElement> {}
   interface ComponentThumbnail extends JSXBase.HTMLAttributes<HTMLComponentThumbnailElement> {}
   interface ComponentToast extends JSXBase.HTMLAttributes<HTMLComponentToastElement> {}
   interface ComponentToggle extends JSXBase.HTMLAttributes<HTMLComponentToggleElement> {}
@@ -509,11 +509,11 @@ declare namespace LocalJSX {
     'component-select': ComponentSelect;
     'component-skeleton-text': ComponentSkeletonText;
     'component-slides': ComponentSlides;
+    'component-spinner': ComponentSpinner;
     'component-tabs': ComponentTabs;
     'component-tabs-games': ComponentTabsGames;
     'component-tabs-movies': ComponentTabsMovies;
     'component-tabs-music': ComponentTabsMusic;
-    'component-text': ComponentText;
     'component-thumbnail': ComponentThumbnail;
     'component-toast': ComponentToast;
     'component-toggle': ComponentToggle;
