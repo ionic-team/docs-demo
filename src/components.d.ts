@@ -22,6 +22,10 @@ export namespace Components {
   interface ComponentChip {}
   interface ComponentContent {}
   interface ComponentDatetime {}
+  interface ComponentDetails {
+    'description': string;
+    'url': string;
+  }
   interface ComponentFab {}
   interface ComponentGrid {}
   interface ComponentIcons {}
@@ -140,6 +144,12 @@ declare global {
   var HTMLComponentDatetimeElement: {
     prototype: HTMLComponentDatetimeElement;
     new (): HTMLComponentDatetimeElement;
+  };
+
+  interface HTMLComponentDetailsElement extends Components.ComponentDetails, HTMLStencilElement {}
+  var HTMLComponentDetailsElement: {
+    prototype: HTMLComponentDetailsElement;
+    new (): HTMLComponentDetailsElement;
   };
 
   interface HTMLComponentFabElement extends Components.ComponentFab, HTMLStencilElement {}
@@ -377,6 +387,7 @@ declare global {
     'component-chip': HTMLComponentChipElement;
     'component-content': HTMLComponentContentElement;
     'component-datetime': HTMLComponentDatetimeElement;
+    'component-details': HTMLComponentDetailsElement;
     'component-fab': HTMLComponentFabElement;
     'component-grid': HTMLComponentGridElement;
     'component-icons': HTMLComponentIconsElement;
@@ -431,6 +442,10 @@ declare namespace LocalJSX {
   interface ComponentChip extends JSXBase.HTMLAttributes<HTMLComponentChipElement> {}
   interface ComponentContent extends JSXBase.HTMLAttributes<HTMLComponentContentElement> {}
   interface ComponentDatetime extends JSXBase.HTMLAttributes<HTMLComponentDatetimeElement> {}
+  interface ComponentDetails extends JSXBase.HTMLAttributes<HTMLComponentDetailsElement> {
+    'description'?: string;
+    'url'?: string;
+  }
   interface ComponentFab extends JSXBase.HTMLAttributes<HTMLComponentFabElement> {}
   interface ComponentGrid extends JSXBase.HTMLAttributes<HTMLComponentGridElement> {}
   interface ComponentIcons extends JSXBase.HTMLAttributes<HTMLComponentIconsElement> {}
@@ -483,6 +498,7 @@ declare namespace LocalJSX {
     'component-chip': ComponentChip;
     'component-content': ComponentContent;
     'component-datetime': ComponentDatetime;
+    'component-details': ComponentDetails;
     'component-fab': ComponentFab;
     'component-grid': ComponentGrid;
     'component-icons': ComponentIcons;

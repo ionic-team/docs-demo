@@ -42,27 +42,5 @@
  */
 
  .component-content {
-   --background: var(--ion-color-step-50, #f2f2f2);
+   --background: var(--ion-color-step-50, #f2f2f7);
  }
-
- .component-details ion-list {
-   margin-bottom: 26px;
- }
-
- .component-details .component-description {
-  color: var(--ion-color-step-800, #3e4a58);
-  font-size: 18px;
-  line-height: 1.4;
-  white-space: normal;
-  padding-bottom: 16px;
- }
-
- .component-details .component-description b {
-  color: var(--ion-text-color, #000);
-  font-weight: 450;
- }
-
- .component-details .component-link {
-   font-size: 16px;
- }
-

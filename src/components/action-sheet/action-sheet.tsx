@@ -58,6 +58,12 @@ export class ActionSheet {
   }
 
   render() {
+    const description = `The <b>Action Sheet</b> is a dialog that displays a set of options. It appears on
+    top of the app’s content, and must be manually dismissed by the user before they can
+    resume interaction with the app. There are multiple ways to dismiss the action sheet,
+    including tapping the backdrop or hitting the escape key.`;
+    const url = 'action-sheet';
+
     return [
       <ion-action-sheet-controller ref={e => { this.controller = e }} />,
       <ion-header>
@@ -70,29 +76,7 @@ export class ActionSheet {
       </ion-header>,
 
       <ion-content fullscreen class="component-content">
-        {/* TODO make into a component */}
-        <div class="component-details">
-          <ion-list>
-            <ion-item>
-              <ion-label class="component-description">
-                The <b>Action Sheet</b> is a dialog that displays a set of options. It appears on
-                top of the app’s content, and must be manually dismissed by the user before they can
-                resume interaction with the app. There are multiple ways to dismiss the action sheet,
-                including tapping the backdrop or hitting the escape key.
-              </ion-label>
-            </ion-item>
-            <ion-item class="component-link" href="https://ionicframework.com/docs/components" target="_blank">
-              <ion-label color="primary">
-                Component Docs
-              </ion-label>
-            </ion-item>
-            <ion-item lines="full" class="component-link" href="https://ionicframework.com/docs/api/action-sheet" target="_blank">
-              <ion-label color="primary">
-                API
-              </ion-label>
-            </ion-item>
-          </ion-list>
-        </div>
+        <component-details description={description} url={url}></component-details>
 
         <div class="component-preview">
           <div class="ion-padding-start ion-padding-end">
