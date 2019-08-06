@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class thumbnail {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -16,7 +16,7 @@ export class thumbnail {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-list-header>Default</ion-list-header>
         <ion-thumbnail class="ion-margin-start">
           <img src="/assets/thumbnail.svg" />

@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class card {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -16,7 +16,7 @@ export class card {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-card>
           <img src="/assets/madison.jpg" />
           <ion-card-header>

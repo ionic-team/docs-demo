@@ -66,7 +66,7 @@ export class ActionSheet {
 
     return [
       <ion-action-sheet-controller ref={e => { this.controller = e }} />,
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>

@@ -16,7 +16,7 @@ export class reorder {
 
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -28,7 +28,7 @@ export class reorder {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-list>
           <ion-list-header>Reorder Icon</ion-list-header>
           <ion-reorder-group id="reorder" onIonItemReorder={this.handleReorder}>

@@ -17,15 +17,12 @@ export class menu {
   render() {
     return [
       <ion-menu side="start" contentId="main">
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
-            <ion-buttons slot="start">
-              <ion-back-button defaultHref="/"></ion-back-button>
-            </ion-buttons>
             <ion-title>Menu</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content>
+        <ion-content fullscreen>
           <ion-list>
             <ion-item>
               <ion-icon name="home" slot="start"></ion-icon>
@@ -48,9 +45,10 @@ export class menu {
       </ion-menu>,
 
       <div class="ion-page" id="main">
-        <ion-header>
+        <ion-header translucent>
           <ion-toolbar>
             <ion-buttons slot="start">
+              <ion-back-button defaultHref="/"></ion-back-button>
               <ion-menu-button></ion-menu-button>
             </ion-buttons>
             <ion-title>Home</ion-title>

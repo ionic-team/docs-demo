@@ -1,4 +1,5 @@
 component-details ion-list {
+  padding-bottom: 0;
   margin-bottom: 26px !important;
 }
 

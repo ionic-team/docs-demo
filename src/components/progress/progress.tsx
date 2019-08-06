@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class progress {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -16,7 +16,7 @@ export class progress {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-list>
           <ion-list-header>
             <ion-label>Default</ion-label>

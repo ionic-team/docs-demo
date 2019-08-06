@@ -5,8 +5,10 @@
 .component-icon {
   border-radius: 50%;
   padding: 5px;
-  height: 16px;
-  width: 16px;
+  height: 22px;
+  width: 22px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .component-icon-dark {
@@ -17,4 +19,22 @@
 .component-icon-primary {
   background: var(--ion-color-primary);
   color: #fff;
+}
+
+.ios .home-list ion-item:first-child {
+  --border-width: .55px 0 0 0;
+}
+
+.md .home-list ion-item:first-child {
+  --border-width: 1px 0 0 0;
+}
+
+.ios .home-list ion-item:last-child {
+  --inner-border-width: 0 0 0 0;
+  --border-width: 0 0 .55px 0;
+}
+
+.md .home-list ion-item:last-child {
+  --inner-border-width: 0 0 0 0;
+  --border-width: 0 0 1px 0;
 }

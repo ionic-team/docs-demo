@@ -44,7 +44,7 @@ export class refresher {
 
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -53,7 +53,7 @@ export class refresher {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-refresher slot="fixed" id="refresher" onIonRefresh={this.handleRefresh} ref={e => this.refresher = e}>
           <ion-refresher-content></ion-refresher-content>
         </ion-refresher>

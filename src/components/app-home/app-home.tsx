@@ -26,13 +26,13 @@ export class AppHome {
 
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-title>Ionic Framework</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen>
         <ion-list>
           <ion-item lines="full">
             <ion-icon slot="start" icon="moon" class="component-icon component-icon-dark"></ion-icon>
@@ -43,7 +43,7 @@ export class AppHome {
           </ion-item>
         </ion-list>
 
-        <ion-list>
+        <ion-list class="home-list">
           {this.components.map(component => {
             const href = component.id === 'tabs' ? `/component/tabs/music` : `/component/${component.id}`;
 

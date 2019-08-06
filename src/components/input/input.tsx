@@ -30,7 +30,7 @@ export class input {
   render() {
     return [
       <ion-alert-controller ref={e => { this.controller = e}} />,
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>

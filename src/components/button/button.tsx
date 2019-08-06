@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class button {
   render() {
     return [
-      <ion-header>
+      <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
