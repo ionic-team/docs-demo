@@ -19,6 +19,12 @@ export class modal {
   }
 
   render() {
+    const description = `The <b>Modal</b> is a dialog that appears on top of the app's
+      content, and must be dismissed by the user before interaction can resume. It is
+      useful as a select component when there are a lot of options to choose from, or when
+      filtering items in a list, as well as many other use cases.`;
+    const url = 'modal';
+
     return [
       <ion-header>
         <ion-toolbar>
@@ -29,8 +35,12 @@ export class modal {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen class="ion-padding">
-        <ion-button expand="block" onClick={this.openModal}>Show Modal</ion-button>
+      <ion-content fullscreen class="component-content">
+        <component-details description={description} url={url}></component-details>
+
+        <div class="ion-padding-start ion-padding-end">
+          <ion-button expand="block" onClick={this.openModal}>Open Modal</ion-button>
+        </div>
       </ion-content>,
 
       <ion-modal-controller ref={e => { this.controller = e}}></ion-modal-controller>

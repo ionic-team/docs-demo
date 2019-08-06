@@ -5,7 +5,8 @@ import { Component, h, Element } from '@stencil/core';
   styleUrl: 'picker.css'
 })
 export class picker {
-  @Element() el;
+  @Element() el!: HTMLElement;
+
   defaultColumnOptions = [
     [
       'Dog',
@@ -79,6 +80,11 @@ export class picker {
   }
 
   render() {
+    const description = `The <b>Picker</b> is a dialog that displays a row of buttons
+      and columns underneath. It appears on top of the app's content, and at the bottom
+      of the viewport.`;
+    const url = 'picker';
+
     return [
       <ion-header>
         <ion-toolbar>
@@ -89,11 +95,16 @@ export class picker {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen class="component-content">
+        <component-details description={description} url={url}></component-details>
+
+        <div class="ion-padding-start ion-padding-end">
+          <ion-button expand="block" onClick={_ => this.openPicker()}>Open Single Column Picker</ion-button>
+          <ion-button expand="block" onClick={_ => this.openPicker(2, 5, this.multiColumnOptions)}>Open Multiple Column Picker</ion-button>
+        </div>
+
         <ion-picker-controller></ion-picker-controller>
-        <ion-button onClick={_ => this.openPicker()}>Open Single Column Picker</ion-button>
-        <ion-button onClick={_ => this.openPicker(2, 5, this.multiColumnOptions)}>Open Multi Column Picker</ion-button>
-      </ion-content>
+      </ion-content>,
     ];
   }
 }

@@ -18,6 +18,12 @@ export class toast {
     toast.present();
   }
   render() {
+    const description = `The <b>Toast</b> is a subtle notification commonly used in modern
+      applications. It can be used to provide feedback about an operation or to display a
+      system message. It appears on top of the app's content, and can be dismissed by the
+      app to resume user interaction with the app.`;
+    const url = 'toast';
+
     return [
       <ion-header>
         <ion-toolbar>
@@ -28,9 +34,14 @@ export class toast {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content>
+      <ion-content fullscreen class="component-content">
+        <component-details description={description} url={url}></component-details>
+
+        <div class="ion-padding-start ion-padding-end">
+          <ion-button expand="block" onClick={this.openToast}>Open Toast</ion-button>
+        </div>
+
         <ion-toast-controller ref={e => { this.controller = e }}></ion-toast-controller>
-        <ion-button expand="block" onClick={this.openToast}>Pair <ion-icon slot="end" name="bluetooth"></ion-icon></ion-button>
       </ion-content>
     ];
   }

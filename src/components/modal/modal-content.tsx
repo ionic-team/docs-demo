@@ -13,7 +13,7 @@ export class ModalContent {
     return [
       <ion-header translucent>
         <ion-toolbar>
-          <ion-title>Modal Content</ion-title>
+          <ion-title>Contacts</ion-title>
           <ion-buttons slot="end">
             <ion-button onClick={this.dismiss}>Close</ion-button>
           </ion-buttons>
@@ -39,7 +39,7 @@ export class ModalContent {
               <p>Go back, Sam! I'm going to Mordor alone!</p>
             </ion-label>
           </ion-item>
-          <ion-item>
+          <ion-item lines="full">
             <ion-avatar slot="start">
               <ion-img src="/assets/avatar-samwise.jpg"/>
             </ion-avatar>
