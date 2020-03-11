@@ -10,7 +10,8 @@
   --transition: none;
 }
 
-.theme-list {
+.theme-list,
+.home-list {
   padding-bottom: 40px;
 }
 
@@ -18,17 +19,26 @@
   padding-right: 0;
 }
 
-.home-list {
-  border-top-color: var(--ion-border-color);
-  border-top-style: solid;
+/*
+ * iOS Border is hairline width
+ */
+
+.ios .home-list ion-item:first-child {
+  --border-width: 0.55px 0 0 0;
 }
 
-.ios .home-list {
-  border-top-width: .55px;
+.md .home-list ion-item:first-child {
+  --border-width: 1px 0 0 0;
 }
 
-.md .home-list {
-  border-top-width: 1px;
+.ios .home-list ion-item:last-child {
+  --border-width: 0 0 0.55px 0;
+  --inner-border-width: 0;
+}
+
+.md .home-list ion-item:last-child {
+  --border-width: 0 0 1px 0;
+  --inner-border-width: 0;
 }
 
 

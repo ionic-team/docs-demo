@@ -72,8 +72,6 @@ body.dark {
   --ion-color-light-contrast-rgb: 255,255,255;
   --ion-color-light-shade: #1e2023;
   --ion-color-light-tint: #383a3e;
-
-  --ion-border-color: #1a1a1a;
 }
 
 /*
@@ -111,6 +109,8 @@ body.dark {
   --ion-toolbar-background: #0d0d0d;
 
   --ion-item-background: #000000;
+
+  --ion-border-color: #1a1a1a;
 }
 
 /*
