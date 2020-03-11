@@ -1,4 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
+import { _template_ } from '../_template_/_template_';
 
 /**
  * This component is useful for providing a top section in the component page
@@ -16,6 +17,8 @@ export class ComponentDetails {
   render() {
     const { url, description } = this;
 
+    const name = url.replace('-', ' ');
+
     return (
       <ion-list>
         <ion-item lines="full">
@@ -23,14 +26,14 @@ export class ComponentDetails {
             <span innerHTML={ description }></span>
           </ion-label>
         </ion-item>
-        <ion-item class="component-link" href="https://ionicframework.com/docs/components" target="_blank">
+        <ion-item class="component-link" href={`https://ionicframework.com/docs/api/${url}`} target="_blank">
           <ion-label color="primary">
-            Component Docs
+            { name } API Docs
           </ion-label>
         </ion-item>
-        <ion-item lines="full" class="component-link" href={`https://ionicframework.com/docs/api/${url}`} target="_blank">
+        <ion-item lines="full" class="component-link" href="https://ionicframework.com/docs/components" target="_blank">
           <ion-label color="primary">
-            API
+            UI Component Docs
           </ion-label>
         </ion-item>
       </ion-list>
