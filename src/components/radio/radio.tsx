@@ -18,7 +18,7 @@ export class radio {
 
       <ion-content fullscreen>
         <ion-list>
-          <ion-radio-group>
+          <ion-radio-group value="grape">
             <ion-list-header>
               <ion-label>Fruit</ion-label>
             </ion-list-header>
@@ -29,7 +29,7 @@ export class radio {
 
             <ion-item>
               <ion-label>Grape</ion-label>
-              <ion-radio slot="start" color="tertiary" value="grape" checked></ion-radio>
+              <ion-radio slot="start" color="tertiary" value="grape"></ion-radio>
             </ion-item>
 
             <ion-item>
@@ -38,23 +38,23 @@ export class radio {
             </ion-item>
           </ion-radio-group>
 
-          <ion-radio-group allow-empty-selection>
+          <ion-radio-group value="anchovies" allow-empty-selection>
             <ion-list-header>
               <ion-label>Pizza Topping</ion-label>
             </ion-list-header>
             <ion-item>
               <ion-label>Beef</ion-label>
-              <ion-radio slot="end" color="primary"></ion-radio>
+              <ion-radio slot="end" color="primary" value="beef"></ion-radio>
             </ion-item>
 
             <ion-item>
               <ion-label>Anchovies</ion-label>
-              <ion-radio slot="end" color="secondary" checked></ion-radio>
+              <ion-radio slot="end" color="secondary" value="anchovies"></ion-radio>
             </ion-item>
 
             <ion-item>
               <ion-label>Sausage</ion-label>
-              <ion-radio slot="end" color="tertiary" name="sausage"></ion-radio>
+              <ion-radio slot="end" color="tertiary" value="sausage"></ion-radio>
             </ion-item>
 
             <ion-item>
@@ -69,7 +69,7 @@ export class radio {
 
             <ion-item>
               <ion-label>Pepperoni</ion-label>
-              <ion-radio slot="end" color="danger" checked></ion-radio>
+              <ion-radio slot="end" color="danger" value="pepperoni"></ion-radio>
             </ion-item>
           </ion-radio-group>
         </ion-list>

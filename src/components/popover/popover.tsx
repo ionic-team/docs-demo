@@ -1,5 +1,7 @@
 import { Component, h, Element } from '@stencil/core';
 
+import { popoverController } from '@ionic/core';
+
 @Component({
   tag: 'component-popover',
   styleUrl: 'popover.css'
@@ -8,8 +10,7 @@ export class popover {
   @Element() el;
 
   showPopover = async (event: MouseEvent) => {
-    const controller = this.el.querySelector('ion-popover-controller');
-    const popover = await controller.create({
+    const popover = await popoverController.create({
       component: 'popover-example-page',
       event: event,
       translucent: true
@@ -31,7 +32,6 @@ export class popover {
           </ion-buttons>
           <ion-title>Popover</ion-title>
           <ion-buttons slot="end">
-            <ion-popover-controller></ion-popover-controller>
             <ion-button slot="end" onClick={this.showPopover}>
               <ion-icon slot="icon-only" name="information-circle"></ion-icon>
             </ion-button>

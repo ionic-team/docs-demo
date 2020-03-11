@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 
-import { Config } from '@ionic/core';
+import { actionSheetController, Config } from '@ionic/core';
 
 @Component({
   tag: 'component-action-sheet',
@@ -11,14 +11,10 @@ export class ActionSheet {
 
   @Prop({ context: 'config' }) config: Config;
 
-  controller: HTMLIonActionSheetControllerElement;
-
   open = async () => {
     const mode = this.config.get('mode');
 
-    await this.controller.componentOnReady();
-
-    const actionSheet = await this.controller.create({
+    const actionSheet = await actionSheetController.create({
       header: "Albums",
       buttons: [{
         text: 'Delete',
@@ -65,7 +61,6 @@ export class ActionSheet {
     const url = 'action-sheet';
 
     return [
-      <ion-action-sheet-controller ref={e => { this.controller = e }} />,
       <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">

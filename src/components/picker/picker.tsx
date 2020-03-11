@@ -1,5 +1,7 @@
 import { Component, h, Element } from '@stencil/core';
 
+import { pickerController } from '@ionic/core';
+
 @Component({
   tag: 'component-picker',
   styleUrl: 'picker.css'
@@ -35,7 +37,6 @@ export class picker {
   ]
 
   async openPicker(numColumns = 1, numOptions = 5, columnOptions = this.defaultColumnOptions){
-    const pickerController = this.el.querySelector('ion-picker-controller');
     const picker = await pickerController.create({
       columns: this.getColumns(numColumns, numOptions, columnOptions),
       buttons: [
@@ -102,9 +103,7 @@ export class picker {
           <ion-button expand="block" onClick={_ => this.openPicker()}>Open Single Column Picker</ion-button>
           <ion-button expand="block" onClick={_ => this.openPicker(2, 5, this.multiColumnOptions)}>Open Multiple Column Picker</ion-button>
         </div>
-
-        <ion-picker-controller></ion-picker-controller>
-      </ion-content>,
+      </ion-content>
     ];
   }
 }

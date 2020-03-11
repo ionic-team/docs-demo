@@ -1,18 +1,21 @@
 import { Component, h } from '@stencil/core';
 
+import { toastController } from '@ionic/core';
+
 @Component({
   tag: 'component-toast',
   styleUrl: 'toast.css'
 })
 export class toast {
-  controller: HTMLIonToastControllerElement;
-
   openToast = async () => {
-    const toast = await this.controller.create({
+    const toast = await toastController.create({
       color: 'dark',
       duration: 2000,
       message: 'Paired successfully',
-      showCloseButton: true
+      buttons: [{
+        text: 'Close',
+        role: 'cancel'
+      }]
     });
 
     toast.present();
@@ -40,8 +43,6 @@ export class toast {
         <div class="ion-padding-start ion-padding-end">
           <ion-button expand="block" onClick={this.openToast}>Open Toast</ion-button>
         </div>
-
-        <ion-toast-controller ref={e => { this.controller = e }}></ion-toast-controller>
       </ion-content>
     ];
   }

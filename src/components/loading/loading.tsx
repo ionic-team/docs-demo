@@ -1,5 +1,7 @@
 import { Component, h, Element } from '@stencil/core';
 
+import { loadingController } from '@ionic/core';
+
 @Component({
   tag: 'component-loading',
   styleUrl: 'loading.css'
@@ -7,12 +9,8 @@ import { Component, h, Element } from '@stencil/core';
 export class loading {
   @Element() el;
 
-  controller: HTMLIonLoadingControllerElement;
-
   handleButtonClick = async () => {
-    await this.controller.componentOnReady();
-
-    const loading = await this.controller.create({
+    const loading = await loadingController.create({
       message: 'Please wait...',
       duration: 3000
     });
@@ -42,9 +40,7 @@ export class loading {
         <div class="ion-padding-start ion-padding-end">
           <ion-button expand="block" onClick={this.handleButtonClick}>Open Loading</ion-button>
         </div>
-      </ion-content>,
-
-      <ion-loading-controller ref={e => { this.controller = e}}></ion-loading-controller>
+      </ion-content>
     ];
   }
 }

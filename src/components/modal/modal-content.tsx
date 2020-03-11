@@ -1,12 +1,13 @@
 import { Component, h } from '@stencil/core';
 
+import { modalController } from '@ionic/core';
+
 @Component({
   tag: 'component-modal-content',
 })
 export class ModalContent {
   dismiss = () => {
-    const controller = document.querySelector('ion-modal-controller') as HTMLIonModalControllerElement;
-    controller.dismiss();
+    modalController.dismiss();
   }
 
   render() {

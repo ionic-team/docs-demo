@@ -1,16 +1,14 @@
 import { Component, h } from '@stencil/core';
 
+import { alertController } from '@ionic/core';
+
 @Component({
   tag: 'component-alert',
   styleUrl: 'alert.css'
 })
 export class alert {
-  controller: HTMLIonAlertControllerElement;
-
   open = async () => {
-    await this.controller.componentOnReady();
-
-    const alert = await this.controller.create({
+    const alert = await alertController.create({
       header: 'Use this lightsaber?',
       message: 'Do you agree to use this lightsaber to do good across the galaxy?',
       buttons: ['Disagree', 'Agree']
@@ -25,7 +23,6 @@ export class alert {
     const url = `alert`;
 
     return [
-      <ion-alert-controller ref={e => { this.controller = e }} />,
       <ion-header translucent>
         <ion-toolbar>
           <ion-buttons slot="start">
