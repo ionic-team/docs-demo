@@ -19,25 +19,25 @@ export class ActionSheet {
       buttons: [{
         text: 'Delete',
         role: 'destructive',
-        icon: mode !== 'ios' ? 'trash' : null,
+        icon: mode !== 'ios' ? 'trash-outline' : null,
         handler: () => {
           console.log('Delete clicked');
         }
       }, {
         text: 'Share',
-        icon: mode !== 'ios' ? 'share' : null,
+        icon: mode !== 'ios' ? 'share-outline' : null,
         handler: () => {
           console.log('Share clicked');
         }
       }, {
         text: 'Play (open modal)',
-        icon: mode !== 'ios' ? 'arrow-dropright-circle' : null,
+        icon: mode !== 'ios' ? 'play-circle-outline' : null,
         handler: () => {
           console.log('Play clicked');
         }
       }, {
         text: 'Favorite',
-        icon: mode !== 'ios' ? 'heart' : null,
+        icon: mode !== 'ios' ? 'heart-outline' : null,
         handler: () => {
           console.log('Favorite clicked');
         }

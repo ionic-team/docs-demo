@@ -18,7 +18,7 @@ export class ComponentDetails {
 
     return (
       <ion-list>
-        <ion-item>
+        <ion-item lines="full">
           <ion-label class="component-description">
             <span innerHTML={ description }></span>
           </ion-label>
