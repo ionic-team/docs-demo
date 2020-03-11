@@ -2,7 +2,8 @@
  * Lists
  */
 
-ion-list ion-item {
+.theme-list ion-item,
+.home-list ion-item {
   --padding-start: 14px;
   --inner-padding-end: 14px;
 
