@@ -12,12 +12,17 @@
 
 .theme-list,
 .home-list {
-  padding-bottom: 40px;
+  padding-bottom: 40px !important;
 }
 
 .theme-list ion-toggle {
   padding-right: 0;
 }
+
+.home-list {
+  padding-top: 0 !important;
+}
+
 
 /*
  * iOS Border is hairline width
@@ -58,8 +63,8 @@
 }
 
 .component-icon-dark {
-  background: #27323e;
-  color: #fff;
+  background: var(--ion-color-step-850, #27323e);
+  color: var(--ion-item-background, #fff);
 }
 
 .component-icon-primary {

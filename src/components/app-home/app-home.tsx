@@ -8,20 +8,8 @@ import { getComponents } from '../../utils/component-utils';
 export class AppHome {
   components = getComponents();
 
-  componentWillLoad() {
-    if (this.isChecked()) {
-      this.toggleDarkMode();
-    }
-  }
-
   toggleDarkMode = () => {
     document.body.classList.toggle('dark');
-  }
-
-  isChecked = () => {
-    const theme = getComputedStyle(document.body).getPropertyValue('--ion-color-scheme').trim();
-
-    return theme === 'dark';
   }
 
   render() {
@@ -45,7 +33,7 @@ export class AppHome {
             <ion-label>
               Dark Mode
             </ion-label>
-            <ion-toggle slot="end" onIonChange={this.toggleDarkMode} checked={this.isChecked()}></ion-toggle>
+            <ion-toggle slot="end" onIonChange={this.toggleDarkMode}></ion-toggle>
           </ion-item>
         </ion-list>
 
