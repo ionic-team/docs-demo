@@ -1,12 +1,47 @@
 /*
+ * Lists
+ */
+
+ion-list ion-item {
+  --padding-start: 14px;
+  --inner-padding-end: 14px;
+
+  --transition: none;
+}
+
+.theme-list {
+  padding-bottom: 40px;
+}
+
+.theme-list ion-toggle {
+  padding-right: 0;
+}
+
+.home-list {
+  border-top-color: var(--ion-border-color);
+  border-top-style: solid;
+}
+
+.ios .home-list {
+  border-top-width: .55px;
+}
+
+.md .home-list {
+  border-top-width: 1px;
+}
+
+
+/*
  * Component icons
  */
 
 .component-icon {
   border-radius: 50%;
-  padding: 5px;
-  height: 22px;
-  width: 22px;
+
+  padding: 7px;
+  height: 18px;
+  width: 18px;
+
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -19,22 +54,4 @@
 .component-icon-primary {
   background: var(--ion-color-primary);
   color: #fff;
-}
-
-.ios .home-list ion-item:first-child {
-  --border-width: .55px 0 0 0;
-}
-
-.md .home-list ion-item:first-child {
-  --border-width: 1px 0 0 0;
-}
-
-.ios .home-list ion-item:last-child {
-  --inner-border-width: 0 0 0 0;
-  --border-width: 0 0 .55px 0;
-}
-
-.md .home-list ion-item:last-child {
-  --inner-border-width: 0 0 0 0;
-  --border-width: 0 0 1px 0;
 }

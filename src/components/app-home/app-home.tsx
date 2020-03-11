@@ -26,15 +26,21 @@ export class AppHome {
 
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-title>Ionic Framework</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
-        <ion-list>
-          <ion-item lines="full">
+      <ion-content fullscreen={true}>
+        <ion-header collapse="condense">
+          <ion-toolbar>
+            <ion-title size="large">Ionic Framework</ion-title>
+          </ion-toolbar>
+        </ion-header>
+
+        <ion-list class="theme-list" lines="full">
+          <ion-item>
             <ion-icon slot="start" icon="moon" class="component-icon component-icon-dark"></ion-icon>
             <ion-label>
               Dark Mode
