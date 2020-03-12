@@ -1,19 +1,19 @@
 import { Component, h, State } from '@stencil/core';
 
 const names = [
-    'Burt Bear',
-    'Charlie Cheetah',
-    'Donald Duck',
-    'Eva Eagle',
-    'Ellie Elephant',
-    'Gino Giraffe',
-    'Isabella Iguana',
-    'Karl Kitten',
-    'Lionel Lion',
-    'Molly Mouse',
-    'Paul Puppy',
-    'Rachel Rabbit',
-    'Ted Turtle'
+  'Burt Bear',
+  'Charlie Cheetah',
+  'Donald Duck',
+  'Eva Eagle',
+  'Ellie Elephant',
+  'Gino Giraffe',
+  'Isabella Iguana',
+  'Karl Kitten',
+  'Lionel Lion',
+  'Molly Mouse',
+  'Paul Puppy',
+  'Rachel Rabbit',
+  'Ted Turtle'
 ];
 
 const createItems = (count: number, unread: boolean) => {
@@ -58,13 +58,13 @@ export class refresher {
           <ion-refresher-content></ion-refresher-content>
         </ion-refresher>
         <ion-list>
-          {this.items.map(({unread, name }: any) => {
+          {this.items.map(({ unread, name }: any) => {
             return (
               <ion-item>
-                <div slot="start" class={unread ? 'unread' : 'read'}></div>
+                <div slot="start" class={unread ? 'dot unread' : 'dot read'}></div>
                 <ion-label class="ion-text-wrap">
                   <h2>{name}</h2>
-                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                 </ion-label>
               </ion-item>
             );

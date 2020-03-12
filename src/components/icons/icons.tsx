@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class icons {
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -16,151 +16,56 @@ export class icons {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
-        <ion-list>
-          <ion-item>
-            <ion-icon name="home" id="dynamicColor" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="home"
-              </code>
-            </ion-label>
-          </ion-item>
+      <ion-content fullscreen={true} class="ion-padding ion-text-center">
+        <ion-icon name="logo-ionic" color="primary"></ion-icon>
+        <ion-icon name="logo-pwa"></ion-icon>
+        <ion-icon name="heart" color="danger"></ion-icon>
+        <ion-icon name="logo-ionitron" color="primary"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="home" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="home"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="happy" color="warning"></ion-icon>
+        <ion-icon name="finger-print"></ion-icon>
+        <ion-icon name="person" color="tertiary"></ion-icon>
+        <ion-icon name="people-circle"></ion-icon>
 
-          <ion-item>
-            <ion-icon id="dynamicHomeIcon" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                id="dynamicHomeIcon"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="apps"></ion-icon>
+        <ion-icon name="lock-closed"></ion-icon>
+        <ion-icon name="key" color="success"></ion-icon>
+        <ion-icon name="attach"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="md-home" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="md-home"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="map" color="secondary"></ion-icon>
+        <ion-icon name="navigate"></ion-icon>
+        <ion-icon name="pin"></ion-icon>
+        <ion-icon name="locate"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="ios-home" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="ios-home"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="mic"></ion-icon>
+        <ion-icon name="volume-high" color="danger"></ion-icon>
+        <ion-icon name="musical-notes"></ion-icon>
+        <ion-icon name="radio" color="primary"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="ios-home" slot="end"></ion-icon>
-            <ion-label>
-              <code>
-                name="ios-home"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="cafe" color="success"></ion-icon>
+        <ion-icon name="calculator"></ion-icon>
+        <ion-icon name="bus" color="warning"></ion-icon>
+        <ion-icon name="wine"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="ios-star-outline" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="ios-star-outline"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="camera"></ion-icon>
+        <ion-icon name="star" color="tertiary"></ion-icon>
+        <ion-icon name="image"></ion-icon>
+        <ion-icon name="pin" color="secondary"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="IOS-STAR-OUTLINE" slot="end"></ion-icon>
-            <ion-label>
-              <code>
-                name="IOS-STAR-OUTLINE"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="arrow-up-circle" color="warning"></ion-icon>
+        <ion-icon name="arrow-undo"></ion-icon>
+        <ion-icon name="chevron-down"></ion-icon>
+        <ion-icon name="play-circle"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="md-home" color="primary" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="md-home"
-              </code>
-            </ion-label>
-          </ion-item>
+        <ion-icon name="cloud"></ion-icon>
+        <ion-icon name="sunny" color="success"></ion-icon>
+        <ion-icon name="umbrella"></ion-icon>
+        <ion-icon name="rainy"></ion-icon>
 
-          <ion-item>
-            <ion-icon name="logo-twitter" color="secondary" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="logo-twitter"
-              </code>
-            </ion-label>
-          </ion-item>
-
-          <ion-item>
-            <ion-icon ios="logo-apple" md="logo-android" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                ios="logo-apple" md="logo-android"
-              </code>
-            </ion-label>
-          </ion-item>
-
-          <ion-item>
-            <ion-icon name="color-filter" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="color-filter"
-              </code>
-            </ion-label>
-          </ion-item>
-
-          <ion-item>
-            <ion-icon ios="ios-color-filter" md="md-color-filter" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                ios="ios-color-filter" md="md-color-filter"
-              </code>
-            </ion-label>
-          </ion-item>
-
-          <ion-item>
-            <ion-icon ios="MD-COLOR-FILTER" md="IOS-COLOR-FILTER" slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                ios="MD-COLOR-FILTER" md="IOS-COLOR-FILTER"
-              </code>
-            </ion-label>
-          </ion-item>
-
-          <ion-item>
-            <ion-icon slot="start"></ion-icon>
-            <ion-label>
-              <code>
-                name="null"
-              </code>
-            </ion-label>
-          </ion-item>
-
-          <ion-item detail={true}>
-            <ion-label>
-              <code>
-                ion-item w/ [detail="true"] attr. text text text text text text
-              </code>
-            </ion-label>
-          </ion-item>
-        </ion-list>
+        <ion-icon name="game-controller" color="danger"></ion-icon>
+        <ion-icon name="alarm"></ion-icon>
+        <ion-icon name="barbell"></ion-icon>
+        <ion-icon name="earth" color="primary"></ion-icon>
       </ion-content>
     ];
   }

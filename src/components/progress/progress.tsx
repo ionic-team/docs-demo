@@ -33,12 +33,10 @@ export class progress {
 
         <ion-list>
           <ion-list-header>
-            <ion-label>Colorized</ion-label>
+            <ion-label>Colors</ion-label>
           </ion-list-header>
-          <ion-progress-bar color="primary" value={0.5}></ion-progress-bar>
           <ion-progress-bar color="secondary" value={0.5}></ion-progress-bar>
-
-
+          <ion-progress-bar color="tertiary" value={0.5}></ion-progress-bar>
 
           <ion-list-header>
             <ion-label>

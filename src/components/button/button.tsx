@@ -16,35 +16,35 @@ export class button {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen class="ion-padding">
+      <ion-content fullscreen>
         <section>
-          <header>Small Size</header>
+          <ion-list-header>Small Size</ion-list-header>
           <ion-button size="small">Default</ion-button>
           <ion-button size="small" color="secondary">Secondary</ion-button>
           <ion-button size="small" color="tertiary">Tertiary</ion-button>
         </section>
 
         <section>
-          <header>Default Size</header>
+          <ion-list-header>Default Size</ion-list-header>
           <ion-button color="success">Success</ion-button>
           <ion-button color="warning">Warning</ion-button>
           <ion-button color="danger">Danger</ion-button>
         </section>
 
         <section>
-          <header>Large Size</header>
+          <ion-list-header>Large Size</ion-list-header>
           <ion-button size="large" color="light">Light</ion-button>
           <ion-button size="large" color="medium">Medium</ion-button>
           <ion-button size="large" color="dark">Dark</ion-button>
         </section>
 
         <section>
-          <header>Block Width</header>
+          <ion-list-header>Block Width</ion-list-header>
           <ion-button expand="block">A block button</ion-button>
         </section>
 
-        <section class="full-width">
-          <header>Full Width</header>
+        <section>
+          <ion-list-header>Full Width</ion-list-header>
           <ion-button expand="full" color="secondary">A full-width button</ion-button>
         </section>
       </ion-content>

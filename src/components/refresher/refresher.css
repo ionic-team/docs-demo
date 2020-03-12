@@ -1,25 +1,28 @@
-ion-content {
+component-refresher ion-content {
   user-select: none;
 }
 
-ion-item {
+component-refresher ion-item {
   --padding-start: 8px;
 }
 
-.unread {
+component-refresher .dot {
   width: 10px;
   height: 10px;
   border-radius: 10px;
-  background-color: #3684ff;
   margin-top: 15px;
   margin-right: 8px;
   align-self: start;
 }
 
-ion-item h2 {
-  font-weight: 500 !important;
+component-refresher .md .dot {
+  margin-top: 17px;
 }
 
-ion-item h3 {
-  color: #777;
+component-refresher .unread {
+  background-color: #3684ff;
+}
+
+component-refresher ion-item h2 {
+  font-weight: 500 !important;
 }

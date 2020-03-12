@@ -33,7 +33,7 @@ export class popover {
           <ion-title>Popover</ion-title>
           <ion-buttons slot="end">
             <ion-button slot="end" onClick={this.showPopover}>
-              <ion-icon slot="icon-only" name="information-circle"></ion-icon>
+              <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-toolbar>

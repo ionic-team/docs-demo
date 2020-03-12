@@ -12,7 +12,7 @@ export class fab {
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
-          <ion-title>FAB</ion-title>
+          <ion-title>Floating Action Button</ion-title>
         </ion-toolbar>
       </ion-header>,
 
@@ -42,7 +42,7 @@ export class fab {
 
         <ion-fab horizontal="end" vertical="bottom" slot="fixed">
           <ion-fab-button color="light">
-            <ion-icon name="arrow-dropleft"></ion-icon>
+            <ion-icon name="caret-back"></ion-icon>
           </ion-fab-button>
           <ion-fab-list side="start">
             <ion-fab-button color="light">
@@ -59,7 +59,7 @@ export class fab {
 
         <ion-fab horizontal="start" vertical="bottom" slot="fixed">
           <ion-fab-button color="dark">
-            <ion-icon name="arrow-dropup"></ion-icon>
+            <ion-icon name="caret-up"></ion-icon>
           </ion-fab-button>
           <ion-fab-list side="top">
             <ion-fab-button color="light">
@@ -79,7 +79,7 @@ export class fab {
 
         <ion-fab horizontal="start" vertical="top" slot="fixed">
           <ion-fab-button color="secondary">
-            <ion-icon name="arrow-dropright"></ion-icon>
+            <ion-icon name="caret-forward"></ion-icon>
           </ion-fab-button>
           <ion-fab-list side="end">
             <ion-fab-button color="light">

@@ -65,8 +65,8 @@ export class reorder {
               <ion-label>
                 Item 5
               </ion-label>
-              <ion-reorder slot="start">
-                <ion-icon name="repeat"></ion-icon>
+              <ion-reorder slot="end">
+                <ion-icon name="swap-vertical"></ion-icon>
               </ion-reorder>
             </ion-item>
 
@@ -74,8 +74,8 @@ export class reorder {
               <ion-label>
                 Item 6
               </ion-label>
-              <ion-reorder slot="start">
-                <ion-icon name="repeat"></ion-icon>
+              <ion-reorder slot="end">
+                <ion-icon name="swap-vertical"></ion-icon>
               </ion-reorder>
             </ion-item>
 
@@ -83,8 +83,8 @@ export class reorder {
               <ion-label>
                 Item 7
               </ion-label>
-              <ion-reorder slot="start">
-                <ion-icon name="repeat"></ion-icon>
+              <ion-reorder slot="end">
+                <ion-icon name="swap-vertical"></ion-icon>
               </ion-reorder>
             </ion-item>
 

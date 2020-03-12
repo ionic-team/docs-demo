@@ -12,7 +12,7 @@ export class nav {
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
-          <ion-title>Nav</ion-title>
+          <ion-title>Navigation</ion-title>
         </ion-toolbar>
       </ion-header>,
 
