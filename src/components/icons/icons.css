@@ -1,4 +1,6 @@
 component-icons ion-icon {
-  font-size: 56px;
-  margin: 9px;
+  font-size: 36px;
+  margin: 3px;
+
+  color: var(--ion-color-step-650, #444);
 }
