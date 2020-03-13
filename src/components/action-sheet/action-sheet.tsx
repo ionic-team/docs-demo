@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 
-import { actionSheetController, Config } from '@ionic/core';
+import { Config, actionSheetController } from '@ionic/core';
 
 @Component({
   tag: 'component-action-sheet',
@@ -15,7 +15,7 @@ export class ActionSheet {
     const mode = this.config.get('mode');
 
     const actionSheet = await actionSheetController.create({
-      header: "Albums",
+      header: 'Albums',
       buttons: [{
         text: 'Delete',
         role: 'destructive',

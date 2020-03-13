@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-avatar',
   styleUrl: 'avatar.css'
 })
-export class avatar {
+export class Avatar {
   render() {
     return [
       <ion-header translucent={true}>

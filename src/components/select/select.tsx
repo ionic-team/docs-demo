@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-select',
   styleUrl: 'select.css'
 })
-export class select {
+export class Select {
   render() {
     return [
       <ion-header translucent={true}>

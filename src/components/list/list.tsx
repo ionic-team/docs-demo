@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-list',
   styleUrl: 'list.css'
 })
-export class list {
+export class List {
   render() {
     return [
       <ion-header translucent={true}>

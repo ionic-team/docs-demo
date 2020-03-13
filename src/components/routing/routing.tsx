@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-routing',
   styleUrl: 'routing.css'
 })
-export class routing {
+export class Routing {
   render() {
     return [
       <ion-header translucent={true}>

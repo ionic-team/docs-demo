@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-tabs',
   styleUrl: 'tabs.css'
 })
-export class tabs {
+export class Tabs {
   render() {
     return [
     <ion-tabs>

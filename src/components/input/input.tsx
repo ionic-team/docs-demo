@@ -1,4 +1,4 @@
-import { Component, h, Element, State } from '@stencil/core';
+import { Component, Element, State, h } from '@stencil/core';
 
 import { alertController } from '@ionic/core';
 
@@ -6,7 +6,7 @@ import { alertController } from '@ionic/core';
   tag: 'component-input',
   styleUrl: 'input.css'
 })
-export class input {
+export class Input {
   @Element() el;
 
   @State() firstName: string;

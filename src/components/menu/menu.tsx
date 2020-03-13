@@ -1,4 +1,4 @@
-import { Component, h, Element } from '@stencil/core';
+import { Component, Element, h } from '@stencil/core';
 
 import { menuController } from '@ionic/core';
 
@@ -6,7 +6,7 @@ import { menuController } from '@ionic/core';
   tag: 'component-menu',
   styleUrl: 'menu.css'
 })
-export class menu {
+export class Menu {
   @Element() el;
 
   openMenu = async () => {

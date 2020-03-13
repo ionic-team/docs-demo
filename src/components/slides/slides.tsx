@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-slides',
   styleUrl: 'slides.css'
 })
-export class slides {
+export class Slides {
   render() {
     return [
       <ion-header translucent={true}>

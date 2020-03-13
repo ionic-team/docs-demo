@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-toggle',
   styleUrl: 'toggle.css'
 })
-export class toggle {
+export class Toggle {
   render() {
     return [
       <ion-header translucent={true}>

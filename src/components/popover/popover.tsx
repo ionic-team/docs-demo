@@ -1,4 +1,4 @@
-import { Component, h, Element } from '@stencil/core';
+import { Component, Element, h } from '@stencil/core';
 
 import { popoverController } from '@ionic/core';
 
@@ -6,13 +6,13 @@ import { popoverController } from '@ionic/core';
   tag: 'component-popover',
   styleUrl: 'popover.css'
 })
-export class popover {
+export class Popover {
   @Element() el;
 
   showPopover = async (event: MouseEvent) => {
     const popover = await popoverController.create({
       component: 'popover-example-page',
-      event: event,
+      event,
       translucent: true
     });
     return popover.present();

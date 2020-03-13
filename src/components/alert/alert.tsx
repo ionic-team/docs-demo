@@ -6,7 +6,7 @@ import { alertController } from '@ionic/core';
   tag: 'component-alert',
   styleUrl: 'alert.css'
 })
-export class alert {
+export class Alert {
   open = async () => {
     const alert = await alertController.create({
       header: 'Use this lightsaber?',

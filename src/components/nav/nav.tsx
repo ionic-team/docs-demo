@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-nav',
   styleUrl: 'nav.css'
 })
-export class nav {
+export class Nav {
   render() {
     return [
       <ion-header translucent={true}>
@@ -17,7 +17,7 @@ export class nav {
       </ion-header>,
 
       <ion-content fullscreen={true}>
-        <ion-nav id="nav-example" root="nav-example-page"></ion-nav>
+
       </ion-content>
     ];
   }

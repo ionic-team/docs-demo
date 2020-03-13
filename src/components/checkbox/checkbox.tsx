@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-checkbox',
   styleUrl: 'checkbox.css'
 })
-export class checkbox {
+export class Checkbox {
   render() {
     return [
       <ion-header translucent={true}>

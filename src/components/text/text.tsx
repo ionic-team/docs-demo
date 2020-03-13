@@ -5,7 +5,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'text.css',
   shadow: true
 })
-export class text {
+export class Text {
   render() {
     return [
       <ion-header translucent={true}>

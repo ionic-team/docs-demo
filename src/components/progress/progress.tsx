@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-progress',
   styleUrl: 'progress.css'
 })
-export class progress {
+export class Progress {
   render() {
     return [
       <ion-header translucent={true}>
