@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class badge {
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -16,7 +16,7 @@ export class badge {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <ion-list>
           <ion-list-header>Badges</ion-list-header>
           <ion-item>

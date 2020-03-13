@@ -7,16 +7,16 @@ import { Component, h } from '@stencil/core';
 export class nav {
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
-          <ion-title>Nav</ion-title>
+          <ion-title>Navigation</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <ion-nav id="nav-example" root="nav-example-page"></ion-nav>
       </ion-content>
     ];

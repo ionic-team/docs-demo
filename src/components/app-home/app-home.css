@@ -1,28 +1,35 @@
 /*
- * Component icons
+ * Lists
  */
 
-.component-icon {
-  border-radius: 50%;
-  padding: 5px;
-  height: 22px;
-  width: 22px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+.theme-list ion-item,
+.home-list ion-item {
+  --padding-start: 14px;
+  --inner-padding-end: 14px;
+
+  --transition: none;
 }
 
-.component-icon-dark {
-  background: #27323e;
-  color: #fff;
+.theme-list,
+.home-list {
+  padding-bottom: 40px !important;
 }
 
-.component-icon-primary {
-  background: var(--ion-color-primary);
-  color: #fff;
+.theme-list ion-toggle {
+  padding-right: 0;
 }
+
+.home-list {
+  padding-top: 0 !important;
+}
+
+
+/*
+ * iOS Border is hairline width
+ */
 
 .ios .home-list ion-item:first-child {
-  --border-width: .55px 0 0 0;
+  --border-width: 0.55px 0 0 0;
 }
 
 .md .home-list ion-item:first-child {
@@ -30,11 +37,37 @@
 }
 
 .ios .home-list ion-item:last-child {
-  --inner-border-width: 0 0 0 0;
-  --border-width: 0 0 .55px 0;
+  --border-width: 0 0 0.55px 0;
+  --inner-border-width: 0;
 }
 
 .md .home-list ion-item:last-child {
-  --inner-border-width: 0 0 0 0;
   --border-width: 0 0 1px 0;
+  --inner-border-width: 0;
+}
+
+
+/*
+ * Component icons
+ */
+
+.component-icon {
+  border-radius: 50%;
+
+  padding: 7px;
+  height: 18px;
+  width: 18px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.component-icon-dark {
+  background: var(--ion-color-step-850, #27323e);
+  color: var(--ion-item-background, #fff);
+}
+
+.component-icon-primary {
+  background: var(--ion-color-primary);
+  color: #fff;
 }

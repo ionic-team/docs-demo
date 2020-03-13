@@ -1,5 +1,7 @@
 import { Component, h, Element, State } from '@stencil/core';
 
+import { alertController } from '@ionic/core';
+
 @Component({
   tag: 'component-input',
   styleUrl: 'input.css'
@@ -10,13 +12,10 @@ export class input {
   @State() firstName: string;
   @State() lastName: string;
 
-  controller: HTMLIonAlertControllerElement;
-
   processForm = async (event) => {
     event.preventDefault();
 
-    await this.controller.componentOnReady();
-    const alert = await this.controller.create({
+    const alert = await alertController.create({
       header: 'Account Created',
       message: `Created account for: <b>${this.firstName} ${this.lastName}</b>`,
       buttons: [{
@@ -29,8 +28,7 @@ export class input {
 
   render() {
     return [
-      <ion-alert-controller ref={e => { this.controller = e}} />,
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -39,7 +37,7 @@ export class input {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <form onSubmit={this.processForm}>
           <ion-list lines="full" class="ion-no-margin ion-no-padding">
             <ion-item>
@@ -72,7 +70,6 @@ export class input {
           </div>
         </form>
       </ion-content>,
-      <ion-alert-controller />
     ];
   }
 }

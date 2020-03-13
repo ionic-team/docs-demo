@@ -1,5 +1,5 @@
 component-details ion-list {
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
   margin-bottom: 26px !important;
 }
 
@@ -17,5 +17,7 @@ component-details .item .component-description b {
 }
 
 component-details .component-link {
+  text-transform: capitalize;
+
   font-size: 16px;
 }

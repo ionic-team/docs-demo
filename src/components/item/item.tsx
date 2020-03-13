@@ -1,10 +1,10 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'component-list-item',
-  styleUrl: 'list-item.css'
+  tag: 'component-item',
+  styleUrl: 'item.css'
 })
-export class ListItem {
+export class Item {
   render() {
     return [
       <ion-header translucent>
@@ -12,7 +12,7 @@ export class ListItem {
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
-          <ion-title>List Item</ion-title>
+          <ion-title>Item</ion-title>
         </ion-toolbar>
       </ion-header>,
 
@@ -33,36 +33,7 @@ export class ListItem {
 
         <ion-list>
           <ion-list-header>
-            Color Items
-          </ion-list-header>
-          <ion-item color="primary">
-            <ion-label>Primary</ion-label>
-          </ion-item>
-
-          <ion-item color="secondary">
-            <ion-label>Secondary</ion-label>
-          </ion-item>
-
-          <ion-item color="tertiary">
-            <ion-label>Tertiary</ion-label>
-          </ion-item>
-
-          <ion-item color="success">
-            <ion-label>Success</ion-label>
-          </ion-item>
-
-          <ion-item color="warning">
-            <ion-label>Warning</ion-label>
-          </ion-item>
-
-          <ion-item color="danger">
-            <ion-label>Danger</ion-label>
-          </ion-item>
-        </ion-list>
-
-        <ion-list>
-          <ion-list-header>
-            Group with Divider
+            Item Groups
           </ion-list-header>
 
           <ion-item-group>
@@ -98,7 +69,7 @@ export class ListItem {
 
         <ion-list>
           <ion-list-header>
-            Sliding Item
+            Sliding Items
           </ion-list-header>
 
           <ion-item-sliding>
@@ -132,39 +103,25 @@ export class ListItem {
 
         <ion-list>
           <ion-list-header>
-            Notes
+            Inputs & Controls
           </ion-list-header>
 
           <ion-item-sliding>
             <ion-item>
-              <ion-label>Primary Note</ion-label>
-              <ion-note slot="end" color="primary">99</ion-note>
+              <ion-label>Item Note</ion-label>
+              <ion-note slot="end">99</ion-note>
             </ion-item>
 
             <ion-item>
-              <ion-label>Secondary Note</ion-label>
-              <ion-note slot="end" color="secondary">99</ion-note>
+              <ion-label>Item Checkbox</ion-label>
+              <ion-checkbox slot="end" checked></ion-checkbox>
             </ion-item>
 
             <ion-item>
-              <ion-label>Tertiary Note</ion-label>
-              <ion-note slot="end" color="tertiary">99</ion-note>
+              <ion-label>Item Toggle</ion-label>
+              <ion-toggle slot="end" checked></ion-toggle>
             </ion-item>
 
-            <ion-item>
-              <ion-label>Success Note</ion-label>
-              <ion-note slot="end" color="success">99</ion-note>
-            </ion-item>
-
-            <ion-item>
-              <ion-label>Warning Note</ion-label>
-              <ion-note slot="end" color="warning">99</ion-note>
-            </ion-item>
-
-            <ion-item>
-              <ion-label>Danger Note</ion-label>
-              <ion-note slot="end" color="danger">99</ion-note>
-            </ion-item>
           </ion-item-sliding>
         </ion-list>
       </ion-content>

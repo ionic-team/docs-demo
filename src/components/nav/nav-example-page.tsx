@@ -69,12 +69,12 @@ export class NavExamplePage {
 
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-title>Tech</ion-title>
         </ion-toolbar>
       </ion-header>,
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <ion-list>
         {this.techs.map(tech => {
           return (

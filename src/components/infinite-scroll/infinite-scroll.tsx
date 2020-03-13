@@ -155,7 +155,7 @@ export class InfiniteScroll {
 
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -164,7 +164,7 @@ export class InfiniteScroll {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <ion-list>
           {this.items.map((user, i) => {
             return (

@@ -1,17 +1,18 @@
 import { Component, h } from '@stencil/core';
 
+import { modalController } from '@ionic/core';
+
 @Component({
   tag: 'component-modal-content',
 })
 export class ModalContent {
   dismiss = () => {
-    const controller = document.querySelector('ion-modal-controller') as HTMLIonModalControllerElement;
-    controller.dismiss();
+    modalController.dismiss();
   }
 
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-title>Contacts</ion-title>
           <ion-buttons slot="end">
@@ -19,7 +20,7 @@ export class ModalContent {
           </ion-buttons>
         </ion-toolbar>
       </ion-header>,
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <ion-list>
           <ion-item>
             <ion-avatar slot="start">

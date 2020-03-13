@@ -1,0 +1,8 @@
+component-chip .ios p {
+  margin-left: 16px;
+}
+
+component-chip .md p {
+  margin-top: 0;
+  margin-left: 10px;
+}

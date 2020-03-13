@@ -13,6 +13,7 @@ export class AppRoot {
       <ion-app>
         <ion-router useHash={false}>
           <ion-route url="/" component="app-home" />
+          <ion-route url="/component" component="app-home" />
           {this.components.filter(c => c.name !== 'tabs').map(component => {
             return (
               <ion-route url={`/component/${component.id}`} component={`component-${component.id}`} />

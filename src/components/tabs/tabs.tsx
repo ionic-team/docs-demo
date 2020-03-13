@@ -23,7 +23,7 @@ export class tabs {
         </ion-tab-button>
         <ion-tab-button tab="tabs-games">
           <ion-label>Games</ion-label>
-          <ion-icon name="logo-game-controller-b"></ion-icon>
+          <ion-icon name="game-controller"></ion-icon>
         </ion-tab-button>
       </ion-tab-bar>
     </ion-tabs>

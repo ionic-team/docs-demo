@@ -1,5 +1,7 @@
 import { Component, h, Element } from '@stencil/core';
 
+import { menuController } from '@ionic/core';
+
 @Component({
   tag: 'component-menu',
   styleUrl: 'menu.css'
@@ -7,22 +9,19 @@ import { Component, h, Element } from '@stencil/core';
 export class menu {
   @Element() el;
 
-  controller: HTMLIonMenuControllerElement;
-
   openMenu = async () => {
-    await this.controller.componentOnReady();
-    this.controller.open();
+    menuController.open();
   }
 
   render() {
     return [
       <ion-menu side="start" contentId="main">
-        <ion-header translucent>
+        <ion-header translucent={true}>
           <ion-toolbar>
             <ion-title>Menu</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content fullscreen>
+        <ion-content fullscreen={true}>
           <ion-list>
             <ion-item>
               <ion-icon name="home" slot="start"></ion-icon>
@@ -45,7 +44,7 @@ export class menu {
       </ion-menu>,
 
       <div class="ion-page" id="main">
-        <ion-header translucent>
+        <ion-header translucent={true}>
           <ion-toolbar>
             <ion-buttons slot="start">
               <ion-back-button defaultHref="/"></ion-back-button>
@@ -57,9 +56,7 @@ export class menu {
         <ion-content class="ion-padding">
           <ion-button expand="block" onClick={this.openMenu}>Open Menu</ion-button>
         </ion-content>
-      </div>,
-
-      <ion-menu-controller ref={e => { this.controller = e }} />
+      </div>
     ]
   }
 }

@@ -1,17 +1,16 @@
 import { Component, h } from '@stencil/core';
 
+import { modalController } from '@ionic/core';
+
 @Component({
   tag: 'component-modal',
   styleUrl: 'modal.css'
 })
 export class modal {
-  controller: HTMLIonModalControllerElement;
-
   currentModal: HTMLIonModalElement;
 
   openModal = async () => {
-    await this.controller.componentOnReady();
-    const modal = await this.controller.create({
+    const modal = await modalController.create({
       component: 'component-modal-content'
     });
     modal.present();
@@ -26,7 +25,7 @@ export class modal {
     const url = 'modal';
 
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -41,9 +40,7 @@ export class modal {
         <div class="ion-padding-start ion-padding-end">
           <ion-button expand="block" onClick={this.openModal}>Open Modal</ion-button>
         </div>
-      </ion-content>,
-
-      <ion-modal-controller ref={e => { this.controller = e}}></ion-modal-controller>
+      </ion-content>
     ];
   }
 }

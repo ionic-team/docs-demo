@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 
-import { Config } from '@ionic/core';
+import { actionSheetController, Config } from '@ionic/core';
 
 @Component({
   tag: 'component-action-sheet',
@@ -11,37 +11,33 @@ export class ActionSheet {
 
   @Prop({ context: 'config' }) config: Config;
 
-  controller: HTMLIonActionSheetControllerElement;
-
   open = async () => {
     const mode = this.config.get('mode');
 
-    await this.controller.componentOnReady();
-
-    const actionSheet = await this.controller.create({
+    const actionSheet = await actionSheetController.create({
       header: "Albums",
       buttons: [{
         text: 'Delete',
         role: 'destructive',
-        icon: mode !== 'ios' ? 'trash' : null,
+        icon: mode !== 'ios' ? 'trash-outline' : null,
         handler: () => {
           console.log('Delete clicked');
         }
       }, {
         text: 'Share',
-        icon: mode !== 'ios' ? 'share' : null,
+        icon: mode !== 'ios' ? 'share-outline' : null,
         handler: () => {
           console.log('Share clicked');
         }
       }, {
         text: 'Play (open modal)',
-        icon: mode !== 'ios' ? 'arrow-dropright-circle' : null,
+        icon: mode !== 'ios' ? 'play-circle-outline' : null,
         handler: () => {
           console.log('Play clicked');
         }
       }, {
         text: 'Favorite',
-        icon: mode !== 'ios' ? 'heart' : null,
+        icon: mode !== 'ios' ? 'heart-outline' : null,
         handler: () => {
           console.log('Favorite clicked');
         }
@@ -65,8 +61,7 @@ export class ActionSheet {
     const url = 'action-sheet';
 
     return [
-      <ion-action-sheet-controller ref={e => { this.controller = e }} />,
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
