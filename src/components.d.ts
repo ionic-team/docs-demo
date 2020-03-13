@@ -46,6 +46,8 @@ export namespace Components {
     }
     interface ComponentInput {
     }
+    interface ComponentItem {
+    }
     interface ComponentList {
     }
     interface ComponentLoading {
@@ -225,6 +227,12 @@ declare global {
     var HTMLComponentInputElement: {
         prototype: HTMLComponentInputElement;
         new (): HTMLComponentInputElement;
+    };
+    interface HTMLComponentItemElement extends Components.ComponentItem, HTMLStencilElement {
+    }
+    var HTMLComponentItemElement: {
+        prototype: HTMLComponentItemElement;
+        new (): HTMLComponentItemElement;
     };
     interface HTMLComponentListElement extends Components.ComponentList, HTMLStencilElement {
     }
@@ -438,6 +446,7 @@ declare global {
         "component-icons": HTMLComponentIconsElement;
         "component-infinite-scroll": HTMLComponentInfiniteScrollElement;
         "component-input": HTMLComponentInputElement;
+        "component-item": HTMLComponentItemElement;
         "component-list": HTMLComponentListElement;
         "component-loading": HTMLComponentLoadingElement;
         "component-menu": HTMLComponentMenuElement;
@@ -512,6 +521,8 @@ declare namespace LocalJSX {
     interface ComponentInfiniteScroll {
     }
     interface ComponentInput {
+    }
+    interface ComponentItem {
     }
     interface ComponentList {
     }
@@ -597,6 +608,7 @@ declare namespace LocalJSX {
         "component-icons": ComponentIcons;
         "component-infinite-scroll": ComponentInfiniteScroll;
         "component-input": ComponentInput;
+        "component-item": ComponentItem;
         "component-list": ComponentList;
         "component-loading": ComponentLoading;
         "component-menu": ComponentMenu;
@@ -654,6 +666,7 @@ declare module "@stencil/core" {
             "component-icons": LocalJSX.ComponentIcons & JSXBase.HTMLAttributes<HTMLComponentIconsElement>;
             "component-infinite-scroll": LocalJSX.ComponentInfiniteScroll & JSXBase.HTMLAttributes<HTMLComponentInfiniteScrollElement>;
             "component-input": LocalJSX.ComponentInput & JSXBase.HTMLAttributes<HTMLComponentInputElement>;
+            "component-item": LocalJSX.ComponentItem & JSXBase.HTMLAttributes<HTMLComponentItemElement>;
             "component-list": LocalJSX.ComponentList & JSXBase.HTMLAttributes<HTMLComponentListElement>;
             "component-loading": LocalJSX.ComponentLoading & JSXBase.HTMLAttributes<HTMLComponentLoadingElement>;
             "component-menu": LocalJSX.ComponentMenu & JSXBase.HTMLAttributes<HTMLComponentMenuElement>;

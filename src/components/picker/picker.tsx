@@ -87,7 +87,7 @@ export class picker {
     const url = 'picker';
 
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>

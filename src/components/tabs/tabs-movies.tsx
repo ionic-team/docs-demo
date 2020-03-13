@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class TabsMovies {
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-title>Movies</ion-title>
         </ion-toolbar>

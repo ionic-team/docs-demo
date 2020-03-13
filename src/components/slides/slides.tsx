@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class slides {
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -16,7 +16,7 @@ export class slides {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content scrollY={false} fullscreen>
+      <ion-content scrollY={false} fullscreen={true}>
         <ion-slides>
           <ion-slide>
             <img src="/assets/slide-1.png" class="slide-image"/>

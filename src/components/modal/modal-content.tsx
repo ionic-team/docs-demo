@@ -12,7 +12,7 @@ export class ModalContent {
 
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-title>Contacts</ion-title>
           <ion-buttons slot="end">
@@ -20,7 +20,7 @@ export class ModalContent {
           </ion-buttons>
         </ion-toolbar>
       </ion-header>,
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <ion-list>
           <ion-item>
             <ion-avatar slot="start">

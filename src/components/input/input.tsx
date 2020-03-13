@@ -28,7 +28,7 @@ export class input {
 
   render() {
     return [
-      <ion-header translucent>
+      <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
@@ -37,7 +37,7 @@ export class input {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
+      <ion-content fullscreen={true}>
         <form onSubmit={this.processForm}>
           <ion-list lines="full" class="ion-no-margin ion-no-padding">
             <ion-item>

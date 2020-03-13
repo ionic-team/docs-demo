@@ -16,12 +16,12 @@ export class menu {
   render() {
     return [
       <ion-menu side="start" contentId="main">
-        <ion-header translucent>
+        <ion-header translucent={true}>
           <ion-toolbar>
             <ion-title>Menu</ion-title>
           </ion-toolbar>
         </ion-header>
-        <ion-content fullscreen>
+        <ion-content fullscreen={true}>
           <ion-list>
             <ion-item>
               <ion-icon name="home" slot="start"></ion-icon>
@@ -44,7 +44,7 @@ export class menu {
       </ion-menu>,
 
       <div class="ion-page" id="main">
-        <ion-header translucent>
+        <ion-header translucent={true}>
           <ion-toolbar>
             <ion-buttons slot="start">
               <ion-back-button defaultHref="/"></ion-back-button>
