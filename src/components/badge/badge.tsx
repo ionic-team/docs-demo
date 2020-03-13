@@ -63,7 +63,7 @@ export class badge {
             <ion-badge color="tertiary">44</ion-badge>
           </ion-tab-button>
           <ion-tab-button>
-            <ion-icon name="contact"></ion-icon>
+            <ion-icon name="people"></ion-icon>
             <ion-badge color="success">1</ion-badge>
           </ion-tab-button>
           <ion-tab-button>
