@@ -20,7 +20,7 @@ export class Alert {
     const description = `The <b>Alert</b> is a dialog that presents users with information
       or collects information from the user via inputs. It appears on top of the app's content,
       and must be manually dismissed by the user before they can resume interaction with the app.`;
-    const url = `alert`;
+    const url = 'alert';
 
     return [
       <ion-header translucent={true}>

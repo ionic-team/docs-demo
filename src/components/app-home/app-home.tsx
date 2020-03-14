@@ -39,7 +39,7 @@ export class AppHome {
 
         <ion-list class="home-list">
           {this.components.map(component => {
-            const href = component.id === 'tabs' ? `/component/tabs/music` : `/component/${component.id}`;
+            const href = component.id === 'tabs' ? '/component/tabs/music' : `/component/${component.id}`;
 
             return (
               <ion-item href={href}>
