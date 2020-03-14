@@ -1,4 +1,0 @@
-# ignore from the linter
-
-node_modules/*
-www/*

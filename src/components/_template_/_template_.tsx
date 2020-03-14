@@ -5,7 +5,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-_template_',
   styleUrl: '_template_.css'
 })
-export class _Template_ {
+export class _template_ {
   render() {
     return [
       <ion-header translucent={true}>
