@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-badge',
   styleUrl: 'badge.css'
 })
-export class badge {
+export class Badge {
   render() {
     return [
       <ion-header translucent={true}>

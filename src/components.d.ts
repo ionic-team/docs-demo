@@ -108,8 +108,6 @@ export namespace Components {
     }
     interface ComponentToolbar {
     }
-    interface NavExamplePage {
-    }
     interface PopoverExamplePage {
     }
 }
@@ -414,12 +412,6 @@ declare global {
         prototype: HTMLComponentToolbarElement;
         new (): HTMLComponentToolbarElement;
     };
-    interface HTMLNavExamplePageElement extends Components.NavExamplePage, HTMLStencilElement {
-    }
-    var HTMLNavExamplePageElement: {
-        prototype: HTMLNavExamplePageElement;
-        new (): HTMLNavExamplePageElement;
-    };
     interface HTMLPopoverExamplePageElement extends Components.PopoverExamplePage, HTMLStencilElement {
     }
     var HTMLPopoverExamplePageElement: {
@@ -477,7 +469,6 @@ declare global {
         "component-toast": HTMLComponentToastElement;
         "component-toggle": HTMLComponentToggleElement;
         "component-toolbar": HTMLComponentToolbarElement;
-        "nav-example-page": HTMLNavExamplePageElement;
         "popover-example-page": HTMLPopoverExamplePageElement;
     }
 }
@@ -584,8 +575,6 @@ declare namespace LocalJSX {
     }
     interface ComponentToolbar {
     }
-    interface NavExamplePage {
-    }
     interface PopoverExamplePage {
     }
     interface IntrinsicElements {
@@ -639,7 +628,6 @@ declare namespace LocalJSX {
         "component-toast": ComponentToast;
         "component-toggle": ComponentToggle;
         "component-toolbar": ComponentToolbar;
-        "nav-example-page": NavExamplePage;
         "popover-example-page": PopoverExamplePage;
     }
 }
@@ -697,7 +685,6 @@ declare module "@stencil/core" {
             "component-toast": LocalJSX.ComponentToast & JSXBase.HTMLAttributes<HTMLComponentToastElement>;
             "component-toggle": LocalJSX.ComponentToggle & JSXBase.HTMLAttributes<HTMLComponentToggleElement>;
             "component-toolbar": LocalJSX.ComponentToolbar & JSXBase.HTMLAttributes<HTMLComponentToolbarElement>;
-            "nav-example-page": LocalJSX.NavExamplePage & JSXBase.HTMLAttributes<HTMLNavExamplePageElement>;
             "popover-example-page": LocalJSX.PopoverExamplePage & JSXBase.HTMLAttributes<HTMLPopoverExamplePageElement>;
         }
     }

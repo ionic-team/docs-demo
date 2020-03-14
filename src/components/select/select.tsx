@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-select',
   styleUrl: 'select.css'
 })
-export class select {
+export class Select {
   render() {
     return [
       <ion-header translucent={true}>
@@ -76,7 +76,7 @@ export class select {
             <ion-select placeholder="Popover Interface" interface="popover">
               <ion-select-option value="f">Female</ion-select-option>
               <ion-select-option value="m">Male</ion-select-option>
-          </ion-select>
+            </ion-select>
           </ion-item>
           <ion-item>
             <ion-label position="stacked">

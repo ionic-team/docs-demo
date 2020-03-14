@@ -10,7 +10,7 @@ export class TabsGames {
       <ion-header translucent={true}>
         <ion-toolbar>
           <ion-buttons slot="start">
-            <ion-back-button default-href="/"></ion-back-button>
+            <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
           <ion-title>Games</ion-title>
         </ion-toolbar>

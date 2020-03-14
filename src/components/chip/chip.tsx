@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-chip',
   styleUrl: 'chip.css'
 })
-export class chip {
+export class Chip {
   render() {
     return [
       <ion-header translucent={true}>

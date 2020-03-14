@@ -1,10 +1,10 @@
-import { Component, h, Element, State } from '@stencil/core';
+import { Component, Element, State, h } from '@stencil/core';
 
 @Component({
   tag: 'component-searchbar',
   styleUrl: 'searchbar.css'
 })
-export class searchbar {
+export class Searchbar {
   @Element() el;
 
   list: HTMLElement;

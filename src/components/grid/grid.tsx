@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-grid',
   styleUrl: 'grid.css'
 })
-export class grid {
+export class Grid {
   render() {
     return [
       <ion-header translucent={true}>

@@ -1,10 +1,10 @@
-import { Component, h, Element } from '@stencil/core';
+import { Component, Element, h } from '@stencil/core';
 
 @Component({
   tag: 'component-content',
   styleUrl: 'content.css'
 })
-export class content {
+export class Content {
   @Element() el;
 
   getContent() {

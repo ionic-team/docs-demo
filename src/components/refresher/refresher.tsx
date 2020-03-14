@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, State, h } from '@stencil/core';
 
 const authors = [
   'Everyworse',
@@ -74,7 +74,7 @@ const createItems = (count: number, unread = false) => {
   tag: 'component-refresher',
   styleUrl: 'refresher.css'
 })
-export class refresher {
+export class Refresher {
   refresher: HTMLIonRefresherElement;
 
   @State() items = createItems(5);

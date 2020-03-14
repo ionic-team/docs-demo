@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-spinner',
   styleUrl: 'spinner.css'
 })
-export class spinner {
+export class Spinner {
   render() {
     return [
       <ion-header translucent={true}>

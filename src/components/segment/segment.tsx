@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-segment',
   styleUrl: 'segment.css'
 })
-export class segment {
+export class Segment {
   render() {
     return [
       <ion-header translucent={true}>

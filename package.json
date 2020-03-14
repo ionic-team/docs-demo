@@ -8,22 +8,24 @@
     "dist/"
   ],
   "scripts": {
-    "lint": "tslint --project .",
-    "lint.fix": "tslint --project . --fix",
+    "lint": "eslint src/ --ext .js,.ts,.jsx,.tsx",
+    "lint.fix": "lint -- --fix",
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch"
   },
   "dependencies": {
-    "@ionic/core": "^5.0.5",
-    "tslint": "^6.1.0",
-    "tslint-ionic-rules": "0.0.21"
+    "@ionic/core": "^5.0.5"
   },
   "devDependencies": {
     "@stencil/core": "1.9.1",
     "@types/jest": "24.0.20",
     "@types/puppeteer": "1.19.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
     "jest": "24.9.0",
     "jest-cli": "24.9.0",
     "puppeteer": "2.1.0"

@@ -6,7 +6,7 @@ import { modalController } from '@ionic/core';
   tag: 'component-modal',
   styleUrl: 'modal.css'
 })
-export class modal {
+export class Modal {
   currentModal: HTMLIonModalElement;
 
   openModal = async () => {

@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-fab',
   styleUrl: 'fab.css'
 })
-export class fab {
+export class Fab {
   render() {
     return [
       <ion-header translucent={true}>

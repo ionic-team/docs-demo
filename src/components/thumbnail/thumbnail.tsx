@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-thumbnail',
   styleUrl: 'thumbnail.css'
 })
-export class thumbnail {
+export class Thumbnail {
   render() {
     return [
       <ion-header translucent={true}>

@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-datetime',
   styleUrl: 'datetime.css'
 })
-export class datetime {
+export class Datetime {
   render() {
     return [
       <ion-header translucent={true}>
