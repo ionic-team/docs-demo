@@ -9,11 +9,11 @@ describe('app-home', () => {
     expect(element).toHaveClass('hydrated');
   });
 
-  it('contains a "Profile Page" button', async () => {
+  it('contains an Action Sheet button', async () => {
     const page = await newE2EPage();
     await page.setContent('<app-home></app-home>');
 
-    const element = await page.find('app-home ion-content ion-button');
-    expect(element.textContent).toEqual('Profile page');
+    const element = await page.find('app-home .home-list ion-label');
+    expect(element.textContent).toEqual('Action Sheet');
   });
 });
