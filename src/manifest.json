@@ -1,6 +1,6 @@
 {
-  "name": "ionic-docs-demo",
-  "short_name": "ionic-docs-demo",
+  "name": "Ionic Kitchen Sink",
+  "short_name": "Kitchen Sink",
   "start_url": "/",
   "display": "standalone",
   "icons": [{
@@ -12,6 +12,6 @@
     "sizes": "512x512",
     "type": "image/png"
   }],
-  "background_color": "#488aff",
-  "theme_color": "#488aff"
+  "background_color": "#3880ff",
+  "theme_color": "#3880ff"
 }
