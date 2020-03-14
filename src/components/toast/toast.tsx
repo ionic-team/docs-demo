@@ -6,7 +6,7 @@ import { toastController } from '@ionic/core';
   tag: 'component-toast',
   styleUrl: 'toast.css'
 })
-export class toast {
+export class Toast {
   openToast = async () => {
     const toast = await toastController.create({
       color: 'dark',

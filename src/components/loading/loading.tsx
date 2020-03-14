@@ -1,4 +1,4 @@
-import { Component, h, Element } from '@stencil/core';
+import { Component, Element, h } from '@stencil/core';
 
 import { loadingController } from '@ionic/core';
 
@@ -6,7 +6,7 @@ import { loadingController } from '@ionic/core';
   tag: 'component-loading',
   styleUrl: 'loading.css'
 })
-export class loading {
+export class Loading {
   @Element() el;
 
   handleButtonClick = async () => {

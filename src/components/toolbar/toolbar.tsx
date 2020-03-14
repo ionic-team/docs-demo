@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-toolbar',
   styleUrl: 'toolbar.css'
 })
-export class toolbar {
+export class Toolbar {
   render() {
     return [
       <ion-header translucent={true}>

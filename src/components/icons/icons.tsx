@@ -4,7 +4,7 @@ import { Component, State, h } from '@stencil/core';
   tag: 'component-icons',
   styleUrl: 'icons.css'
 })
-export class icons {
+export class Icons {
   @State() segment = '';
 
   updateSegment(ev) {

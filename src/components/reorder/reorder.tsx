@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-reorder',
   styleUrl: 'reorder.css'
 })
-export class reorder {
+export class Reorder {
   handleReorder = ({ detail }) => {
     detail.complete();
   }

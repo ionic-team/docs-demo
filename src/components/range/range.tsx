@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-range',
   styleUrl: 'range.css'
 })
-export class range {
+export class Range {
   render() {
     return [
       <ion-header translucent={true}>

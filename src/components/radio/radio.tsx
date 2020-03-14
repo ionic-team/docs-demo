@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-radio',
   styleUrl: 'radio.css'
 })
-export class radio {
+export class Radio {
   render() {
     return [
       <ion-header translucent={true}>

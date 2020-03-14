@@ -6,7 +6,7 @@ import { alertController } from '@ionic/core';
   tag: 'component-alert',
   styleUrl: 'alert.css'
 })
-export class alert {
+export class Alert {
   open = async () => {
     const alert = await alertController.create({
       header: 'Use this lightsaber?',
@@ -20,7 +20,7 @@ export class alert {
     const description = `The <b>Alert</b> is a dialog that presents users with information
       or collects information from the user via inputs. It appears on top of the app's content,
       and must be manually dismissed by the user before they can resume interaction with the app.`;
-    const url = `alert`;
+    const url = 'alert';
 
     return [
       <ion-header translucent={true}>

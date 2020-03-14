@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/class-name-casing */
 import { Component, h } from '@stencil/core';
 
 @Component({

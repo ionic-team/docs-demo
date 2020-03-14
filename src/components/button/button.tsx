@@ -4,7 +4,7 @@ import { Component, h } from '@stencil/core';
   tag: 'component-button',
   styleUrl: 'button.css'
 })
-export class button {
+export class Button {
   render() {
     return [
       <ion-header translucent={true}>

@@ -1,4 +1,4 @@
-import { Component, h, Element } from '@stencil/core';
+import { Component, Element, h } from '@stencil/core';
 
 import { pickerController } from '@ionic/core';
 
@@ -6,7 +6,7 @@ import { pickerController } from '@ionic/core';
   tag: 'component-picker',
   styleUrl: 'picker.css'
 })
-export class picker {
+export class Picker {
   @Element() el!: HTMLElement;
 
   defaultColumnOptions = [
@@ -36,7 +36,7 @@ export class picker {
     ]
   ]
 
-  async openPicker(numColumns = 1, numOptions = 5, columnOptions = this.defaultColumnOptions){
+  async openPicker(numColumns = 1, numOptions = 5, columnOptions = this.defaultColumnOptions) {
     const picker = await pickerController.create({
       columns: this.getColumns(numColumns, numOptions, columnOptions),
       buttons: [
@@ -57,7 +57,7 @@ export class picker {
   }
 
   getColumns(numColumns, numOptions, columnOptions) {
-    let columns = [];
+    const columns = [];
     for (let i = 0; i < numColumns; i++) {
       columns.push({
         name: `col-${i}`,
@@ -69,7 +69,7 @@ export class picker {
   }
 
   getColumnOptions(columnIndex, numOptions, columnOptions) {
-    let options = [];
+    const options = [];
     for (let i = 0; i < numOptions; i++) {
       options.push({
         text: columnOptions[columnIndex][i % numOptions],
