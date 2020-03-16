@@ -28,4 +28,4 @@ jobs:
     - name: Build
       run: npm run build -- --prod
     - name: Test
-      run: npm test -- --configuration=ci
+      run: npm test
