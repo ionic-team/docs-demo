@@ -31,7 +31,6 @@ export const getComponents = () => {
     { name: 'Range', icon: '/assets/component-icon.svg', id: 'range' },
     { name: 'Refresher', icon: '/assets/component-icon.svg', id: 'refresher' },
     { name: 'Reorder', icon: '/assets/component-icon.svg', id: 'reorder' },
-    { name: 'Routing', icon: '/assets/component-icon.svg', id: 'routing' },
     { name: 'Searchbar', icon: '/assets/component-icon.svg', id: 'searchbar' },
     { name: 'Segment', icon: '/assets/component-icon.svg', id: 'segment' },
     { name: 'Select', icon: '/assets/component-icon.svg', id: 'select' },
