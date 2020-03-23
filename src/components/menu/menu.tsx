@@ -48,7 +48,6 @@ export class Menu {
           <ion-toolbar>
             <ion-buttons slot="start">
               <ion-back-button defaultHref="/"></ion-back-button>
-              <ion-menu-button></ion-menu-button>
             </ion-buttons>
             <ion-title>Home</ion-title>
           </ion-toolbar>

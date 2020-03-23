@@ -20,9 +20,7 @@ export class Nav {
         <div class="ion-padding">
           <p>
             Traditional web apps use a linear history, meaning that the user navigates
-            forward to a page and can hit the back button to navigate back. An example of
-            this is clicking around Wikipedia where the user is going forward and backward on
-            the browser's linear history stack.
+            forward to a page and can hit the back button to navigate back.
           </p>
 
           <p>
@@ -33,7 +31,7 @@ export class Nav {
           </p>
 
           <p>
-            Ionic apps embrace this mobile navigation approach, supporting parallel navigation
+            Ionic Framework embraces the latter approach, supporting parallel navigation
             histories that can also be nested, all while maintaining the familiar browser-style
             navigation concepts web developers are familiar with.
           </p>

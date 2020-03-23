@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, Element, h } from '@stencil/core';
 
 import { modalController } from '@ionic/core';
 
@@ -9,9 +9,13 @@ import { modalController } from '@ionic/core';
 export class Modal {
   currentModal: HTMLIonModalElement;
 
+  @Element() el: any;
+
   openModal = async () => {
     const modal = await modalController.create({
-      component: 'component-modal-content'
+      component: 'component-modal-content',
+      swipeToClose: true,
+      presentingElement: this.el
     });
     modal.present();
     this.currentModal = modal;

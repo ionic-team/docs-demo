@@ -14,9 +14,14 @@ export class ModalContent {
     return [
       <ion-header translucent={true}>
         <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button onClick={this.dismiss}>Cancel</ion-button>
+          </ion-buttons>
           <ion-title>Contacts</ion-title>
           <ion-buttons slot="end">
-            <ion-button onClick={this.dismiss}>Close</ion-button>
+            <ion-button slot="icon-only">
+              <ion-icon name="add"></ion-icon>
+            </ion-button>
           </ion-buttons>
         </ion-toolbar>
       </ion-header>,
