@@ -12,7 +12,7 @@ export class Datetime {
           <ion-buttons slot="start">
             <ion-back-button defaultHref="/"></ion-back-button>
           </ion-buttons>
-          <ion-title>Datetime</ion-title>
+          <ion-title>Date & Time Picker</ion-title>
         </ion-toolbar>
       </ion-header>,
 
@@ -21,7 +21,7 @@ export class Datetime {
           <ion-item>
             <ion-input placeholder="Title"></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item lines="full">
             <ion-input placeholder="Location"></ion-input>
           </ion-item>
           <ion-item-divider></ion-item-divider>
@@ -41,12 +41,12 @@ export class Datetime {
             <ion-label>Repeat</ion-label>
             <ion-datetime placeholder="Never" disabled></ion-datetime>
           </ion-item>
-          <ion-item>
+          <ion-item lines="full">
             <ion-label>Travel Time</ion-label>
             <ion-datetime placeholder="None" disabled></ion-datetime>
           </ion-item>
           <ion-item-divider></ion-item-divider>
-          <ion-item>
+          <ion-item lines="full">
             <ion-label>Alert</ion-label>
             <ion-datetime placeholder="None" disabled></ion-datetime>
           </ion-item>

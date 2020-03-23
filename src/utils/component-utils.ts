@@ -11,7 +11,7 @@ export const getComponents = () => {
     { name: 'Checkbox', icon: '/assets/component-icon.svg', id: 'checkbox' },
     { name: 'Chip', icon: '/assets/component-icon.svg', id: 'chip' },
     { name: 'Content', icon: '/assets/component-icon.svg', id: 'content' },
-    { name: 'Date & Time Pickers', icon: '/assets/component-icon.svg', id: 'datetime' },
+    { name: 'Date & Time Picker', icon: '/assets/component-icon.svg', id: 'datetime' },
     { name: 'Floating Action Button', icon: '/assets/component-icon.svg', id: 'fab' },
     { name: 'Grid', icon: '/assets/component-icon.svg', id: 'grid' },
     { name: 'Icons', icon: '/assets/component-icon.svg', id: 'icons' },
