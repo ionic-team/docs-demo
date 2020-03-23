@@ -12,3 +12,7 @@
   padding-left: 12px;
   text-align: left;
 }
+
+component-toolbar ion-content ion-header ion-toolbar:first-of-type {
+  padding-top: 0;
+}
