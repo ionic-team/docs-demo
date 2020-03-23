@@ -79,3 +79,8 @@
 
   --ion-border-color: #efeff2;
 }
+
+:root.ios {
+  --ion-padding: 20px;
+  --ion-margin: 20px;
+}
