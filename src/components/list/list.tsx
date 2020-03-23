@@ -19,7 +19,9 @@ export class List {
       <ion-content fullscreen={true}>
         <ion-list>
           <ion-list-header>
-            Recent Conversations
+            <ion-label>
+              Recent Conversations
+            </ion-label>
           </ion-list-header>
 
           <ion-item>
@@ -69,7 +71,9 @@ export class List {
 
         <ion-list>
           <ion-list-header>
-            Online
+            <ion-label>
+              Online
+            </ion-label>
           </ion-list-header>
 
           <ion-item>

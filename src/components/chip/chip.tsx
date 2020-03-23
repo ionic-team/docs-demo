@@ -17,8 +17,12 @@ export class Chip {
       </ion-header>,
 
       <ion-content fullscreen={true}>
-        <ion-list-header>Basic</ion-list-header>
-        <p>
+        <ion-list-header>
+          <ion-label>
+            Basic
+          </ion-label>
+        </ion-list-header>
+        <div class="ion-padding-horizontal">
           <ion-chip>
             <ion-label>Default</ion-label>
           </ion-chip>
@@ -32,10 +36,14 @@ export class Chip {
             </ion-avatar>
             <ion-label>Avatar</ion-label>
           </ion-chip>
-        </p>
+        </div>
 
-        <ion-list-header>Colors</ion-list-header>
-        <p>
+        <ion-list-header>
+          <ion-label>
+            Colors
+          </ion-label>
+        </ion-list-header>
+        <div class="ion-padding-horizontal">
           <ion-chip color="primary">
             <ion-label>Primary</ion-label>
           </ion-chip>
@@ -54,10 +62,14 @@ export class Chip {
           <ion-chip color="danger">
             <ion-label>Danger</ion-label>
           </ion-chip>
-        </p>
+        </div>
 
-        <ion-list-header>Outline</ion-list-header>
-        <p>
+        <ion-list-header>
+          <ion-label>
+            Outline
+          </ion-label>
+        </ion-list-header>
+        <div class="ion-padding-horizontal">
           <ion-chip outline color="primary">
             <ion-label>Primary</ion-label>
           </ion-chip>
@@ -76,10 +88,14 @@ export class Chip {
           <ion-chip outline color="danger">
             <ion-label>Danger</ion-label>
           </ion-chip>
-        </p>
+        </div>
 
-        <ion-list-header>Icons</ion-list-header>
-        <p>
+        <ion-list-header>
+          <ion-label>
+            Icons
+          </ion-label>
+        </ion-list-header>
+        <div class="ion-padding-horizontal">
           <ion-chip outline color="primary">
             <ion-icon name="pin"></ion-icon>
             <ion-label>Madison</ion-label>
@@ -100,7 +116,7 @@ export class Chip {
             <ion-label>Entertainment</ion-label>
             <ion-icon name="close-circle"></ion-icon>
           </ion-chip>
-        </p>
+        </div>
       </ion-content>
     ];
   }

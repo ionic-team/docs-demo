@@ -18,7 +18,11 @@ export class Badge {
 
       <ion-content fullscreen={true}>
         <ion-list>
-          <ion-list-header>Badges</ion-list-header>
+          <ion-list-header>
+            <ion-label>
+              Badges
+            </ion-label>
+          </ion-list-header>
           <ion-item>
             <ion-label>Followers</ion-label>
             <ion-badge slot="end">22k</ion-badge>

@@ -52,7 +52,11 @@ export class Segment {
       </ion-header>,
 
       <ion-content fullscreen={true}>
-        <ion-list-header>Colors</ion-list-header>
+        <ion-list-header>
+          <ion-label>
+            Colors
+          </ion-label>
+        </ion-list-header>
 
         <div class="ion-padding-horizontal">
           <ion-segment value="call">
@@ -140,7 +144,11 @@ export class Segment {
           </ion-segment>
         </div>
 
-        <ion-list-header>Scrollable</ion-list-header>
+        <ion-list-header>
+          <ion-label>
+            Scrollable
+          </ion-label>
+        </ion-list-header>
 
         <div class="ion-padding-horizontal">
           <ion-segment value="call" scrollable>

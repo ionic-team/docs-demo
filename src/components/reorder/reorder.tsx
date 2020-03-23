@@ -30,7 +30,11 @@ export class Reorder {
 
       <ion-content fullscreen={true}>
         <ion-list>
-          <ion-list-header>Reorder Icon</ion-list-header>
+          <ion-list-header>
+            <ion-label>
+              Reorder Icon
+            </ion-label>
+          </ion-list-header>
           <ion-reorder-group id="reorder" onIonItemReorder={this.handleReorder}>
             <ion-item>
               <ion-label>
@@ -60,7 +64,11 @@ export class Reorder {
               <ion-reorder slot="end"></ion-reorder>
             </ion-item>
 
-            <ion-list-header>Custom Reorder Icon</ion-list-header>
+            <ion-list-header>
+              <ion-label>
+                Custom Reorder Icon
+              </ion-label>
+            </ion-list-header>
             <ion-item>
               <ion-label>
                 Item 5
@@ -88,7 +96,11 @@ export class Reorder {
               </ion-reorder>
             </ion-item>
 
-            <ion-list-header>Reorder Item</ion-list-header>
+            <ion-list-header>
+              <ion-label>
+                Reorder Item
+              </ion-label>
+            </ion-list-header>
             <ion-reorder>
               <ion-item>
                 <ion-label>

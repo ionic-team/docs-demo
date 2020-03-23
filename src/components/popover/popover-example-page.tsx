@@ -7,7 +7,9 @@ export class PopoverExamplePage {
   render() {
     return (
       <ion-list>
-        <ion-list-header>Ionic</ion-list-header>
+        <ion-list-header>
+          <ion-label>Ionic</ion-label>
+        </ion-list-header>
         <ion-item button>Learn Ionic</ion-item>
         <ion-item button>Documentation</ion-item>
         <ion-item button>Showcase</ion-item>

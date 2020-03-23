@@ -19,7 +19,9 @@ export class Range {
       <ion-content fullscreen={true}>
         <ion-list>
           <ion-list-header>
-            Adjust Display
+            <ion-label>
+              Adjust Display
+            </ion-label>
           </ion-list-header>
 
           <ion-item>

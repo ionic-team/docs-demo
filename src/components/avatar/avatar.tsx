@@ -17,12 +17,20 @@ export class Avatar {
       </ion-header>,
 
       <ion-content fullscreen={true}>
-        <ion-list-header>Default</ion-list-header>
+        <ion-list-header>
+          <ion-label>
+            Default
+          </ion-label>
+        </ion-list-header>
         <ion-avatar class="ion-margin-start">
           <img src="/assets/avatar.svg" />
         </ion-avatar>
 
-        <ion-list-header>Chip Avatar</ion-list-header>
+        <ion-list-header>
+          <ion-label>
+            Chip Avatar
+          </ion-label>
+        </ion-list-header>
         <ion-chip class="ion-margin-start">
           <ion-avatar>
             <img src="/assets/avatar.svg" />
@@ -31,7 +39,11 @@ export class Avatar {
         </ion-chip>
 
         <ion-list>
-          <ion-list-header>Item Avatars</ion-list-header>
+          <ion-list-header>
+            <ion-label>
+              Item Avatars
+            </ion-label>
+          </ion-list-header>
           <ion-item>
             <ion-avatar slot="start">
               <img src="/assets/avatar.svg" />

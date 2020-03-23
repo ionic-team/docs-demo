@@ -35,7 +35,11 @@ export class SkeletonText {
 
       <ion-content fullscreen={true}>
         <ion-list id="data">
-          <ion-list-header>Albums</ion-list-header>
+          <ion-list-header>
+            <ion-label>
+              Albums
+            </ion-label>
+          </ion-list-header>
           <ion-item>
             <ion-thumbnail slot="start">
               <img src="/assets/thebeatles.jpeg" />
@@ -120,7 +124,9 @@ export class SkeletonText {
         </ion-list>
         <ion-list id="skeleton">
           <ion-list-header>
-            <ion-skeleton-text animated style={{ width: '80px' }}></ion-skeleton-text>
+            <ion-label>
+              <ion-skeleton-text animated style={{ width: '80px' }}></ion-skeleton-text>
+            </ion-label>
           </ion-list-header>
           <ion-item>
             <ion-thumbnail slot="start">

@@ -18,7 +18,11 @@ export class Note {
 
       <ion-content fullscreen={true}>
         <ion-list>
-          <ion-list-header>List Notes</ion-list-header>
+          <ion-list-header>
+            <ion-label>
+              List Notes
+            </ion-label>
+          </ion-list-header>
           <ion-item>
             <ion-label>Default</ion-label>
             <ion-note slot="end">11</ion-note>

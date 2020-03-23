@@ -18,7 +18,11 @@ export class Checkbox {
 
       <ion-content fullscreen={true}>
         <ion-list>
-          <ion-list-header>Characters</ion-list-header>
+          <ion-list-header>
+            <ion-label>
+              Characters
+            </ion-label>
+          </ion-list-header>
           <ion-item>
             <ion-label>Jon Snow</ion-label>
             <ion-checkbox color="primary" checked slot="start"></ion-checkbox>

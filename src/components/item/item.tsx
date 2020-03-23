@@ -18,14 +18,16 @@ export class Item {
 
       <ion-content fullscreen={true}>
         <ion-list>
-          <ion-list-header>
-            Items with Labels
+          <ion-list-header lines="full">
+            <ion-label>
+              Items with Labels
+            </ion-label>
           </ion-list-header>
           <ion-item>
             <ion-label>Label</ion-label>
           </ion-item>
 
-          <ion-item>
+          <ion-item lines="full">
             <ion-icon slot="end" name="logo-ionic"></ion-icon>
             <ion-label>Label with Icon</ion-label>
           </ion-item>

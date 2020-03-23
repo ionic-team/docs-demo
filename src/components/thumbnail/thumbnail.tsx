@@ -17,13 +17,21 @@ export class Thumbnail {
       </ion-header>,
 
       <ion-content fullscreen={true}>
-        <ion-list-header>Default</ion-list-header>
+        <ion-list-header>
+          <ion-label>
+            Default
+          </ion-label>
+        </ion-list-header>
         <ion-thumbnail class="ion-margin-start">
           <img src="/assets/thumbnail.svg" />
         </ion-thumbnail>
 
         <ion-list>
-          <ion-list-header>Item thumbnails</ion-list-header>
+          <ion-list-header>
+            <ion-label>
+              Item Thumbnails
+            </ion-label>
+          </ion-list-header>
           <ion-item>
             <ion-thumbnail slot="start">
               <img src="/assets/thumbnail.svg" />
