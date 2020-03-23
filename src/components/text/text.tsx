@@ -2,8 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'component-text',
-  styleUrl: 'text.css',
-  shadow: true
+  styleUrl: 'text.css'
 })
 export class Text {
   render() {
@@ -17,7 +16,7 @@ export class Text {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen class="ion-padding">
+      <ion-content fullscreen={true} class="ion-padding-start ion-padding-end">
         <ion-text color="primary">
           <h1> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
         </ion-text>
