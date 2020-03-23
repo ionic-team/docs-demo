@@ -1,0 +1,14 @@
+
+.ios component-toolbar ion-header ion-segment {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.ios component-toolbar ion-footer ion-title {
+  padding-left: 12px;
+  text-align: left;
+}

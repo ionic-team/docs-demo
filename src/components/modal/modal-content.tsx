@@ -19,8 +19,8 @@ export class ModalContent {
           </ion-buttons>
           <ion-title>Contacts</ion-title>
           <ion-buttons slot="end">
-            <ion-button slot="icon-only">
-              <ion-icon name="add"></ion-icon>
+            <ion-button>
+              <ion-icon slot="icon-only" name="add"></ion-icon>
             </ion-button>
           </ion-buttons>
         </ion-toolbar>

@@ -79,8 +79,3 @@
 
   --ion-border-color: #efeff2;
 }
-
-:root.ios {
-  --ion-toolbar-background: #f7f8f9;
-
-}
