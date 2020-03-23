@@ -1,0 +1,11 @@
+component-nav p:first-of-type {
+  margin-top: 0;
+}
+
+component-nav p:last-of-type {
+  margin-bottom: 0;
+}
+
+component-nav p {
+  color: var(--ion-color-step-800, #3e4a58);
+}
