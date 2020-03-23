@@ -76,8 +76,6 @@ export namespace Components {
     }
     interface ComponentReorder {
     }
-    interface ComponentRouting {
-    }
     interface ComponentSearchbar {
     }
     interface ComponentSegment {
@@ -316,12 +314,6 @@ declare global {
         prototype: HTMLComponentReorderElement;
         new (): HTMLComponentReorderElement;
     };
-    interface HTMLComponentRoutingElement extends Components.ComponentRouting, HTMLStencilElement {
-    }
-    var HTMLComponentRoutingElement: {
-        prototype: HTMLComponentRoutingElement;
-        new (): HTMLComponentRoutingElement;
-    };
     interface HTMLComponentSearchbarElement extends Components.ComponentSearchbar, HTMLStencilElement {
     }
     var HTMLComponentSearchbarElement: {
@@ -453,7 +445,6 @@ declare global {
         "component-range": HTMLComponentRangeElement;
         "component-refresher": HTMLComponentRefresherElement;
         "component-reorder": HTMLComponentReorderElement;
-        "component-routing": HTMLComponentRoutingElement;
         "component-searchbar": HTMLComponentSearchbarElement;
         "component-segment": HTMLComponentSegmentElement;
         "component-select": HTMLComponentSelectElement;
@@ -543,8 +534,6 @@ declare namespace LocalJSX {
     }
     interface ComponentReorder {
     }
-    interface ComponentRouting {
-    }
     interface ComponentSearchbar {
     }
     interface ComponentSegment {
@@ -612,7 +601,6 @@ declare namespace LocalJSX {
         "component-range": ComponentRange;
         "component-refresher": ComponentRefresher;
         "component-reorder": ComponentReorder;
-        "component-routing": ComponentRouting;
         "component-searchbar": ComponentSearchbar;
         "component-segment": ComponentSegment;
         "component-select": ComponentSelect;
@@ -669,7 +657,6 @@ declare module "@stencil/core" {
             "component-range": LocalJSX.ComponentRange & JSXBase.HTMLAttributes<HTMLComponentRangeElement>;
             "component-refresher": LocalJSX.ComponentRefresher & JSXBase.HTMLAttributes<HTMLComponentRefresherElement>;
             "component-reorder": LocalJSX.ComponentReorder & JSXBase.HTMLAttributes<HTMLComponentReorderElement>;
-            "component-routing": LocalJSX.ComponentRouting & JSXBase.HTMLAttributes<HTMLComponentRoutingElement>;
             "component-searchbar": LocalJSX.ComponentSearchbar & JSXBase.HTMLAttributes<HTMLComponentSearchbarElement>;
             "component-segment": LocalJSX.ComponentSegment & JSXBase.HTMLAttributes<HTMLComponentSegmentElement>;
             "component-select": LocalJSX.ComponentSelect & JSXBase.HTMLAttributes<HTMLComponentSelectElement>;
