@@ -20,108 +20,109 @@ export class Item {
         <ion-list>
           <ion-list-header lines="full">
             <ion-label>
-              Items with Labels
+              Icon Items
             </ion-label>
           </ion-list-header>
+
           <ion-item>
+            <ion-icon slot="start" ios="star-outline" md="star-sharp"></ion-icon>
             <ion-label>Label</ion-label>
           </ion-item>
 
           <ion-item lines="full">
-            <ion-icon slot="end" name="logo-ionic"></ion-icon>
-            <ion-label>Label with Icon</ion-label>
+            <ion-icon slot="start" ios="heart-outline" md="heart-sharp"></ion-icon>
+            <ion-label>Label</ion-label>
+          </ion-item>
+        </ion-list>
+
+        <ion-list>
+          <ion-list-header lines="full">
+            <ion-label>
+              Media Items
+            </ion-label>
+          </ion-list-header>
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img src="/assets/avatar.svg"/>
+            </ion-avatar>
+            <ion-label>Label</ion-label>
+          </ion-item>
+
+          <ion-item lines="full">
+            <ion-avatar slot="start">
+              <img src="/assets/avatar.svg"/>
+            </ion-avatar>
+            <ion-label>Label</ion-label>
           </ion-item>
         </ion-list>
 
         <ion-list>
           <ion-list-header>
-            Item Groups
-          </ion-list-header>
-
-          <ion-item-group>
-            <ion-item-divider>
-              <ion-label>A</ion-label>
-            </ion-item-divider>
-
-            <ion-item>
-              <ion-label>Adam</ion-label>
-            </ion-item>
-
-            <ion-item lines="none">
-              <ion-label>Alan</ion-label>
-            </ion-item>
-
-            <ion-item-divider>
-              <ion-label>B</ion-label>
-            </ion-item-divider>
-
-            <ion-item lines="none">
-              <ion-label>Brianna</ion-label>
-            </ion-item>
-
-            <ion-item-divider>
-              <ion-label>C</ion-label>
-            </ion-item-divider>
-
-            <ion-item lines="none">
-              <ion-label>Carla</ion-label>
-            </ion-item>
-          </ion-item-group>
-        </ion-list>
-
-        <ion-list>
-          <ion-list-header>
-            Sliding Items
+            <ion-label>
+              Sliding Items
+            </ion-label>
           </ion-list-header>
 
           <ion-item-sliding>
             <ion-item>
-              <ion-label>New Message</ion-label>
+              <ion-label>Label</ion-label>
             </ion-item>
 
             <ion-item-options side="start">
-              <ion-item-option color="primary">Mark Unread</ion-item-option>
+              <ion-item-option color="primary">Archive</ion-item-option>
             </ion-item-options>
 
             <ion-item-options side="end">
-              <ion-item-option color="danger">Delete</ion-item-option>
+              <ion-item-option expandable color="danger">Delete</ion-item-option>
             </ion-item-options>
           </ion-item-sliding>
 
           <ion-item-sliding>
             <ion-item>
-              <ion-label>New Message</ion-label>
+              <ion-label>Label</ion-label>
             </ion-item>
 
             <ion-item-options side="start">
-              <ion-item-option color="primary">Mark Unread</ion-item-option>
+              <ion-item-option color="primary">
+                <ion-icon slot="icon-only" ios="share-outline" md="share-sharp"></ion-icon>
+              </ion-item-option>
             </ion-item-options>
 
             <ion-item-options side="end">
-              <ion-item-option color="danger">Delete</ion-item-option>
+              <ion-item-option expandable color="danger">
+                <ion-icon slot="icon-only" ios="trash-outline" md="trash-sharp"></ion-icon>
+              </ion-item-option>
             </ion-item-options>
           </ion-item-sliding>
         </ion-list>
 
         <ion-list>
           <ion-list-header>
-            Inputs & Controls
+            <ion-label>
+              Inputs & Controls
+            </ion-label>
           </ion-list-header>
 
           <ion-item-sliding>
             <ion-item>
-              <ion-label>Item Note</ion-label>
+              <ion-label>Note</ion-label>
               <ion-note slot="end">99</ion-note>
             </ion-item>
 
             <ion-item>
-              <ion-label>Item Checkbox</ion-label>
+              <ion-label>Checkbox</ion-label>
               <ion-checkbox slot="end" checked></ion-checkbox>
             </ion-item>
 
             <ion-item>
-              <ion-label>Item Toggle</ion-label>
+              <ion-label>Toggle</ion-label>
               <ion-toggle slot="end" checked></ion-toggle>
+            </ion-item>
+
+            <ion-item>
+              <ion-label>Input</ion-label>
+              <ion-input slot="end" placeholder="Placeholder"></ion-input>
             </ion-item>
 
           </ion-item-sliding>
