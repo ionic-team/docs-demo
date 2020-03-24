@@ -1,0 +1,12 @@
+component-item-group ion-list {
+  margin-bottom: var(--ion-margin, 20px);
+}
+
+.ios component-item-group ion-item:last-of-type {
+  --inner-border-width: 0;
+}
+
+.md component-item-group ion-item:last-of-type {
+  --inner-border-width: 0;
+  --border-width: 0 0 1px 0;
+}

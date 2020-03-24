@@ -18,6 +18,7 @@ export const getComponents = () => {
     { name: 'Infinite Scroll', icon: '/assets/component-icon.svg', id: 'infinite-scroll' },
     { name: 'Input', icon: '/assets/component-icon.svg', id: 'input' },
     { name: 'Item', icon: '/assets/component-icon.svg', id: 'item' },
+    { name: 'Item Group', icon: '/assets/component-icon.svg', id: 'item-group' },
     { name: 'List', icon: '/assets/component-icon.svg', id: 'list' },
     { name: 'Loading', icon: '/assets/component-icon.svg', id: 'loading' },
     { name: 'Menu', icon: '/assets/component-icon.svg', id: 'menu' },
