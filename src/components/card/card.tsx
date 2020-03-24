@@ -79,11 +79,11 @@ export class Card {
               </ion-item>
               <ion-item lines="none">
                 <ion-thumbnail slot="start">
-                  <img src="/assets/logo-marketwatch.png"/>
+                  <img src="/assets/logo-amtrak.png"/>
                 </ion-thumbnail>
                 <ion-label>
-                  <h3>Market Watch</h3>
-                  <p>The latest financial news</p>
+                  <h3>Amtrak</h3>
+                  <p>Book a trip today</p>
                 </ion-label>
               </ion-item>
             </ion-list>
