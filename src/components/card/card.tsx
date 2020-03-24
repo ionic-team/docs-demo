@@ -139,16 +139,16 @@ export class Card {
             <ion-progress-bar value={.25}></ion-progress-bar>
 
             <ion-button color="dark" fill="clear" size="small">
-              <ion-icon slot="icon-only" name="shuffle-sharp"></ion-icon>
+              <ion-icon slot="icon-only" name="shuffle"></ion-icon>
             </ion-button>
             <ion-button color="dark" fill="clear" size="large">
-              <ion-icon slot="icon-only" name="play-back-sharp"></ion-icon>
+              <ion-icon slot="icon-only" name="play-back"></ion-icon>
             </ion-button>
             <ion-button color="dark" fill="clear" class="button-largest">
-              <ion-icon slot="icon-only" name="play-sharp"></ion-icon>
+              <ion-icon slot="icon-only" name="play"></ion-icon>
             </ion-button>
             <ion-button color="dark" fill="clear" size="large">
-              <ion-icon slot="icon-only" name="play-forward-sharp"></ion-icon>
+              <ion-icon slot="icon-only" name="play-forward"></ion-icon>
             </ion-button>
             <ion-button color="dark" fill="clear" size="small">
               <ion-icon slot="icon-only" name="repeat"></ion-icon>
