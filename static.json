@@ -1,5 +1,10 @@
 {
   "root": "www/",
   "clean_urls": true,
-  "https_only": true
+  "https_only": true,
+  "routes": {
+    "/assets/*": "/assets/",
+    "/build/*": "/build/",
+    "/**": "index.html"
+  }
 }
