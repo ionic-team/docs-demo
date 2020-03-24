@@ -91,12 +91,12 @@ export class Card {
         </ion-card>
 
         <ion-card class="coworker-card">
-          <img src="/assets/card-top-img.png" class="header-img"/>
+          <img src="/assets/card-coworker-header.png" class="header-img"/>
           <ion-card-content>
             <ion-list lines="none">
               <ion-item>
                 <ion-avatar slot="start">
-                  <img src="/assets/avatar.svg"/>
+                  <img src="/assets/card-coworker-avatar.png"/>
                 </ion-avatar>
                 <ion-label>
                   <h1>John Parks</h1>
@@ -130,7 +130,7 @@ export class Card {
 
         <ion-card class="music-card">
           <ion-card-header>
-            <img src="/assets/card-top-img.png"/>
+            <img src="/assets/card-album.png"/>
           </ion-card-header>
           <ion-card-content text-center>
             <h2>29 #Strafford APTS</h2>
