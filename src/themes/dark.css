@@ -147,3 +147,7 @@ body.dark {
 
   --ion-tab-bar-background: #2e2e2e;
 }
+
+.ios body.dark ion-title.large-title {
+  color: var(--ion-text-color, #ffffff);
+}
