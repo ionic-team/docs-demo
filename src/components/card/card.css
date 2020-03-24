@@ -1,0 +1,142 @@
+.ios body.dark component-card {
+  --ion-item-background: #1c1c1e;
+}
+
+component-card {
+  --background-darker: var(--ion-color-step-200, #e9edf3);
+
+  --text-dark: var(--ion-color-step-850, #27323f);
+  --text-darker: var(--ion-color-step-950, #0e151f);
+
+  --text-light: var(--ion-color-step-650, #5b708b);
+  --text-lighter: var(--ion-color-step-550, #73849a);
+  --text-lightest: var(--ion-color-step-300, #b2becd);
+}
+
+component-card ion-card .header-img {
+  width: 100%;
+  height: 120px;
+}
+
+component-card ion-card ion-card-subtitle {
+  color: var(--text-lighter);
+}
+
+component-card ion-card ion-card-title {
+  color: var(--text-darker);
+}
+
+component-card ion-card ion-card-content {
+  color: var(--text-light);
+}
+
+component-card ion-card ion-list ion-item {
+  --padding-start: 0;
+}
+
+/* Action Card */
+
+component-card .action-card ion-grid {
+  --ion-grid-column-padding: 0;
+
+  padding: 10px 0 0;
+}
+
+component-card .action-card ion-col:last-child {
+  text-align: right;
+}
+
+.md component-card .action-card .button-clear {
+  --background-hover: currentColor;
+  --background-focused: currentColor;
+}
+
+component-card .action-card .button-clear {
+  --color: #c6cede;
+  --border-radius: 50%;
+  --padding-top: 0;
+  --padding-end: 0;
+  --padding-bottom: 0;
+  --padding-start: 0;
+
+  margin: 0;
+
+  height: 36px;
+  width: 36px;
+}
+
+/* Apps Card */
+
+component-card .apps-card ion-list ion-thumbnail {
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  --border-radius: 14px;
+}
+
+/* Coworker Card */
+
+component-card .coworker-card .header-img {
+  height: 160px;
+}
+
+component-card .coworker-card h1 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+component-card .coworker-card p {
+  color: var(--text-light);
+}
+
+component-card .coworker-card ion-icon {
+  align-self: start;
+  margin-top: 10px;
+  margin-right: 29px;
+
+  color: var(--text-lightest);
+}
+
+/* Music Card */
+
+component-card .music-card ion-card-header,
+component-card .music-card ion-card-content {
+  text-align: center;
+}
+
+component-card .music-card img {
+  width: 248px;
+  height: 248px;
+
+  box-shadow: 0px 2px 8px rgba(2, 8, 20, 0.1), 0px 8px 16px rgba(2, 8, 20, 0.08);
+  border-radius: 6px;
+}
+
+component-card .music-card h2 {
+  font-weight: 600;
+  font-size: 16px;
+
+  color: var(--text-darker);
+}
+
+component-card .music-card p {
+  color: var(--text-light);
+}
+
+component-card .music-card ion-button {
+  --padding-start: 7px;
+  --padding-end: 7px;
+
+  margin: 0;
+}
+
+component-card .music-card .button-largest {
+  font-size: 28px;
+}
+
+component-card .music-card ion-progress-bar {
+  margin: 30px 0 20px;
+
+  --background: var(--background-darker);
+  --progress-background: var(--text-dark);
+}

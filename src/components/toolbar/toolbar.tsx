@@ -197,7 +197,7 @@ export class Toolbar {
         </ion-header>
 
         <ion-header>
-         <ion-toolbar>
+          <ion-toolbar>
             <ion-buttons slot="start">
               <ion-back-button defaultHref="#"></ion-back-button>
             </ion-buttons>
