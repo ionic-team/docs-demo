@@ -48,6 +48,7 @@
 /*
  * When placed inside of an element with a background color
  * the backdrop-filter is blurring it into the header
+ * https://bugs.webkit.org/show_bug.cgi?id=168418
  */
 
 ion-header .header-background {
