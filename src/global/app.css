@@ -47,10 +47,11 @@
 
 /*
  * When placed inside of an element with a background color
- * the backdrop-filter is blurring it into the header
+ * the backdrop-filter is blurring it into the header in Safari
  * https://bugs.webkit.org/show_bug.cgi?id=168418
  */
 
-ion-header .header-background {
+_::-webkit-full-page-media, _:future ion-header .header-background,
+:root .safari_only ion-header .header-background {
   backdrop-filter: none !important;
 }
