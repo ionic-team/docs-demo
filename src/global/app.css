@@ -41,12 +41,12 @@
  * CSS to apply throughout the application.
  */
 
- .component-content {
-   --background: var(--ion-color-step-50, #f2f2f7);
- }
+.component-content {
+  --background: var(--ion-color-step-50, #f2f2f7);
+}
 
 /*
- * When placed inside of an element with a background color
+ * When placed inside of an element with a background/border color
  * the backdrop-filter is blurring it into the header in Safari
  * https://bugs.webkit.org/show_bug.cgi?id=168418
  */
