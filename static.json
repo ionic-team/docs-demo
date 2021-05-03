@@ -8,11 +8,11 @@
     "/**": "index.html"
   },
   "headers": {
-    "/build/p-*.js": {
-      "Cache-Control": "public, max-age=86400"
-    },
     "/**": {
       "Cache-Control": "public, max-age=600"
+    },
+    "/build/p-*.js": {
+      "Cache-Control": "public, max-age=86400"
     }
   }
 }
