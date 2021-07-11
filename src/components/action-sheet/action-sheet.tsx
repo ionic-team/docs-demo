@@ -1,18 +1,14 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
-import { Config, actionSheetController } from '@ionic/core';
+import { actionSheetController, getMode } from '@ionic/core';
 
 @Component({
   tag: 'component-action-sheet',
   styleUrl: 'action-sheet.css'
 })
 export class ActionSheet {
-  mode!: string;
-
-  @Prop({ context: 'config' }) config: Config;
-
   open = async () => {
-    const mode = this.config.get('mode');
+    const mode = getMode();
 
     const actionSheet = await actionSheetController.create({
       header: 'Albums',
