@@ -1,10 +1,11 @@
+/**
+ * TODO: This works around https://github.com/ionic-team/ionic-framework/issues/21037
+ * where segment is offset by back button width.
+ * Back button width is ~60px, so adjusting by
+ * half of that gives us ~30px.
+ */
 .ios component-segment ion-header ion-segment {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translateX(-50%) translateY(-50%);
+  left: -30px;
 }
 
 component-segment ion-content ion-segment {
