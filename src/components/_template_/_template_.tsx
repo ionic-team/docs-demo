@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/class-name-casing */
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Component, h } from '@stencil/core';
 
 @Component({
