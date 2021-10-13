@@ -1,6 +1,6 @@
 import { Component, h } from '@stencil/core';
 
-import { Config, actionSheetController } from '@ionic/core';
+import { actionSheetController, getMode } from '@ionic/core';
 
 @Component({
   tag: 'component-action-sheet',
@@ -10,8 +10,7 @@ export class ActionSheet {
   mode!: string;
 
   open = async () => {
-    const config: Config = (window as any).Ionic.config;
-    const mode = config.get('mode');
+    const mode = getMode();
 
     const actionSheet = await actionSheetController.create({
       header: 'Albums',
