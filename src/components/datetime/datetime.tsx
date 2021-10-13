@@ -6,6 +6,9 @@ import { Component, h } from '@stencil/core';
 })
 export class Datetime {
   render() {
+    return ['tbd']
+  }
+  /*render() {
     return [
       <ion-header translucent={true}>
         <ion-toolbar>
@@ -53,5 +56,5 @@ export class Datetime {
         </ion-list>
       </ion-content>
     ];
-  }
+  }*/
 }

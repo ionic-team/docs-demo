@@ -1,7 +1,6 @@
-
-
 export const getComponents = () => {
   return [
+    { name: 'Accordion', icon: '/assets/component-icon.svg', id: 'accordion' },
     { name: 'Action Sheet', icon: '/assets/component-icon.svg', id: 'action-sheet' },
     { name: 'Alert', icon: '/assets/component-icon.svg', id: 'alert' },
     { name: 'Avatar', icon: '/assets/component-icon.svg', id: 'avatar' },
