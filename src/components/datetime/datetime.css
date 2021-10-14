@@ -1,0 +1,24 @@
+ion-datetime {
+  height: auto;
+}
+
+ion-datetime.datetime-presentation-date,
+ion-datetime.datetime-presentation-date-time,
+ion-datetime.datetime-presentation-time-date {
+  min-height: 350px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-gap: 0 10px;
+}
+
+ion-modal {
+  --width: 350px;
+  --height: 382px;
+}
+
+ion-modal ion-datetime {
+  height: 382px;
+}
