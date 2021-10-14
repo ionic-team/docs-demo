@@ -11,14 +11,27 @@ export class Modal {
 
   @Element() el: any;
 
-  openModal = async () => {
+  openModal = async (opts: any = {}) => {
     const modal = await modalController.create({
       component: 'component-modal-content',
-      swipeToClose: true,
-      presentingElement: this.el
+      ...opts
     });
     modal.present();
     this.currentModal = modal;
+  }
+
+  private openSheetModal = () => {
+    this.openModal({
+      breakpoints: [0, 0.2, 0.5, 1],
+      initialBreakpoint: 0.2
+    })
+  }
+
+  private openCardModal = () => {
+    this.openModal({
+      swipeToClose: true,
+      presentingElement: this.el
+    })
   }
 
   render() {
@@ -43,6 +56,8 @@ export class Modal {
 
         <div class="ion-padding-start ion-padding-end">
           <ion-button expand="block" onClick={this.openModal}>Open Modal</ion-button>
+          <ion-button expand="block" onClick={this.openCardModal}>Open Card Modal</ion-button>
+          <ion-button expand="block" onClick={this.openSheetModal}>Open Sheet Modal</ion-button>
         </div>
       </ion-content>
     ];
