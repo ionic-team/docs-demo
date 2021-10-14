@@ -22,6 +22,8 @@ export namespace Components {
     }
     interface ComponentBadge {
     }
+    interface ComponentBreadcrumbs {
+    }
     interface ComponentButton {
     }
     interface ComponentCard {
@@ -161,6 +163,12 @@ declare global {
     var HTMLComponentBadgeElement: {
         prototype: HTMLComponentBadgeElement;
         new (): HTMLComponentBadgeElement;
+    };
+    interface HTMLComponentBreadcrumbsElement extends Components.ComponentBreadcrumbs, HTMLStencilElement {
+    }
+    var HTMLComponentBreadcrumbsElement: {
+        prototype: HTMLComponentBreadcrumbsElement;
+        new (): HTMLComponentBreadcrumbsElement;
     };
     interface HTMLComponentButtonElement extends Components.ComponentButton, HTMLStencilElement {
     }
@@ -435,6 +443,7 @@ declare global {
         "component-alert": HTMLComponentAlertElement;
         "component-avatar": HTMLComponentAvatarElement;
         "component-badge": HTMLComponentBadgeElement;
+        "component-breadcrumbs": HTMLComponentBreadcrumbsElement;
         "component-button": HTMLComponentButtonElement;
         "component-card": HTMLComponentCardElement;
         "component-checkbox": HTMLComponentCheckboxElement;
@@ -497,6 +506,8 @@ declare namespace LocalJSX {
     interface ComponentAvatar {
     }
     interface ComponentBadge {
+    }
+    interface ComponentBreadcrumbs {
     }
     interface ComponentButton {
     }
@@ -597,6 +608,7 @@ declare namespace LocalJSX {
         "component-alert": ComponentAlert;
         "component-avatar": ComponentAvatar;
         "component-badge": ComponentBadge;
+        "component-breadcrumbs": ComponentBreadcrumbs;
         "component-button": ComponentButton;
         "component-card": ComponentCard;
         "component-checkbox": ComponentCheckbox;
@@ -655,6 +667,7 @@ declare module "@stencil/core" {
             "component-alert": LocalJSX.ComponentAlert & JSXBase.HTMLAttributes<HTMLComponentAlertElement>;
             "component-avatar": LocalJSX.ComponentAvatar & JSXBase.HTMLAttributes<HTMLComponentAvatarElement>;
             "component-badge": LocalJSX.ComponentBadge & JSXBase.HTMLAttributes<HTMLComponentBadgeElement>;
+            "component-breadcrumbs": LocalJSX.ComponentBreadcrumbs & JSXBase.HTMLAttributes<HTMLComponentBreadcrumbsElement>;
             "component-button": LocalJSX.ComponentButton & JSXBase.HTMLAttributes<HTMLComponentButtonElement>;
             "component-card": LocalJSX.ComponentCard & JSXBase.HTMLAttributes<HTMLComponentCardElement>;
             "component-checkbox": LocalJSX.ComponentCheckbox & JSXBase.HTMLAttributes<HTMLComponentCheckboxElement>;

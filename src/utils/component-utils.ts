@@ -5,6 +5,7 @@ export const getComponents = () => {
     { name: 'Alert', icon: '/assets/component-icon.svg', id: 'alert' },
     { name: 'Avatar', icon: '/assets/component-icon.svg', id: 'avatar' },
     { name: 'Badge', icon: '/assets/component-icon.svg', id: 'badge' },
+    { name: 'Breadcrumbs', icon: '/assets/component-icon.svg', id: 'breadcrumbs' },
     { name: 'Button', icon: '/assets/component-icon.svg', id: 'button' },
     { name: 'Card', icon: '/assets/component-icon.svg', id: 'card' },
     { name: 'Checkbox', icon: '/assets/component-icon.svg', id: 'checkbox' },
