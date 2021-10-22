@@ -1,27 +1,27 @@
-import { Component, h } from '@stencil/core';
+import { Component, State, h } from '@stencil/core';
+import { format, parseISO } from 'date-fns';
+import { DatetimeCustomEvent } from '@ionic/core';
 
 @Component({
   tag: 'component-datetime',
   styleUrl: 'datetime.css'
 })
 export class Datetime {
-  private customDatetime?: HTMLIonDatetimeElement;
+  @State() startDate: string = format(new Date(), 'PP');
+  @State() endDate: string = format(new Date(), 'PP');
 
-  private confirm = () => {
-    const { customDatetime } = this;
-    if (!customDatetime) return;
-
-    customDatetime.confirm();
+  private onStartChange = (ev: DatetimeCustomEvent) => {
+    const date = format(parseISO(ev.detail.value), 'PP');
+    this.startDate = date;
   }
 
-  private reset = () => {
-    const { customDatetime } = this;
-    if (!customDatetime) return;
-
-    customDatetime.reset();
+  private onEndChange = (ev: DatetimeCustomEvent) => {
+    const date = format(parseISO(ev.detail.value), 'PP');
+    this.endDate = date;
   }
 
   render() {
+    const { startDate, endDate } = this;
     const description = `<b>Datetime</b> presents a calendar interface and time wheel, making it easy for users to select dates and times. Datetimes are similar to the native input elements of <code>datetime-local</code>, however, Ionic's Datetime component makes it easy to display the date and time in the a preferred format, and manage the datetime values.`;
     const url = 'datetime';
 
@@ -35,89 +35,48 @@ export class Datetime {
         </ion-toolbar>
       </ion-header>,
 
-      <ion-content fullscreen>
+      <ion-content fullscreen class="component-content">
         <component-details description={description} url={url}></component-details>
 
-        <div class="ion-padding-start ion-padding-end">
-          <div class="grid">
-            <div class="grid-item">
-              <h2>Initial Value</h2>
-              <ion-datetime value="2012-12-15T13:47:20.789"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Readonly</h2>
-              <ion-datetime readonly={true}></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Disabled</h2>
-              <ion-datetime disabled={true}></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Custom Locale</h2>
-              <ion-datetime locale="en-GB"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Max and min</h2>
-              <ion-datetime min="1994-03-14" max="2012-12-09" value="2008-09-02"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>15 minute increments</h2>
-              <ion-datetime minuteValues="0,15,30,45"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Specific days/months/years</h2>
-              <ion-datetime monthValues="6,7,8" yearValues="2014,2015" dayValues="01,02,03,04,05,06,08,09,10,11,12,13,14"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Time Only</h2>
-              <ion-datetime presentation="time"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Time First, Date Second</h2>
-              <ion-datetime presentation="time-date"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Cover</h2>
-              <ion-datetime size="cover"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Custom Hour Cycle</h2>
-              <ion-datetime hourCycle="h23"></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Custom First Day Of Week</h2>
-              <ion-datetime firstDayOfWeek={1}></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Custom Title</h2>
-              <ion-datetime>
-                <div slot="title">My Custom Title</div>
-              </ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Clear Button</h2>
-              <ion-datetime showClearButton={true}></ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Custom Buttons</h2>
-              <ion-datetime ref={el => this.customDatetime = el}>
-                <ion-buttons slot="buttons">
-                  <ion-button color="primary" onClick={() => this.confirm()}>Good to go!</ion-button>
-                  <ion-button color="danger" onClick={() => this.reset()}>Reset</ion-button>
-                </ion-buttons>
-              </ion-datetime>
-            </div>
-            <div class="grid-item">
-              <h2>Datetime in Overlay</h2>
-              <ion-button id="open-modal">Open Datetime Modal</ion-button>
-              <ion-modal trigger="open-modal">
-                <ion-content forceOverscroll={false}>
-                  <ion-datetime></ion-datetime>
-                </ion-content>
-              </ion-modal>
-            </div>
-          </div>
-        </div>
+        <ion-list inset={true}>
+          <ion-item>
+            <ion-input placeholder="Title"></ion-input>
+          </ion-item>
+          <ion-item lines="full">
+            <ion-input placeholder="Location"></ion-input>
+          </ion-item>
+        </ion-list>
+
+        <ion-list inset={true}>
+          <ion-accordion-group>
+            <ion-accordion value="start">
+              <ion-item slot="header">
+                <ion-label>Starts</ion-label>
+                <ion-note slot="end">{startDate}</ion-note>
+              </ion-item>
+              <ion-datetime slot="content" presentation="date-time" onIonChange={this.onStartChange}></ion-datetime>
+            </ion-accordion>
+            <ion-accordion value="end">
+              <ion-item slot="header">
+                <ion-label>Ends</ion-label>
+                <ion-note slot="end">{endDate}</ion-note>
+              </ion-item>
+              <ion-datetime slot="content" presentation="date-time" onIonChange={this.onEndChange}></ion-datetime>
+            </ion-accordion>
+          </ion-accordion-group>
+          <ion-item>
+            <ion-label>Repeat</ion-label>
+            <ion-note slot="end">Never</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Travel Time</ion-label>
+            <ion-note slot="end">None</ion-note>
+          </ion-item>
+          <ion-item>
+            <ion-label>Alert</ion-label>
+            <ion-note slot="end">None</ion-note>
+          </ion-item>
+        </ion-list>
       </ion-content>
     ];
   }

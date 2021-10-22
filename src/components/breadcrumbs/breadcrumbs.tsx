@@ -1,5 +1,4 @@
 import { Component, State, h } from '@stencil/core';
-import { BreadcrumbCustomEvent } from '@ionic/core';
 
 @Component({
   tag: 'component-breadcrumbs',

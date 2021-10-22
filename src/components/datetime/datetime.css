@@ -22,3 +22,7 @@ ion-modal {
 ion-modal ion-datetime {
   height: 382px;
 }
+
+ion-accordion .ion-accordion-toggle-icon {
+  display: none;
+}
