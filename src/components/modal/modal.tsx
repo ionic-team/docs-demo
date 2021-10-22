@@ -1,6 +1,5 @@
 import { Component, Element, h } from '@stencil/core';
-
-import { modalController } from '@ionic/core';
+import { modalController, ModalOptions } from '@ionic/core';
 
 @Component({
   tag: 'component-modal',
@@ -11,13 +10,17 @@ export class Modal {
 
   @Element() el: any;
 
-  openModal = async (opts: any = {}) => {
+  openModal = async (opts: Partial<ModalOptions> = {}) => {
     const modal = await modalController.create({
       component: 'component-modal-content',
       ...opts
     });
     modal.present();
     this.currentModal = modal;
+  }
+
+  private openDefaultModal = () => {
+    this.openModal();
   }
 
   private openSheetModal = () => {
@@ -55,7 +58,7 @@ export class Modal {
         <component-details description={description} url={url}></component-details>
 
         <div class="ion-padding-start ion-padding-end">
-          <ion-button expand="block" onClick={this.openModal}>Open Modal</ion-button>
+          <ion-button expand="block" onClick={this.openDefaultModal}>Open Modal</ion-button>
           <ion-button expand="block" onClick={this.openCardModal}>Open Card Modal</ion-button>
           <ion-button expand="block" onClick={this.openSheetModal}>Open Sheet Modal</ion-button>
         </div>
