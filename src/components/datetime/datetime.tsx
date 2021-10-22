@@ -22,7 +22,7 @@ export class Datetime {
 
   render() {
     const { startDate, endDate } = this;
-    const description = `<b>Datetime</b> presents a calendar interface and time wheel, making it easy for users to select dates and times. Datetimes are similar to the native input elements of <code>datetime-local</code>, however, Ionic's Datetime component makes it easy to display the date and time in the a preferred format, and manage the datetime values.`;
+    const description = '<b>Datetime</b> presents a calendar interface and time wheel, making it easy for users to select dates and times. Datetimes are similar to the native input elements of <code>datetime-local</code>, however, Ionic\'s Datetime component makes it easy to display the date and time in the a preferred format, and manage the datetime values.';
     const url = 'datetime';
 
     return [

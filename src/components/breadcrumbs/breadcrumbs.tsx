@@ -12,7 +12,7 @@ export class Breadcrumb {
   }
 
   render() {
-    const description = `<b>Breadcrumbs</b> are navigation items that are used to indicate where a user is on an app or site. They should be used for large sites and apps with hierarchically arranged pages. Breadcrumbs can be collapsed based on the maximum number that can show, and the collapsed indicator can be clicked on to present a popover with more information or expand the collapsed breadcrumbs.`;
+    const description = '<b>Breadcrumbs</b> are navigation items that are used to indicate where a user is on an app or site. They should be used for large sites and apps with hierarchically arranged pages. Breadcrumbs can be collapsed based on the maximum number that can show, and the collapsed indicator can be clicked on to present a popover with more information or expand the collapsed breadcrumbs.';
     const url = 'breadcrumbs';
     const { maxBreadcrumbs } = this;
 
@@ -45,7 +45,7 @@ export class Breadcrumb {
               35 mm
             </ion-breadcrumb>
           </ion-breadcrumbs>
-          </ion-toolbar>
+        </ion-toolbar>
       </ion-header>,
 
       <ion-content fullscreen class="component-content">

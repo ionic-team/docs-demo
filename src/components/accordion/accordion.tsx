@@ -7,7 +7,7 @@ import { Component, h } from '@stencil/core';
 export class Accordion {
 
   render() {
-    const description = `<b>Accordions</b> provide collapsible sections in your content to reduce vertical space while providing a way of organizing and grouping information. All <code>ion-accordion</code> components should be grouped inside <code>ion-accordion-group</code> components.`;
+    const description = '<b>Accordions</b> provide collapsible sections in your content to reduce vertical space while providing a way of organizing and grouping information. All <code>ion-accordion</code> components should be grouped inside <code>ion-accordion-group</code> components.';
     const url = 'accordion';
 
     return [
