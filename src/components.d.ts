@@ -12,6 +12,8 @@ export namespace Components {
     }
     interface Component_template_ {
     }
+    interface ComponentAccordion {
+    }
     interface ComponentActionSheet {
     }
     interface ComponentAlert {
@@ -19,6 +21,8 @@ export namespace Components {
     interface ComponentAvatar {
     }
     interface ComponentBadge {
+    }
+    interface ComponentBreadcrumbs {
     }
     interface ComponentButton {
     }
@@ -130,6 +134,12 @@ declare global {
         prototype: HTMLComponent_template_Element;
         new (): HTMLComponent_template_Element;
     };
+    interface HTMLComponentAccordionElement extends Components.ComponentAccordion, HTMLStencilElement {
+    }
+    var HTMLComponentAccordionElement: {
+        prototype: HTMLComponentAccordionElement;
+        new (): HTMLComponentAccordionElement;
+    };
     interface HTMLComponentActionSheetElement extends Components.ComponentActionSheet, HTMLStencilElement {
     }
     var HTMLComponentActionSheetElement: {
@@ -153,6 +163,12 @@ declare global {
     var HTMLComponentBadgeElement: {
         prototype: HTMLComponentBadgeElement;
         new (): HTMLComponentBadgeElement;
+    };
+    interface HTMLComponentBreadcrumbsElement extends Components.ComponentBreadcrumbs, HTMLStencilElement {
+    }
+    var HTMLComponentBreadcrumbsElement: {
+        prototype: HTMLComponentBreadcrumbsElement;
+        new (): HTMLComponentBreadcrumbsElement;
     };
     interface HTMLComponentButtonElement extends Components.ComponentButton, HTMLStencilElement {
     }
@@ -422,10 +438,12 @@ declare global {
         "app-home": HTMLAppHomeElement;
         "app-root": HTMLAppRootElement;
         "component-_template_": HTMLComponent_template_Element;
+        "component-accordion": HTMLComponentAccordionElement;
         "component-action-sheet": HTMLComponentActionSheetElement;
         "component-alert": HTMLComponentAlertElement;
         "component-avatar": HTMLComponentAvatarElement;
         "component-badge": HTMLComponentBadgeElement;
+        "component-breadcrumbs": HTMLComponentBreadcrumbsElement;
         "component-button": HTMLComponentButtonElement;
         "component-card": HTMLComponentCardElement;
         "component-checkbox": HTMLComponentCheckboxElement;
@@ -479,6 +497,8 @@ declare namespace LocalJSX {
     }
     interface Component_template_ {
     }
+    interface ComponentAccordion {
+    }
     interface ComponentActionSheet {
     }
     interface ComponentAlert {
@@ -486,6 +506,8 @@ declare namespace LocalJSX {
     interface ComponentAvatar {
     }
     interface ComponentBadge {
+    }
+    interface ComponentBreadcrumbs {
     }
     interface ComponentButton {
     }
@@ -581,10 +603,12 @@ declare namespace LocalJSX {
         "app-home": AppHome;
         "app-root": AppRoot;
         "component-_template_": Component_template_;
+        "component-accordion": ComponentAccordion;
         "component-action-sheet": ComponentActionSheet;
         "component-alert": ComponentAlert;
         "component-avatar": ComponentAvatar;
         "component-badge": ComponentBadge;
+        "component-breadcrumbs": ComponentBreadcrumbs;
         "component-button": ComponentButton;
         "component-card": ComponentCard;
         "component-checkbox": ComponentCheckbox;
@@ -638,10 +662,12 @@ declare module "@stencil/core" {
             "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "component-_template_": LocalJSX.Component_template_ & JSXBase.HTMLAttributes<HTMLComponent_template_Element>;
+            "component-accordion": LocalJSX.ComponentAccordion & JSXBase.HTMLAttributes<HTMLComponentAccordionElement>;
             "component-action-sheet": LocalJSX.ComponentActionSheet & JSXBase.HTMLAttributes<HTMLComponentActionSheetElement>;
             "component-alert": LocalJSX.ComponentAlert & JSXBase.HTMLAttributes<HTMLComponentAlertElement>;
             "component-avatar": LocalJSX.ComponentAvatar & JSXBase.HTMLAttributes<HTMLComponentAvatarElement>;
             "component-badge": LocalJSX.ComponentBadge & JSXBase.HTMLAttributes<HTMLComponentBadgeElement>;
+            "component-breadcrumbs": LocalJSX.ComponentBreadcrumbs & JSXBase.HTMLAttributes<HTMLComponentBreadcrumbsElement>;
             "component-button": LocalJSX.ComponentButton & JSXBase.HTMLAttributes<HTMLComponentButtonElement>;
             "component-card": LocalJSX.ComponentCard & JSXBase.HTMLAttributes<HTMLComponentCardElement>;
             "component-checkbox": LocalJSX.ComponentCheckbox & JSXBase.HTMLAttributes<HTMLComponentCheckboxElement>;

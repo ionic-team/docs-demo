@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "lint": "eslint src/ --ext .js,.ts,.jsx,.tsx",
-    "lint.fix": "lint -- --fix",
+    "lint.fix": "npm run lint -- --fix",
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -17,7 +17,8 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@ionic/core": "^5.8.4"
+    "@ionic/core": "^6.0.0",
+    "date-fns": "^2.25.0"
   },
   "devDependencies": {
     "@stencil/core": "^2.9.0",
