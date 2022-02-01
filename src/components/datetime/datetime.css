@@ -7,3 +7,7 @@
 ion-accordion .ion-accordion-toggle-icon {
   display: none;
 }
+
+ion-datetime.ios {
+  --background: var(--ion-background-color, #ffffff);
+}
