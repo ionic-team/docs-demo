@@ -49,7 +49,7 @@
 @font-face {
   font-family: "Roboto";
   src: url("../assets/fonts/Roboto-Medium.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 450 500;
 }
 
 .component-content {
