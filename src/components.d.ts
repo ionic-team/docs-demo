@@ -36,10 +36,6 @@ export namespace Components {
     }
     interface ComponentDatetime {
     }
-    /**
-     * This component is useful for providing a top section in the component page
-     * to describe what the component is and link to the Component & API docs.
-     */
     interface ComponentDetails {
         "description": string;
         "url": string;
@@ -210,10 +206,6 @@ declare global {
         prototype: HTMLComponentDatetimeElement;
         new (): HTMLComponentDatetimeElement;
     };
-    /**
-     * This component is useful for providing a top section in the component page
-     * to describe what the component is and link to the Component & API docs.
-     */
     interface HTMLComponentDetailsElement extends Components.ComponentDetails, HTMLStencilElement {
     }
     var HTMLComponentDetailsElement: {
@@ -529,10 +521,6 @@ declare namespace LocalJSX {
     }
     interface ComponentDatetime {
     }
-    /**
-     * This component is useful for providing a top section in the component page
-     * to describe what the component is and link to the Component & API docs.
-     */
     interface ComponentDetails {
         "description"?: string;
         "url"?: string;
@@ -686,10 +674,6 @@ declare module "@stencil/core" {
             "component-chip": LocalJSX.ComponentChip & JSXBase.HTMLAttributes<HTMLComponentChipElement>;
             "component-content": LocalJSX.ComponentContent & JSXBase.HTMLAttributes<HTMLComponentContentElement>;
             "component-datetime": LocalJSX.ComponentDatetime & JSXBase.HTMLAttributes<HTMLComponentDatetimeElement>;
-            /**
-             * This component is useful for providing a top section in the component page
-             * to describe what the component is and link to the Component & API docs.
-             */
             "component-details": LocalJSX.ComponentDetails & JSXBase.HTMLAttributes<HTMLComponentDetailsElement>;
             "component-fab": LocalJSX.ComponentFab & JSXBase.HTMLAttributes<HTMLComponentFabElement>;
             "component-grid": LocalJSX.ComponentGrid & JSXBase.HTMLAttributes<HTMLComponentGridElement>;
