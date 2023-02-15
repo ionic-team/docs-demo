@@ -10,7 +10,6 @@ import { _template_ } from '../_template_/_template_';
  * to describe what the component is and link to the Component & API docs.
  */
 export class ComponentDetails {
-
   @Prop() description: string;
 
   @Prop() url: string;
