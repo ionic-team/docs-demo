@@ -1,27 +1,12 @@
-import { Component, State, h } from '@stencil/core';
-import { format, parseISO } from 'date-fns';
-import { DatetimeCustomEvent } from '@ionic/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'component-datetime',
   styleUrl: 'datetime.css'
 })
 export class Datetime {
-  @State() startDate: string = format(new Date(), 'PP');
-  @State() endDate: string = format(new Date(), 'PP');
-
-  private onStartChange = (ev: DatetimeCustomEvent) => {
-    const date = format(parseISO(ev.detail.value), 'PP');
-    this.startDate = date;
-  }
-
-  private onEndChange = (ev: DatetimeCustomEvent) => {
-    const date = format(parseISO(ev.detail.value), 'PP');
-    this.endDate = date;
-  }
 
   render() {
-    const { startDate, endDate } = this;
     const description = '<b>Datetime</b> presents a calendar interface and time wheel, making it easy for users to select dates and times. Datetimes are similar to the native input elements of <code>datetime-local</code>, however, Ionic\'s Datetime component makes it easy to display the date and time in the a preferred format, and manage the datetime values.';
     const url = 'datetime';
 
@@ -50,18 +35,18 @@ export class Datetime {
         <ion-list inset={true}>
           <ion-accordion-group>
             <ion-accordion value="start">
-              <ion-item slot="header">
+              <ion-item lines="inset" slot="header">
                 <ion-label>Starts</ion-label>
-                <ion-note slot="end">{startDate}</ion-note>
+                <ion-datetime-button slot="end" datetime="start-date"></ion-datetime-button>
               </ion-item>
-              <ion-datetime slot="content" presentation="date-time" onIonChange={this.onStartChange}></ion-datetime>
+              <ion-datetime id="start-date" slot="content" presentation="date"></ion-datetime>
             </ion-accordion>
             <ion-accordion value="end">
-              <ion-item slot="header">
+              <ion-item lines="inset" slot="header">
                 <ion-label>Ends</ion-label>
-                <ion-note slot="end">{endDate}</ion-note>
+                <ion-datetime-button slot="end" datetime="end-date"></ion-datetime-button>
               </ion-item>
-              <ion-datetime slot="content" presentation="date-time" onIonChange={this.onEndChange}></ion-datetime>
+              <ion-datetime id="end-date" slot="content" presentation="date"></ion-datetime>
             </ion-accordion>
           </ion-accordion-group>
           <ion-item>

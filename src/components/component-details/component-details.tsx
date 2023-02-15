@@ -1,14 +1,14 @@
 import { Component, Prop, h } from '@stencil/core';
 import { _template_ } from '../_template_/_template_';
 
-/**
- * This component is useful for providing a top section in the component page
- * to describe what the component is and link to the Component & API docs.
- */
 @Component({
   tag: 'component-details',
   styleUrl: 'component-details.css'
 })
+/**
+ * This component is useful for providing a top section in the component page
+ * to describe what the component is and link to the Component & API docs.
+ */
 export class ComponentDetails {
   @Prop() description: string;
 
