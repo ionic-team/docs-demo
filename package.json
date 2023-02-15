@@ -17,11 +17,10 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@ionic/core": "^6.0.0",
-    "date-fns": "^2.25.0"
+    "@ionic/core": "^6.5.4"
   },
   "devDependencies": {
-    "@stencil/core": "^2.9.0",
+    "@stencil/core": "^2.22.2",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
