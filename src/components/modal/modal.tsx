@@ -32,7 +32,6 @@ export class Modal {
 
   private openCardModal = () => {
     this.openModal({
-      swipeToClose: true,
       presentingElement: this.el
     })
   }

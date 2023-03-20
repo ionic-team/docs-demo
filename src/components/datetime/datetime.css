@@ -11,3 +11,7 @@ ion-accordion .ion-accordion-toggle-icon {
 ion-datetime.ios {
   --background: var(--ion-background-color, #ffffff);
 }
+
+component-datetime ion-note {
+  font-size: inherit;
+}

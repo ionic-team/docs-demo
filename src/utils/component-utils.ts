@@ -37,7 +37,6 @@ export const getComponents = () => {
     { name: 'Select', icon: '/assets/component-icon.svg', id: 'select' },
     { name: 'Skeleton Text', icon: '/assets/component-icon.svg', id: 'skeleton-text' },
     { name: 'Spinner', icon: '/assets/component-icon.svg', id: 'spinner' },
-    { name: 'Slides', icon: '/assets/component-icon.svg', id: 'slides' },
     { name: 'Tabs', icon: '/assets/component-icon.svg', id: 'tabs' },
     { name: 'Text', icon: '/assets/component-icon.svg', id: 'text' },
     { name: 'Thumbnail', icon: '/assets/component-icon.svg', id: 'thumbnail' },
