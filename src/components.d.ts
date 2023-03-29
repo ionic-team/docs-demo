@@ -90,8 +90,6 @@ export namespace Components {
     }
     interface ComponentSkeletonText {
     }
-    interface ComponentSlides {
-    }
     interface ComponentSpinner {
     }
     interface ComponentTabs {
@@ -362,12 +360,6 @@ declare global {
         prototype: HTMLComponentSkeletonTextElement;
         new (): HTMLComponentSkeletonTextElement;
     };
-    interface HTMLComponentSlidesElement extends Components.ComponentSlides, HTMLStencilElement {
-    }
-    var HTMLComponentSlidesElement: {
-        prototype: HTMLComponentSlidesElement;
-        new (): HTMLComponentSlidesElement;
-    };
     interface HTMLComponentSpinnerElement extends Components.ComponentSpinner, HTMLStencilElement {
     }
     var HTMLComponentSpinnerElement: {
@@ -476,7 +468,6 @@ declare global {
         "component-segment": HTMLComponentSegmentElement;
         "component-select": HTMLComponentSelectElement;
         "component-skeleton-text": HTMLComponentSkeletonTextElement;
-        "component-slides": HTMLComponentSlidesElement;
         "component-spinner": HTMLComponentSpinnerElement;
         "component-tabs": HTMLComponentTabsElement;
         "component-tabs-games": HTMLComponentTabsGamesElement;
@@ -575,8 +566,6 @@ declare namespace LocalJSX {
     }
     interface ComponentSkeletonText {
     }
-    interface ComponentSlides {
-    }
     interface ComponentSpinner {
     }
     interface ComponentTabs {
@@ -641,7 +630,6 @@ declare namespace LocalJSX {
         "component-segment": ComponentSegment;
         "component-select": ComponentSelect;
         "component-skeleton-text": ComponentSkeletonText;
-        "component-slides": ComponentSlides;
         "component-spinner": ComponentSpinner;
         "component-tabs": ComponentTabs;
         "component-tabs-games": ComponentTabsGames;
@@ -700,7 +688,6 @@ declare module "@stencil/core" {
             "component-segment": LocalJSX.ComponentSegment & JSXBase.HTMLAttributes<HTMLComponentSegmentElement>;
             "component-select": LocalJSX.ComponentSelect & JSXBase.HTMLAttributes<HTMLComponentSelectElement>;
             "component-skeleton-text": LocalJSX.ComponentSkeletonText & JSXBase.HTMLAttributes<HTMLComponentSkeletonTextElement>;
-            "component-slides": LocalJSX.ComponentSlides & JSXBase.HTMLAttributes<HTMLComponentSlidesElement>;
             "component-spinner": LocalJSX.ComponentSpinner & JSXBase.HTMLAttributes<HTMLComponentSpinnerElement>;
             "component-tabs": LocalJSX.ComponentTabs & JSXBase.HTMLAttributes<HTMLComponentTabsElement>;
             "component-tabs-games": LocalJSX.ComponentTabsGames & JSXBase.HTMLAttributes<HTMLComponentTabsGamesElement>;

@@ -110,6 +110,7 @@ component-card .music-card img {
 
   box-shadow: 0px 2px 8px rgba(2, 8, 20, 0.1), 0px 8px 16px rgba(2, 8, 20, 0.08);
   border-radius: 6px;
+  margin: 0 auto;
 }
 
 component-card .music-card h2 {
