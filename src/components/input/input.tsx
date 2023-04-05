@@ -47,7 +47,7 @@ export class Input {
 
             <ion-item>
               <ion-label position="stacked">Last Name <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input aria-label="Last Name" equired type="text" onInput={(e: any) => { this.lastName = e.target.value}} value={this.lastName}></ion-input>
+              <ion-input aria-label="Last Name" required type="text" onInput={(e: any) => { this.lastName = e.target.value}} value={this.lastName}></ion-input>
             </ion-item>
 
             <ion-item>
