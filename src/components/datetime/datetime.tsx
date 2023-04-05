@@ -25,10 +25,10 @@ export class Datetime {
 
         <ion-list inset={true}>
           <ion-item>
-            <ion-input placeholder="Title"></ion-input>
+            <ion-input aria-label="Title" placeholder="Title"></ion-input>
           </ion-item>
           <ion-item lines="full">
-            <ion-input placeholder="Location"></ion-input>
+            <ion-input aria-label="Location" placeholder="Location"></ion-input>
           </ion-item>
         </ion-list>
 

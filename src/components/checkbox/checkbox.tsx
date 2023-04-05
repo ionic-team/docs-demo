@@ -17,59 +17,47 @@ export class Checkbox {
       </ion-header>,
 
       <ion-content fullscreen={true}>
-        <ion-list>
+        <ion-list lines="full">
           <ion-list-header>
             <ion-label>
               Characters
             </ion-label>
           </ion-list-header>
           <ion-item>
-            <ion-label>Jon Snow</ion-label>
-            <ion-checkbox color="primary" checked slot="start"></ion-checkbox>
+            <ion-checkbox color="primary" checked label-placement="end" justify="start">Jon Snow</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="dark" checked slot="start"></ion-checkbox>
-            <ion-label>Daenerys Targaryen</ion-label>
+            <ion-checkbox color="dark" checked label-placement="end" justify="start">Daenerys Targaryen</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox disabled slot="start"></ion-checkbox>
-            <ion-label>Arya Stark</ion-label>
+            <ion-checkbox disabled label-placement="end" justify="start">Arya Stark</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="secondary" slot="start"></ion-checkbox>
-            <ion-label>Tyrion Lannister</ion-label>
+            <ion-checkbox color="secondary" label-placement="end" justify="start">Tyrion Lannister</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="danger" checked slot="start"></ion-checkbox>
-            <ion-label>Sansa Stark</ion-label>
+            <ion-checkbox color="danger" checked label-placement="end" justify="start">Sansa Stark</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="primary" slot="start"></ion-checkbox>
-            <ion-label>Khal Drogo</ion-label>
+            <ion-checkbox color="primary" label-placement="end" justify="start">Khal Drogo</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="tertiary" checked slot="start"></ion-checkbox>
-            <ion-label>Cersei Lannister</ion-label>
+            <ion-checkbox color="tertiary" checked label-placement="end" justify="start">Cersei Lannister</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="medium" checked slot="start"></ion-checkbox>
-            <ion-label>Stannis Baratheon</ion-label>
+            <ion-checkbox color="medium" checked label-placement="end" justify="start">Stannis Baratheon</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="primary" disabled slot="start"></ion-checkbox>
-            <ion-label>Petyr Baelish</ion-label>
+            <ion-checkbox color="primary" disabled label-placement="end" justify="start">Petyr Baelish</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="dark" checked slot="start"></ion-checkbox>
-            <ion-label>Hodor</ion-label>
+            <ion-checkbox color="dark" checked label-placement="end" justify="start">Hodor</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="secondary" checked slot="start"></ion-checkbox>
-            <ion-label>Catelyn Stark</ion-label>
+            <ion-checkbox color="secondary" checked label-placement="end" justify="start">Catelyn Stark</ion-checkbox>
           </ion-item>
           <ion-item>
-            <ion-checkbox color="primary" slot="start"></ion-checkbox>
-            <ion-label>Bronn</ion-label>
+            <ion-checkbox color="primary" label-placement="end" justify="start">Bronn</ion-checkbox>
           </ion-item>
         </ion-list>
       </ion-content>

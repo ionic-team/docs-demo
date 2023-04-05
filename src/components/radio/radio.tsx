@@ -23,18 +23,15 @@ export class Radio {
               <ion-label>Fruit</ion-label>
             </ion-list-header>
             <ion-item>
-              <ion-label>Apple</ion-label>
-              <ion-radio slot="start" color="success" value="apple"></ion-radio>
+              <ion-radio label-placement="end" justify="start" color="success" value="apple">Apple</ion-radio>
             </ion-item>
 
             <ion-item>
-              <ion-label>Grape</ion-label>
-              <ion-radio slot="start" color="tertiary" value="grape"></ion-radio>
+              <ion-radio label-placement="end" justify="start" color="tertiary" value="grape">Grape</ion-radio>
             </ion-item>
 
             <ion-item>
-              <ion-label>Cherry</ion-label>
-              <ion-radio slot="start" color="danger" value="cherry"></ion-radio>
+              <ion-radio label-placement="end" justify="start" color="danger" value="cherry">Cherry</ion-radio>
             </ion-item>
           </ion-radio-group>
 
@@ -43,33 +40,27 @@ export class Radio {
               <ion-label>Pizza Topping</ion-label>
             </ion-list-header>
             <ion-item>
-              <ion-label>Beef</ion-label>
-              <ion-radio slot="end" color="primary" value="beef"></ion-radio>
+              <ion-radio color="primary" value="beef">Beef</ion-radio>
             </ion-item>
 
             <ion-item>
-              <ion-label>Anchovies</ion-label>
-              <ion-radio slot="end" color="secondary" value="anchovies"></ion-radio>
+              <ion-radio color="secondary" value="anchovies">Anchovies</ion-radio>
             </ion-item>
 
             <ion-item>
-              <ion-label>Sausage</ion-label>
-              <ion-radio slot="end" color="tertiary" value="sausage"></ion-radio>
+              <ion-radio color="tertiary" value="sausage">Sausage</ion-radio>
             </ion-item>
 
             <ion-item>
-              <ion-label>Bellpepper</ion-label>
-              <ion-radio slot="end" color="success" value="tomato"></ion-radio>
+              <ion-radio color="success" value="tomato">Bellpepper</ion-radio>
             </ion-item>
 
             <ion-item>
-              <ion-label>Tomato</ion-label>
-              <ion-radio slot="end" color="warning" value="carrot"></ion-radio>
+              <ion-radio color="warning" value="carrot">Tomato</ion-radio>
             </ion-item>
 
             <ion-item>
-              <ion-label>Pepperoni</ion-label>
-              <ion-radio slot="end" color="danger" value="pepperoni"></ion-radio>
+              <ion-radio color="danger" value="pepperoni">Pepperoni</ion-radio>
             </ion-item>
           </ion-radio-group>
         </ion-list>

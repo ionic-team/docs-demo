@@ -42,26 +42,25 @@ export class Input {
           <ion-list lines="full" class="ion-no-margin ion-no-padding">
             <ion-item>
               <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="text" onInput={(e: any) => { this.firstName = e.target.value}} value={this.firstName}></ion-input>
+              <ion-input aria-label="First Name" required type="text" onInput={(e: any) => { this.firstName = e.target.value}} value={this.firstName}></ion-input>
             </ion-item>
 
             <ion-item>
               <ion-label position="stacked">Last Name <ion-text color="danger">*</ion-text></ion-label>
-              <ion-input required type="text" onInput={(e: any) => { this.lastName = e.target.value}} value={this.lastName}></ion-input>
+              <ion-input aria-label="Last Name" equired type="text" onInput={(e: any) => { this.lastName = e.target.value}} value={this.lastName}></ion-input>
             </ion-item>
 
             <ion-item>
               <ion-label position="stacked">Address</ion-label>
-              <ion-input placeholder="Address Line 1"></ion-input>
-              <ion-input placeholder="Address Line 2"></ion-input>
-              <ion-input placeholder="City"></ion-input>
-              <ion-input placeholder="State"></ion-input>
-              <ion-input placeholder="Zip Code"></ion-input>
+              <ion-input aria-label="Address Line 1" placeholder="Address Line 1"></ion-input>
+              <ion-input aria-label="Address Line 2" placeholder="Address Line 2"></ion-input>
+              <ion-input aria-label="City" placeholder="City"></ion-input>
+              <ion-input aria-label="State" placeholder="State"></ion-input>
+              <ion-input aria-label="Zip Code" placeholder="Zip Code"></ion-input>
             </ion-item>
 
             <ion-item>
-              <ion-label position="stacked">Notes</ion-label>
-              <ion-textarea></ion-textarea>
+              <ion-textarea label="Notes"></ion-textarea>
             </ion-item>
           </ion-list>
 

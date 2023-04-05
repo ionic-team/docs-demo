@@ -111,20 +111,16 @@ export class Item {
             </ion-item>
 
             <ion-item>
-              <ion-label>Checkbox</ion-label>
-              <ion-checkbox slot="end" checked></ion-checkbox>
+              <ion-checkbox checked>Checkbox</ion-checkbox>
             </ion-item>
 
             <ion-item>
-              <ion-label>Toggle</ion-label>
-              <ion-toggle slot="end" checked></ion-toggle>
+              <ion-toggle checked>Toggle</ion-toggle>
             </ion-item>
 
             <ion-item>
-              <ion-label>Input</ion-label>
-              <ion-input slot="end" placeholder="Placeholder"></ion-input>
+              <ion-input label="Input" placeholder="Placeholder"></ion-input>
             </ion-item>
-
           </ion-item-sliding>
         </ion-list>
       </ion-content>
