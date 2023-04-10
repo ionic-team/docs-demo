@@ -19,48 +19,39 @@ export class Toggle {
       <ion-content fullscreen={true}>
         <ion-list>
           <ion-item>
-            <ion-label>Blueberry</ion-label>
-            <ion-toggle slot="end" name="blueberry" checked></ion-toggle>
+            <ion-toggle name="blueberry" checked>Blueberry</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Apple</ion-label>
-            <ion-toggle slot="end" name="apple" color="secondary" checked></ion-toggle>
+            <ion-toggle name="apple" color="secondary" checked>Apple</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Grape</ion-label>
-            <ion-toggle slot="end" name="grape" color="tertiary" checked></ion-toggle>
+            <ion-toggle name="grape" color="tertiary" checked>Grape</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Kiwi</ion-label>
-            <ion-toggle slot="end" name="kiwi" color="success" checked></ion-toggle>
+            <ion-toggle name="kiwi" color="success" checked>Kiwi</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Orange</ion-label>
-            <ion-toggle slot="end" name="banana" color="warning" checked></ion-toggle>
+            <ion-toggle name="banana" color="warning" checked>Orange</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Cherry</ion-label>
-            <ion-toggle slot="end" name="cherry" color="danger" checked></ion-toggle>
+            <ion-toggle name="cherry" color="danger" checked>Cherry</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Banana</ion-label>
-            <ion-toggle slot="end" name="banana" color="light" checked></ion-toggle>
+            <ion-toggle name="banana" color="light" checked>Banana</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Cantaloupe</ion-label>
-            <ion-toggle slot="end" name="cantaloupe" color="medium" checked></ion-toggle>
+            <ion-toggle name="cantaloupe" color="medium" checked>Cantaloupe</ion-toggle>
           </ion-item>
 
           <ion-item>
-            <ion-label>Blackberry</ion-label>
-            <ion-toggle slot="end" name="blackberry" color="dark" checked></ion-toggle>
+            <ion-toggle name="blackberry" color="dark" checked>Blackberry</ion-toggle>
           </ion-item>
         </ion-list>
       </ion-content>

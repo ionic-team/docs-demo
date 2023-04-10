@@ -30,10 +30,9 @@ export class AppHome {
         <ion-list class="theme-list" lines="full">
           <ion-item>
             <ion-icon slot="start" icon="moon" class="component-icon component-icon-dark"></ion-icon>
-            <ion-label>
+            <ion-toggle onIonChange={this.toggleDarkMode}>
               Dark Mode
-            </ion-label>
-            <ion-toggle slot="end" onIonChange={this.toggleDarkMode}></ion-toggle>
+            </ion-toggle>
           </ion-item>
         </ion-list>
 
