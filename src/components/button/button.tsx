@@ -56,7 +56,7 @@ export class Button {
               Block Width
             </ion-label>
           </ion-list-header>
-          <ion-button expand="block">A block button</ion-button>
+          <ion-button class="ion-text-wrap" expand="block">A block button</ion-button>
         </section>
 
         <section>
@@ -65,7 +65,7 @@ export class Button {
               Full Width
             </ion-label>
           </ion-list-header>
-          <ion-button expand="full" color="secondary">A full-width button</ion-button>
+          <ion-button class="ion-text-wrap" expand="full" color="secondary">A full-width button</ion-button>
         </section>
       </ion-content>
     ];

@@ -72,7 +72,7 @@ export class ActionSheet {
         <component-details description={description} url={url}></component-details>
 
         <div class="ion-padding-start ion-padding-end">
-          <ion-button expand="block" onClick={this.open}>Open Action Sheet</ion-button>
+          <ion-button class="ion-text-wrap" expand="block" onClick={this.open}>Open Action Sheet</ion-button>
         </div>
       </ion-content>
     ];

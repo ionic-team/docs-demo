@@ -65,7 +65,7 @@ export class Input {
           </ion-list>
 
           <div class="ion-padding">
-            <ion-button expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
+            <ion-button expand="block" type="submit" class="ion-text-wrap ion-no-margin">Create account</ion-button>
           </div>
         </form>
       </ion-content>,

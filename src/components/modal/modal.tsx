@@ -58,8 +58,8 @@ export class Modal {
 
         <div class="ion-padding-start ion-padding-end">
           <ion-button expand="block" onClick={this.openDefaultModal}>Open Modal</ion-button>
-          <ion-button expand="block" onClick={this.openCardModal}>Open Card Modal</ion-button>
-          <ion-button expand="block" onClick={this.openSheetModal}>Open Sheet Modal</ion-button>
+          <ion-button class="ion-text-wrap" expand="block" onClick={this.openCardModal}>Open Card Modal</ion-button>
+          <ion-button class="ion-text-wrap" expand="block" onClick={this.openSheetModal}>Open Sheet Modal</ion-button>
         </div>
       </ion-content>
     ];

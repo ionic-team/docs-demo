@@ -32,7 +32,7 @@ export class Content {
 
       <ion-content fullscreen={true}>
         <p class="ion-padding-start ion-padding-end">
-          <ion-button onClick={this.scrollToBottom} expand="block" fill="outline">Scroll To Bottom</ion-button>
+          <ion-button class="ion-text-wrap" onClick={this.scrollToBottom} expand="block" fill="outline">Scroll To Bottom</ion-button>
         </p>
         {new Array(30).fill(0).map((_, i) => {
           return (
@@ -42,7 +42,7 @@ export class Content {
           );
         })}
         <p class="ion-padding-start ion-padding-end">
-          <ion-button onClick={this.scrollToTop} expand="block" fill="outline">Scroll To Top</ion-button>
+          <ion-button class="ion-text-wrap" onClick={this.scrollToTop} expand="block" fill="outline">Scroll To Top</ion-button>
         </p>
       </ion-content>
     ];
