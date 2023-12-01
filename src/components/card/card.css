@@ -82,7 +82,7 @@ component-card .coworker-card .header-img {
 
 component-card .coworker-card h1 {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 component-card .coworker-card p {
@@ -115,7 +115,7 @@ component-card .music-card img {
 
 component-card .music-card h2 {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
 
   color: var(--text-darker);
 }
@@ -132,7 +132,7 @@ component-card .music-card ion-button {
 }
 
 component-card .music-card .button-largest {
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 component-card .music-card ion-progress-bar {

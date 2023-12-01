@@ -5,7 +5,7 @@ component-details ion-list {
 
 component-details .item .component-description {
  color: var(--ion-color-step-800, #3e4a58);
- font-size: 18px;
+ font-size: 1.125rem;
  line-height: 1.4;
  white-space: normal;
  padding-bottom: 16px;
@@ -19,5 +19,5 @@ component-details .item .component-description b {
 component-details .component-link {
   text-transform: capitalize;
 
-  font-size: 16px;
+  font-size: 1rem;
 }
