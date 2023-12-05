@@ -100,8 +100,8 @@ export class Picker {
         <component-details description={description} url={url}></component-details>
 
         <div class="ion-padding-start ion-padding-end">
-          <ion-button expand="block" onClick={_ => this.openPicker()}>Open Single Column Picker</ion-button>
-          <ion-button expand="block" onClick={_ => this.openPicker(2, 5, this.multiColumnOptions)}>Open Multiple Column Picker</ion-button>
+          <ion-button class="ion-text-wrap" expand="block" onClick={_ => this.openPicker()}>Open Single Column Picker</ion-button>
+          <ion-button class="ion-text-wrap" expand="block" onClick={_ => this.openPicker(2, 5, this.multiColumnOptions)}>Open Multiple Column Picker</ion-button>
         </div>
       </ion-content>
     ];

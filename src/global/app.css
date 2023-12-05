@@ -52,6 +52,11 @@
   font-weight: 450 500;
 }
 
+/* Enable dynamic font scaling */
+html {
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+}
+
 .component-content {
   --background: var(--ion-color-step-50, #f2f2f7);
 }

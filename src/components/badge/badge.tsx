@@ -60,7 +60,9 @@ export class Badge {
             <ion-badge color="dark" slot="end">4</ion-badge>
           </ion-item>
         </ion-list>
+      </ion-content>,
 
+      <ion-footer>
         <ion-tab-bar>
           <ion-tab-button selected>
             <ion-icon name="globe"></ion-icon>
@@ -75,7 +77,7 @@ export class Badge {
             <ion-badge>2.3k</ion-badge>
           </ion-tab-button>
         </ion-tab-bar>
-      </ion-content>
+      </ion-footer>
     ];
   }
 }
