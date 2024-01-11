@@ -43,14 +43,6 @@
 @import "~@ionic/core/css/themes/dark.class.css";
 
 /*
- * Theme CSS
- * ----------------------------------------------------------------------------
- * Import app dark theme files that can be used to theme an application.
- */
-
-@import "../themes/dark.css";
-
-/*
  * Global CSS
  * ----------------------------------------------------------------------------
  * CSS to apply throughout the application.
