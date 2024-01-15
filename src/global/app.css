@@ -24,15 +24,6 @@
 @import "~@ionic/core/css/text-transformation.css";
 @import "~@ionic/core/css/flex-utils.css";
 
-
-/*
- * Theme CSS
- * ----------------------------------------------------------------------------
- * Import app default theme files that can be used to theme an application.
- */
-
-@import "../themes/default.css";
-
 /**
  * Ionic Dark Theme
  * -----------------------------------------------------
@@ -77,4 +68,9 @@ html {
 _::-webkit-full-page-media, _:future ion-header .header-background,
 :root .safari_only ion-header .header-background {
   backdrop-filter: none !important;
+}
+
+:root.ios {
+  --ion-padding: 20px;
+  --ion-margin: 20px;
 }
