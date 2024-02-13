@@ -13,7 +13,7 @@
     {
       "matchPackageNames": ["puppeteer"],
       // Stencil supports Puppeteer 21
-      "allowsVersions": "^21.0.0",
+      "allowedVersions": "^21.0.0",
     },
     {
       "matchPackageNames": ["jest", "jest-cli", "@types/jest"],
