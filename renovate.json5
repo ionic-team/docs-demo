@@ -10,6 +10,17 @@
       "matchPackagePatterns": ["@stencil/"],
       "groupName": "stencil",
     },
+    {
+      "matchPackageNames": ["puppeteer"],
+      // Stencil supports Puppeteer 21
+      "allowsVersions": "^21.0.0",
+    },
+    {
+      "matchPackageNames": ["jest", "jest-cli", "@types/jest"],
+    },
+    {
+      "matchPackageNames: ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "eslint"]
+    }
   ],
   dependencyDashboard: false,
   minimumReleaseAge: "3 days",
@@ -17,6 +28,6 @@
   schedule: ["every weekday before 11am"],
   semanticCommits: "enabled",
   includePaths: [
-    "./package.json"
+    "package.json"
   ]
 }
