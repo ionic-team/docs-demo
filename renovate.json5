@@ -17,6 +17,6 @@
   schedule: ["every weekday before 11am"],
   semanticCommits: "enabled",
   includePaths: [
-    "./package.json
+    "./package.json"
   ]
 }
