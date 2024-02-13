@@ -19,7 +19,7 @@
       "matchPackageNames": ["jest", "jest-cli", "@types/jest"],
     },
     {
-      "matchPackageNames: ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "eslint"]
+      "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "eslint"]
     }
   ],
   dependencyDashboard: false,
