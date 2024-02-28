@@ -2,5 +2,5 @@ component-icons ion-icon {
   font-size: 2.25rem;
   margin: 3px;
 
-  color: var(--ion-color-step-650, #444);
+  color: var(--ion-text-color-step-350, #444);
 }
