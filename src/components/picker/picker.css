@@ -1,0 +1,9 @@
+ion-modal {
+  --height: auto;
+
+  align-items: end;
+}
+
+ion-modal ion-picker {
+  margin-bottom: var(--ion-safe-area-bottom);
+}
