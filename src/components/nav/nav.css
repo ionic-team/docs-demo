@@ -7,5 +7,5 @@ component-nav p:last-of-type {
 }
 
 component-nav p {
-  color: var(--ion-color-step-800, #3e4a58);
+  color: var(--ion-text-color-step-200, #3e4a58);
 }
