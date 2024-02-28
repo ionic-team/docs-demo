@@ -3,14 +3,14 @@
 }
 
 component-card {
-  --background-darker: var(--ion-color-step-200, #e9edf3);
+  --background-darker: var(--ion-background-color-step-200, #e9edf3);
 
-  --text-dark: var(--ion-color-step-850, #27323f);
-  --text-darker: var(--ion-color-step-950, #0e151f);
+  --text-dark: var(--ion-text-color-step-150, #27323f);
+  --text-darker: var(--ion-text-color-step-50, #0e151f);
 
-  --text-light: var(--ion-color-step-650, #5b708b);
-  --text-lighter: var(--ion-color-step-550, #73849a);
-  --text-lightest: var(--ion-color-step-300, #b2becd);
+  --text-light: var(--ion-text-color-step-350, #5b708b);
+  --text-lighter: var(--ion-text-color-step-450, #73849a);
+  --text-lightest: var(--ion-text-color-step-700, #b2becd);
 }
 
 component-card ion-card .header-img {

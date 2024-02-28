@@ -4,7 +4,7 @@ component-details ion-list {
 }
 
 component-details .item .component-description {
- color: var(--ion-color-step-800, #3e4a58);
+ color: var(--ion-text-color-step-200, #3e4a58);
  font-size: 1.125rem;
  line-height: 1.4;
  white-space: normal;
