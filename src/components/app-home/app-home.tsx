@@ -9,7 +9,7 @@ export class AppHome {
   components = getComponents();
 
   toggleDarkMode = () => {
-    document.documentElement.classList.toggle('ion-theme-dark');
+    document.documentElement.classList.toggle('ion-palette-dark');
   }
 
   render() {
