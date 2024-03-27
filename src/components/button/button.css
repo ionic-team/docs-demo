@@ -10,7 +10,7 @@ component-button section {
 
 component-button section .content {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
