@@ -115,7 +115,7 @@ export class Button {
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
             <ion-button theme="ionic" fill="clear" class="ion-focused">
-              Clear - Outline
+              Focused - Outline
             </ion-button>
             <ion-button theme="ionic" fill="clear" class="ion-focused">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
