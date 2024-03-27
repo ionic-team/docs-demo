@@ -51,6 +51,12 @@ export class Input {
             </ion-item>
 
             <ion-item>
+              <ion-input label="Password" label-placement="stacked" type="password">
+                <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+              </ion-input>
+            </ion-item>
+
+            <ion-item>
               <ion-label position="stacked">Address</ion-label>
               <ion-input aria-label="Address Line 1" placeholder="Address Line 1"></ion-input>
               <ion-input aria-label="Address Line 2" placeholder="Address Line 2"></ion-input>
