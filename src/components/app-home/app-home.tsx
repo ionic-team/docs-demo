@@ -1,15 +1,43 @@
-import { Component, h } from '@stencil/core';
+import { Component, ComponentInterface, h } from '@stencil/core';
 import { getComponents } from '../../utils/component-utils';
 
 @Component({
   tag: 'app-home',
   styleUrl: 'app-home.css'
 })
-export class AppHome {
+export class AppHome implements ComponentInterface {
   components = getComponents();
+
+  private theme: string;
+
+  connectedCallback(): void {
+    const config = JSON.parse(window.sessionStorage.getItem('ionic-persist-config')) ?? {};
+    this.theme = config.theme;
+  }
 
   toggleDarkMode = () => {
     document.documentElement.classList.toggle('ion-palette-dark');
+  }
+
+  /**
+   * Changes the theme to the Ionic theme.
+   * Prompts the user to reload the page for the changes to take effect.
+   */
+  toggleIonicTheme = () => {
+    const config = JSON.parse(window.sessionStorage.getItem('ionic-persist-config')) ?? {};
+
+    if (config.theme === 'ionic') {
+      window.sessionStorage.removeItem('ionic-persist-config');
+    } else {
+      window.sessionStorage.setItem('ionic-persist-config', JSON.stringify({
+        ...config,
+        theme: 'ionic'
+      }));
+    }
+    const confirm = window.confirm('Please reload the page for the changes to take effect.');
+    if (confirm) {
+      window.location.reload();
+    }
   }
 
   render() {
@@ -34,7 +62,14 @@ export class AppHome {
               Dark Mode
             </ion-toggle>
           </ion-item>
+          <ion-item>
+            <ion-icon slot="start" icon="logo-ionic" class="component-icon component-icon-dark"></ion-icon>
+            <ion-toggle onIonChange={this.toggleIonicTheme} checked={this.theme === 'ionic'}>
+              Ionic Theme
+            </ion-toggle>
+          </ion-item>
         </ion-list>
+
 
         <ion-list class="home-list">
           {this.components.map(component => {
