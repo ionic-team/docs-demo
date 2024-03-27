@@ -7,3 +7,14 @@ component-button section {
 
   padding: 0 10px;
 }
+
+component-button section .content {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+component-button section .content ion-button {
+  /* Prevent the button from stretching */
+  align-self: start;
+}
