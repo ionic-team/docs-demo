@@ -1,0 +1,35 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:base", ":semanticCommitTypeAll(chore)"],
+  packageRules: [
+    {
+      "matchPackagePatterns": ["@ionic/"],
+      "groupName": "ionic",
+    },
+    {
+      "matchPackagePatterns": ["@stencil/"],
+      "groupName": "stencil",
+    },
+    {
+      "matchPackageNames": ["puppeteer"],
+      // Stencil supports Puppeteer 21
+      "allowedVersions": "^21.0.0",
+    },
+    {
+      "matchPackageNames": ["jest", "jest-cli", "@types/jest"],
+      "groupName": "jest",
+    },
+    {
+      "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "eslint"],
+      "groupName": "eslint",
+    }
+  ],
+  dependencyDashboard: false,
+  minimumReleaseAge: "3 days",
+  rebaseWhen: "never",
+  schedule: ["every weekday before 11am"],
+  semanticCommits: "enabled",
+  includePaths: [
+    "package.json"
+  ]
+}
