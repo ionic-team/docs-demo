@@ -24,16 +24,14 @@
 @import "~@ionic/core/css/text-transformation.css";
 @import "~@ionic/core/css/flex-utils.css";
 
-
-/*
- * Theme CSS
- * ----------------------------------------------------------------------------
- * Imports theme files that can be used to theme an application.
+/**
+ * Ionic Dark Theme
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
  */
 
-@import "../themes/default.css";
-@import "../themes/dark.css";
-
+@import "~@ionic/core/css/themes/dark.class.css";
 
 /*
  * Global CSS
@@ -52,13 +50,8 @@
   font-weight: 450 500;
 }
 
-/* Enable dynamic font scaling */
-html {
-  --ion-dynamic-font: var(--ion-default-dynamic-font);
-}
-
 .component-content {
-  --background: var(--ion-color-step-50, #f2f2f7);
+  --background: var(--ion-background-color-step-50, #f2f2f7);
 }
 
 /*
@@ -70,4 +63,9 @@ html {
 _::-webkit-full-page-media, _:future ion-header .header-background,
 :root .safari_only ion-header .header-background {
   backdrop-filter: none !important;
+}
+
+:root.ios {
+  --ion-padding: 20px;
+  --ion-margin: 20px;
 }
