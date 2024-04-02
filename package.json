@@ -20,7 +20,7 @@
     "@ionic/core": "^8.0.0-beta.3"
   },
   "devDependencies": {
-    "@stencil/core": "^2.22.2",
+    "@stencil/core": "^3.4.2",
     "@types/jest": "^26.0.24",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
