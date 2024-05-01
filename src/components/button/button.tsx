@@ -1,11 +1,15 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "component-button",
-  styleUrl: "button.css",
+  tag: 'component-button',
+  styleUrl: 'button.css',
 })
 export class Button {
   render() {
+    const config = JSON.parse(
+      window.sessionStorage.getItem('ionic-persist-config')
+    );
+
     return [
       <ion-header translucent={true}>
         <ion-toolbar>
@@ -41,7 +45,9 @@ export class Button {
             <ion-button size="small">Small</ion-button>
             <ion-button>Default</ion-button>
             <ion-button size="large">Large</ion-button>
-            <ion-button size="xlarge">XLarge</ion-button>
+            {config.theme === 'ionic' && (
+              <ion-button size="xlarge">XLarge</ion-button>
+            )}
           </div>
         </section>
 
@@ -76,22 +82,20 @@ export class Button {
             <ion-label>States - Activated</ion-label>
           </ion-list-header>
           <div class="content">
-            <ion-button theme="ionic" class="ion-activated">
-              Activated - Solid
-            </ion-button>
-            <ion-button theme="ionic" class="ion-activated">
+            <ion-button class="ion-activated">Activated - Solid</ion-button>
+            <ion-button class="ion-activated">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
-            <ion-button theme="ionic" fill="outline" class="ion-activated">
+            <ion-button fill="outline" class="ion-activated">
               Activated - Outline
             </ion-button>
-            <ion-button theme="ionic" fill="outline" class="ion-activated">
+            <ion-button fill="outline" class="ion-activated">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
-            <ion-button theme="ionic" fill="clear" class="ion-activated">
+            <ion-button fill="clear" class="ion-activated">
               Activated - Clear
             </ion-button>
-            <ion-button theme="ionic" fill="clear" class="ion-activated">
+            <ion-button fill="clear" class="ion-activated">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
           </div>
@@ -102,22 +106,20 @@ export class Button {
             <ion-label>States - Focused</ion-label>
           </ion-list-header>
           <div class="content">
-            <ion-button theme="ionic" class="ion-focused">
-              Focuseded
-            </ion-button>
-            <ion-button theme="ionic" class="ion-focused">
+            <ion-button class="ion-focused">Focused</ion-button>
+            <ion-button class="ion-focused">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
-            <ion-button theme="ionic" fill="outline" class="ion-focused">
+            <ion-button fill="outline" class="ion-focused">
               Focused - Outline
             </ion-button>
-            <ion-button theme="ionic" fill="outline" class="ion-focused">
+            <ion-button fill="outline" class="ion-focused">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
-            <ion-button theme="ionic" fill="clear" class="ion-focused">
-              Focused - Outline
+            <ion-button fill="clear" class="ion-focused">
+              Focused - Clear
             </ion-button>
-            <ion-button theme="ionic" fill="clear" class="ion-focused">
+            <ion-button fill="clear" class="ion-focused">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
           </div>
@@ -128,22 +130,20 @@ export class Button {
             <ion-label>States - Disabled</ion-label>
           </ion-list-header>
           <div class="content">
-            <ion-button theme="ionic" disabled="true">
-              Disabled
-            </ion-button>
-            <ion-button theme="ionic" disabled="true">
+            <ion-button disabled="true">Disabled</ion-button>
+            <ion-button disabled="true">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
-            <ion-button theme="ionic" fill="outline" disabled="true">
+            <ion-button fill="outline" disabled="true">
               Disabled - Outline
             </ion-button>
-            <ion-button theme="ionic" fill="outline" disabled="true">
+            <ion-button fill="outline" disabled="true">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
-            <ion-button theme="ionic" fill="clear" disabled="true">
+            <ion-button fill="clear" disabled="true">
               Disabled - Clear
             </ion-button>
-            <ion-button theme="ionic" fill="clear" disabled="true">
+            <ion-button fill="clear" disabled="true">
               <ion-icon slot="icon-only" name="rocket"></ion-icon>
             </ion-button>
           </div>

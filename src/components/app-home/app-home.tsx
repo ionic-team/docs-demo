@@ -9,6 +9,7 @@ export class AppHome implements ComponentInterface {
   components = getComponents();
 
   private theme: string;
+  private themeToggleRef?: HTMLIonToggleElement;
 
   connectedCallback(): void {
     const config = JSON.parse(window.sessionStorage.getItem('ionic-persist-config')) ?? {};
@@ -34,9 +35,11 @@ export class AppHome implements ComponentInterface {
         theme: 'ionic'
       }));
     }
-    const confirm = window.confirm('Please reload the page for the changes to take effect.');
+    const confirm = window.confirm('This page will be reloaded to apply your changes.');
     if (confirm) {
       window.location.reload();
+    } else {
+      this.themeToggleRef.checked = false;
     }
   }
 
@@ -64,7 +67,7 @@ export class AppHome implements ComponentInterface {
           </ion-item>
           <ion-item>
             <ion-icon slot="start" icon="logo-ionic" class="component-icon component-icon-dark"></ion-icon>
-            <ion-toggle onIonChange={this.toggleIonicTheme} checked={this.theme === 'ionic'}>
+            <ion-toggle ref={ref => (this.themeToggleRef = ref)} onIonChange={this.toggleIonicTheme} checked={this.theme === 'ionic'}>
               Ionic Theme
             </ion-toggle>
           </ion-item>
