@@ -50,6 +50,8 @@ export namespace Components {
     }
     interface ComponentInput {
     }
+    interface ComponentInputOtp {
+    }
     interface ComponentItem {
     }
     interface ComponentItemGroup {
@@ -239,6 +241,12 @@ declare global {
     var HTMLComponentInputElement: {
         prototype: HTMLComponentInputElement;
         new (): HTMLComponentInputElement;
+    };
+    interface HTMLComponentInputOtpElement extends Components.ComponentInputOtp, HTMLStencilElement {
+    }
+    var HTMLComponentInputOtpElement: {
+        prototype: HTMLComponentInputOtpElement;
+        new (): HTMLComponentInputOtpElement;
     };
     interface HTMLComponentItemElement extends Components.ComponentItem, HTMLStencilElement {
     }
@@ -448,6 +456,7 @@ declare global {
         "component-icons": HTMLComponentIconsElement;
         "component-infinite-scroll": HTMLComponentInfiniteScrollElement;
         "component-input": HTMLComponentInputElement;
+        "component-input-otp": HTMLComponentInputOtpElement;
         "component-item": HTMLComponentItemElement;
         "component-item-group": HTMLComponentItemGroupElement;
         "component-list": HTMLComponentListElement;
@@ -525,6 +534,8 @@ declare namespace LocalJSX {
     interface ComponentInfiniteScroll {
     }
     interface ComponentInput {
+    }
+    interface ComponentInputOtp {
     }
     interface ComponentItem {
     }
@@ -610,6 +621,7 @@ declare namespace LocalJSX {
         "component-icons": ComponentIcons;
         "component-infinite-scroll": ComponentInfiniteScroll;
         "component-input": ComponentInput;
+        "component-input-otp": ComponentInputOtp;
         "component-item": ComponentItem;
         "component-item-group": ComponentItemGroup;
         "component-list": ComponentList;
@@ -668,6 +680,7 @@ declare module "@stencil/core" {
             "component-icons": LocalJSX.ComponentIcons & JSXBase.HTMLAttributes<HTMLComponentIconsElement>;
             "component-infinite-scroll": LocalJSX.ComponentInfiniteScroll & JSXBase.HTMLAttributes<HTMLComponentInfiniteScrollElement>;
             "component-input": LocalJSX.ComponentInput & JSXBase.HTMLAttributes<HTMLComponentInputElement>;
+            "component-input-otp": LocalJSX.ComponentInputOtp & JSXBase.HTMLAttributes<HTMLComponentInputOtpElement>;
             "component-item": LocalJSX.ComponentItem & JSXBase.HTMLAttributes<HTMLComponentItemElement>;
             "component-item-group": LocalJSX.ComponentItemGroup & JSXBase.HTMLAttributes<HTMLComponentItemGroupElement>;
             "component-list": LocalJSX.ComponentList & JSXBase.HTMLAttributes<HTMLComponentListElement>;
