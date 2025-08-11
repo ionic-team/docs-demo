@@ -12,8 +12,9 @@
     "lint.fix": "npm run lint -- --fix",
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
     "generate": "stencil generate"
   },
   "dependencies": {
@@ -28,6 +29,7 @@
     "eslint": "^9.0.0",
     "jest": "^30.0.0",
     "jest-cli": "^30.0.0",
+    "jest-stencil-runner": "^0.0.8",
     "puppeteer": "^24.10.0",
     "typescript": "^5.0.0"
   }

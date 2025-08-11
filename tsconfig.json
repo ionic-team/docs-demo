@@ -11,6 +11,7 @@
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",
+    "types": ["jest", "jest-stencil-runner"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
