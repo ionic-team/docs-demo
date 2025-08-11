@@ -20,7 +20,7 @@
       "groupName": "jest",
     },
     {
-      "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "eslint"],
+      "matchPackageNames": ["@typescript-eslint/eslint-plugin", "@typescript-eslint/parser", "eslint", "@eslint/js"],
       "groupName": "eslint",
     }
   ],
