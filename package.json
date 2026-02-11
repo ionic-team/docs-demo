@@ -29,7 +29,7 @@
     "eslint": "^9.0.0",
     "jest": "^30.0.0",
     "jest-cli": "^30.0.0",
-    "jest-stencil-runner": "^0.0.9",
+    "jest-stencil-runner": "^0.0.18",
     "puppeteer": "^24.10.0",
     "typescript": "^5.0.0"
   }
