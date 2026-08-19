@@ -18,9 +18,9 @@ describe('app-root', () => {
     const router = root.querySelector('ion-router');
     expect(router).toBeTruthy();
 
-    // Check for navigation
-    const nav = root.querySelector('ion-nav');
-    expect(nav).toBeTruthy();
+    // Check for router outlet
+    const routerOutlet = root.querySelector('ion-router-outlet');
+    expect(routerOutlet).toBeTruthy();
   });
 
   it('renders home routes', async () => {
