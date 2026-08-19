@@ -10,7 +10,7 @@
     ],
     "moduleResolution": "bundler",
     "module": "esnext",
-    "target": "es2017",
+    "target": "es2022",
     "types": ["jest", "jest-stencil-runner"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
