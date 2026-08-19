@@ -599,6 +599,12 @@ declare namespace LocalJSX {
     }
     interface PopoverExamplePage {
     }
+
+    interface ComponentDetailsAttributes {
+        "description": string;
+        "url": string;
+    }
+
     interface IntrinsicElements {
         "app-home": AppHome;
         "app-root": AppRoot;
@@ -615,7 +621,7 @@ declare namespace LocalJSX {
         "component-chip": ComponentChip;
         "component-content": ComponentContent;
         "component-datetime": ComponentDatetime;
-        "component-details": ComponentDetails;
+        "component-details": Omit<ComponentDetails, keyof ComponentDetailsAttributes> & { [K in keyof ComponentDetails & keyof ComponentDetailsAttributes]?: ComponentDetails[K] } & { [K in keyof ComponentDetails & keyof ComponentDetailsAttributes as `attr:${K}`]?: ComponentDetailsAttributes[K] } & { [K in keyof ComponentDetails & keyof ComponentDetailsAttributes as `prop:${K}`]?: ComponentDetails[K] };
         "component-fab": ComponentFab;
         "component-grid": ComponentGrid;
         "component-icons": ComponentIcons;
@@ -659,59 +665,59 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "component-_template_": LocalJSX.Component_template_ & JSXBase.HTMLAttributes<HTMLComponent_template_Element>;
-            "component-accordion": LocalJSX.ComponentAccordion & JSXBase.HTMLAttributes<HTMLComponentAccordionElement>;
-            "component-action-sheet": LocalJSX.ComponentActionSheet & JSXBase.HTMLAttributes<HTMLComponentActionSheetElement>;
-            "component-alert": LocalJSX.ComponentAlert & JSXBase.HTMLAttributes<HTMLComponentAlertElement>;
-            "component-avatar": LocalJSX.ComponentAvatar & JSXBase.HTMLAttributes<HTMLComponentAvatarElement>;
-            "component-badge": LocalJSX.ComponentBadge & JSXBase.HTMLAttributes<HTMLComponentBadgeElement>;
-            "component-breadcrumbs": LocalJSX.ComponentBreadcrumbs & JSXBase.HTMLAttributes<HTMLComponentBreadcrumbsElement>;
-            "component-button": LocalJSX.ComponentButton & JSXBase.HTMLAttributes<HTMLComponentButtonElement>;
-            "component-card": LocalJSX.ComponentCard & JSXBase.HTMLAttributes<HTMLComponentCardElement>;
-            "component-checkbox": LocalJSX.ComponentCheckbox & JSXBase.HTMLAttributes<HTMLComponentCheckboxElement>;
-            "component-chip": LocalJSX.ComponentChip & JSXBase.HTMLAttributes<HTMLComponentChipElement>;
-            "component-content": LocalJSX.ComponentContent & JSXBase.HTMLAttributes<HTMLComponentContentElement>;
-            "component-datetime": LocalJSX.ComponentDatetime & JSXBase.HTMLAttributes<HTMLComponentDatetimeElement>;
-            "component-details": LocalJSX.ComponentDetails & JSXBase.HTMLAttributes<HTMLComponentDetailsElement>;
-            "component-fab": LocalJSX.ComponentFab & JSXBase.HTMLAttributes<HTMLComponentFabElement>;
-            "component-grid": LocalJSX.ComponentGrid & JSXBase.HTMLAttributes<HTMLComponentGridElement>;
-            "component-icons": LocalJSX.ComponentIcons & JSXBase.HTMLAttributes<HTMLComponentIconsElement>;
-            "component-infinite-scroll": LocalJSX.ComponentInfiniteScroll & JSXBase.HTMLAttributes<HTMLComponentInfiniteScrollElement>;
-            "component-input": LocalJSX.ComponentInput & JSXBase.HTMLAttributes<HTMLComponentInputElement>;
-            "component-input-otp": LocalJSX.ComponentInputOtp & JSXBase.HTMLAttributes<HTMLComponentInputOtpElement>;
-            "component-item": LocalJSX.ComponentItem & JSXBase.HTMLAttributes<HTMLComponentItemElement>;
-            "component-item-group": LocalJSX.ComponentItemGroup & JSXBase.HTMLAttributes<HTMLComponentItemGroupElement>;
-            "component-list": LocalJSX.ComponentList & JSXBase.HTMLAttributes<HTMLComponentListElement>;
-            "component-loading": LocalJSX.ComponentLoading & JSXBase.HTMLAttributes<HTMLComponentLoadingElement>;
-            "component-menu": LocalJSX.ComponentMenu & JSXBase.HTMLAttributes<HTMLComponentMenuElement>;
-            "component-modal": LocalJSX.ComponentModal & JSXBase.HTMLAttributes<HTMLComponentModalElement>;
-            "component-modal-content": LocalJSX.ComponentModalContent & JSXBase.HTMLAttributes<HTMLComponentModalContentElement>;
-            "component-nav": LocalJSX.ComponentNav & JSXBase.HTMLAttributes<HTMLComponentNavElement>;
-            "component-note": LocalJSX.ComponentNote & JSXBase.HTMLAttributes<HTMLComponentNoteElement>;
-            "component-picker": LocalJSX.ComponentPicker & JSXBase.HTMLAttributes<HTMLComponentPickerElement>;
-            "component-popover": LocalJSX.ComponentPopover & JSXBase.HTMLAttributes<HTMLComponentPopoverElement>;
-            "component-progress": LocalJSX.ComponentProgress & JSXBase.HTMLAttributes<HTMLComponentProgressElement>;
-            "component-radio": LocalJSX.ComponentRadio & JSXBase.HTMLAttributes<HTMLComponentRadioElement>;
-            "component-range": LocalJSX.ComponentRange & JSXBase.HTMLAttributes<HTMLComponentRangeElement>;
-            "component-refresher": LocalJSX.ComponentRefresher & JSXBase.HTMLAttributes<HTMLComponentRefresherElement>;
-            "component-reorder": LocalJSX.ComponentReorder & JSXBase.HTMLAttributes<HTMLComponentReorderElement>;
-            "component-searchbar": LocalJSX.ComponentSearchbar & JSXBase.HTMLAttributes<HTMLComponentSearchbarElement>;
-            "component-segment": LocalJSX.ComponentSegment & JSXBase.HTMLAttributes<HTMLComponentSegmentElement>;
-            "component-select": LocalJSX.ComponentSelect & JSXBase.HTMLAttributes<HTMLComponentSelectElement>;
-            "component-skeleton-text": LocalJSX.ComponentSkeletonText & JSXBase.HTMLAttributes<HTMLComponentSkeletonTextElement>;
-            "component-spinner": LocalJSX.ComponentSpinner & JSXBase.HTMLAttributes<HTMLComponentSpinnerElement>;
-            "component-tabs": LocalJSX.ComponentTabs & JSXBase.HTMLAttributes<HTMLComponentTabsElement>;
-            "component-tabs-games": LocalJSX.ComponentTabsGames & JSXBase.HTMLAttributes<HTMLComponentTabsGamesElement>;
-            "component-tabs-movies": LocalJSX.ComponentTabsMovies & JSXBase.HTMLAttributes<HTMLComponentTabsMoviesElement>;
-            "component-tabs-music": LocalJSX.ComponentTabsMusic & JSXBase.HTMLAttributes<HTMLComponentTabsMusicElement>;
-            "component-text": LocalJSX.ComponentText & JSXBase.HTMLAttributes<HTMLComponentTextElement>;
-            "component-thumbnail": LocalJSX.ComponentThumbnail & JSXBase.HTMLAttributes<HTMLComponentThumbnailElement>;
-            "component-toast": LocalJSX.ComponentToast & JSXBase.HTMLAttributes<HTMLComponentToastElement>;
-            "component-toggle": LocalJSX.ComponentToggle & JSXBase.HTMLAttributes<HTMLComponentToggleElement>;
-            "component-toolbar": LocalJSX.ComponentToolbar & JSXBase.HTMLAttributes<HTMLComponentToolbarElement>;
-            "popover-example-page": LocalJSX.PopoverExamplePage & JSXBase.HTMLAttributes<HTMLPopoverExamplePageElement>;
+            "app-home": LocalJSX.IntrinsicElements["app-home"] & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
+            "app-root": LocalJSX.IntrinsicElements["app-root"] & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "component-_template_": LocalJSX.IntrinsicElements["component-_template_"] & JSXBase.HTMLAttributes<HTMLComponent_template_Element>;
+            "component-accordion": LocalJSX.IntrinsicElements["component-accordion"] & JSXBase.HTMLAttributes<HTMLComponentAccordionElement>;
+            "component-action-sheet": LocalJSX.IntrinsicElements["component-action-sheet"] & JSXBase.HTMLAttributes<HTMLComponentActionSheetElement>;
+            "component-alert": LocalJSX.IntrinsicElements["component-alert"] & JSXBase.HTMLAttributes<HTMLComponentAlertElement>;
+            "component-avatar": LocalJSX.IntrinsicElements["component-avatar"] & JSXBase.HTMLAttributes<HTMLComponentAvatarElement>;
+            "component-badge": LocalJSX.IntrinsicElements["component-badge"] & JSXBase.HTMLAttributes<HTMLComponentBadgeElement>;
+            "component-breadcrumbs": LocalJSX.IntrinsicElements["component-breadcrumbs"] & JSXBase.HTMLAttributes<HTMLComponentBreadcrumbsElement>;
+            "component-button": LocalJSX.IntrinsicElements["component-button"] & JSXBase.HTMLAttributes<HTMLComponentButtonElement>;
+            "component-card": LocalJSX.IntrinsicElements["component-card"] & JSXBase.HTMLAttributes<HTMLComponentCardElement>;
+            "component-checkbox": LocalJSX.IntrinsicElements["component-checkbox"] & JSXBase.HTMLAttributes<HTMLComponentCheckboxElement>;
+            "component-chip": LocalJSX.IntrinsicElements["component-chip"] & JSXBase.HTMLAttributes<HTMLComponentChipElement>;
+            "component-content": LocalJSX.IntrinsicElements["component-content"] & JSXBase.HTMLAttributes<HTMLComponentContentElement>;
+            "component-datetime": LocalJSX.IntrinsicElements["component-datetime"] & JSXBase.HTMLAttributes<HTMLComponentDatetimeElement>;
+            "component-details": LocalJSX.IntrinsicElements["component-details"] & JSXBase.HTMLAttributes<HTMLComponentDetailsElement>;
+            "component-fab": LocalJSX.IntrinsicElements["component-fab"] & JSXBase.HTMLAttributes<HTMLComponentFabElement>;
+            "component-grid": LocalJSX.IntrinsicElements["component-grid"] & JSXBase.HTMLAttributes<HTMLComponentGridElement>;
+            "component-icons": LocalJSX.IntrinsicElements["component-icons"] & JSXBase.HTMLAttributes<HTMLComponentIconsElement>;
+            "component-infinite-scroll": LocalJSX.IntrinsicElements["component-infinite-scroll"] & JSXBase.HTMLAttributes<HTMLComponentInfiniteScrollElement>;
+            "component-input": LocalJSX.IntrinsicElements["component-input"] & JSXBase.HTMLAttributes<HTMLComponentInputElement>;
+            "component-input-otp": LocalJSX.IntrinsicElements["component-input-otp"] & JSXBase.HTMLAttributes<HTMLComponentInputOtpElement>;
+            "component-item": LocalJSX.IntrinsicElements["component-item"] & JSXBase.HTMLAttributes<HTMLComponentItemElement>;
+            "component-item-group": LocalJSX.IntrinsicElements["component-item-group"] & JSXBase.HTMLAttributes<HTMLComponentItemGroupElement>;
+            "component-list": LocalJSX.IntrinsicElements["component-list"] & JSXBase.HTMLAttributes<HTMLComponentListElement>;
+            "component-loading": LocalJSX.IntrinsicElements["component-loading"] & JSXBase.HTMLAttributes<HTMLComponentLoadingElement>;
+            "component-menu": LocalJSX.IntrinsicElements["component-menu"] & JSXBase.HTMLAttributes<HTMLComponentMenuElement>;
+            "component-modal": LocalJSX.IntrinsicElements["component-modal"] & JSXBase.HTMLAttributes<HTMLComponentModalElement>;
+            "component-modal-content": LocalJSX.IntrinsicElements["component-modal-content"] & JSXBase.HTMLAttributes<HTMLComponentModalContentElement>;
+            "component-nav": LocalJSX.IntrinsicElements["component-nav"] & JSXBase.HTMLAttributes<HTMLComponentNavElement>;
+            "component-note": LocalJSX.IntrinsicElements["component-note"] & JSXBase.HTMLAttributes<HTMLComponentNoteElement>;
+            "component-picker": LocalJSX.IntrinsicElements["component-picker"] & JSXBase.HTMLAttributes<HTMLComponentPickerElement>;
+            "component-popover": LocalJSX.IntrinsicElements["component-popover"] & JSXBase.HTMLAttributes<HTMLComponentPopoverElement>;
+            "component-progress": LocalJSX.IntrinsicElements["component-progress"] & JSXBase.HTMLAttributes<HTMLComponentProgressElement>;
+            "component-radio": LocalJSX.IntrinsicElements["component-radio"] & JSXBase.HTMLAttributes<HTMLComponentRadioElement>;
+            "component-range": LocalJSX.IntrinsicElements["component-range"] & JSXBase.HTMLAttributes<HTMLComponentRangeElement>;
+            "component-refresher": LocalJSX.IntrinsicElements["component-refresher"] & JSXBase.HTMLAttributes<HTMLComponentRefresherElement>;
+            "component-reorder": LocalJSX.IntrinsicElements["component-reorder"] & JSXBase.HTMLAttributes<HTMLComponentReorderElement>;
+            "component-searchbar": LocalJSX.IntrinsicElements["component-searchbar"] & JSXBase.HTMLAttributes<HTMLComponentSearchbarElement>;
+            "component-segment": LocalJSX.IntrinsicElements["component-segment"] & JSXBase.HTMLAttributes<HTMLComponentSegmentElement>;
+            "component-select": LocalJSX.IntrinsicElements["component-select"] & JSXBase.HTMLAttributes<HTMLComponentSelectElement>;
+            "component-skeleton-text": LocalJSX.IntrinsicElements["component-skeleton-text"] & JSXBase.HTMLAttributes<HTMLComponentSkeletonTextElement>;
+            "component-spinner": LocalJSX.IntrinsicElements["component-spinner"] & JSXBase.HTMLAttributes<HTMLComponentSpinnerElement>;
+            "component-tabs": LocalJSX.IntrinsicElements["component-tabs"] & JSXBase.HTMLAttributes<HTMLComponentTabsElement>;
+            "component-tabs-games": LocalJSX.IntrinsicElements["component-tabs-games"] & JSXBase.HTMLAttributes<HTMLComponentTabsGamesElement>;
+            "component-tabs-movies": LocalJSX.IntrinsicElements["component-tabs-movies"] & JSXBase.HTMLAttributes<HTMLComponentTabsMoviesElement>;
+            "component-tabs-music": LocalJSX.IntrinsicElements["component-tabs-music"] & JSXBase.HTMLAttributes<HTMLComponentTabsMusicElement>;
+            "component-text": LocalJSX.IntrinsicElements["component-text"] & JSXBase.HTMLAttributes<HTMLComponentTextElement>;
+            "component-thumbnail": LocalJSX.IntrinsicElements["component-thumbnail"] & JSXBase.HTMLAttributes<HTMLComponentThumbnailElement>;
+            "component-toast": LocalJSX.IntrinsicElements["component-toast"] & JSXBase.HTMLAttributes<HTMLComponentToastElement>;
+            "component-toggle": LocalJSX.IntrinsicElements["component-toggle"] & JSXBase.HTMLAttributes<HTMLComponentToggleElement>;
+            "component-toolbar": LocalJSX.IntrinsicElements["component-toolbar"] & JSXBase.HTMLAttributes<HTMLComponentToolbarElement>;
+            "popover-example-page": LocalJSX.IntrinsicElements["popover-example-page"] & JSXBase.HTMLAttributes<HTMLPopoverExamplePageElement>;
         }
     }
 }

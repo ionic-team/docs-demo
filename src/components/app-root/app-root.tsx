@@ -28,7 +28,7 @@ export class AppRoot {
             </ion-route>
           </ion-route>
         </ion-router>
-        <ion-nav />
+        <ion-router-outlet></ion-router-outlet>
       </ion-app>
     );
   }
