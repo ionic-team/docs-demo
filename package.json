@@ -31,6 +31,6 @@
     "jest-cli": "^30.0.0",
     "jest-stencil-runner": "^0.0.20",
     "puppeteer": "^24.10.0",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.0"
   }
 }
